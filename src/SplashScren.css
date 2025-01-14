@@ -1,0 +1,20 @@
+.container{
+    background-color: #891515;
+    width: 430px;
+    height: 932px;
+    border-radius: 50px;
+}
+.head{
+   display: flex;
+   justify-content: center;
+}
+.eye-logo{
+ position: relative;
+ left: 85px;
+ top: 366px;
+}
+.text-logo{
+    position: relative;
+    left: 115px;
+    top: 660px;
+}
