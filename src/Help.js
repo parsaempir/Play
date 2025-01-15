@@ -18,9 +18,12 @@ function Help() {
           <span className="head-bz">
             <img src={Back} className="back" />
             <img src={Zarb} className="zarb" />
+
           </span>
+
           <b className="bold">راهنمای بازی</b>
-          
+          <span className='w'></span>
+
           <div className="button-group">
             <button
               onClick={() => handleClick("بازی")}
@@ -45,37 +48,43 @@ function Help() {
           <div className="description">
             {selectedWord && (
               <div className='po'>
-               <span className='span-h'><h2 className="h-text"> قوانین بازی</h2></span>
                 <p className="text">{getDescription(selectedWord)}</p>
                 
                 {/* متن اضافی زیر هر بخش */}
                 {selectedWord === "بازی" && (
+
                   <p className="text">
+                                                     <span className='span-h'><h1 className="h-text"> قوانین بازی</h1></span>
+
                     <span className='span-yel'>:هدف بازی</span><br/>
- <span className='line-b'>هر بازیکن باید نلاش کند تا نقش جاسوس را در میان سایر<br/> بازیکنان شناسایی کند,در حالی که جاسوس باید هویت خود</span><br/> <span  className='line'>.را پنهان نگه دارد و بازیکنان دیکر را گمراه کند    </span>  
- <br/><span className='span-yel'>:شروع بازی</span><br/>
-<span className='line-b'>بازی با انتخاب کارت ها آغاز میشود. هر بازیکن یک کارت <br/>دریافت می کند که نقش اورا مشخص کی کند.یکی از بازکنان</span><br/>
-<span className='line'>جاسوس است و بقیه در تلاش هستند تااوررا پیدا کنند.</span>
-<div cal></div>
+<span className='line'>هر بازیکن باید تلاش کند تا نقش جاسوس را در میان سایر<br/>بازیکنان شناسایی کند.درحالی که جاسوس باید هویت خود<br/>را پنهان نگه دارد و بازکنان دیگر را گمراه کند</span>
+
+ <br/><span className='span-yel' id='yel'>:شروع بازی</span><br/>
+ <span className='line-b'>بازی با انتخاب کارت ها آغاز میشود.هر بازیکن یک کارت<br/>دریاقت می کند که نقش اورا مشخص می کند.یکی از بازیکنان<br/>جاسوس است و یقسه در تلاش هستند تااورا پیدا کنند</span>
             </p>
 
                 )}
                 {selectedWord === "نقش‌ها" && (
-                  <p className="text">                    <span className='span-yel'>:هدف بازی</span><br/>
+                  <p className="text">     
+                  
+                  <span className='span-h'><h1 className="h-text"> نقش های بازی</h1></span>
 
-                    هر بازیکن باید نقش خود را به درستی ایفا کند تا تیم بتواند برنده شود.
+                                  <span className='span-yel' >:جاسوس</span><br/>
+<span  className='line'>جاسوس باید تلاش کند تا هویت خود را پنهان نگه<br/>دارد و بازکنان دیگررا گمراه کند.هدف او این<br/>است که تا پایان بازی شناسایی نشود.</span>
+<br/><span className='span-yel' id='yel'>:شهروند</span><br/>
+<span className='line-b'>شهروندان باید با همکاری و تبادل نظر با یکدیگر<br/>تلاش کنند تا جاسوس را شناسایی کنند و مانع <br/>موفقیت او شوند</span>
                   </p>
                 )}
                 {selectedWord === "جاسوس" && (
-                  <p className="text">                    <span className='span-yel'>:هدف بازی</span><br/>
+                  <p className="text">          
+                                    <span className='span-h'><h1 className="h-text">قوانین جاسوس</h1></span>
 
-                    جاسوس باید سعی کند تا هویت خود را مخفی نگه دارد و با دقت عمل کند.
+<span>جاسوس باید با پنهان کاری و پاسح های هوشمندانه هویت<br/>خودرا مخفی نگه دارد,بازسمنان دیگر را گمراه کند و تا پایان<br/>بازی شناسایی نشود تا بتواند برنده شود.</span>
                   </p>
                 )}
               </div>
             )}
           </div>
-
           <img src={giah} className="giah-png" />
         </div>
       </div>
