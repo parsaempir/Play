@@ -1,0 +1,101 @@
+body{overflow-y: hidden;}
+.head{
+    display: flex;
+    justify-content: center;
+ }
+ .container{
+    background-color: #891515;
+    width: 430px;
+    height: 932px;
+    border-radius: 50px;
+}
+.giah-png{
+    position: relative;
+   bottom: 60px;
+    border-radius: 50px;
+position: fixed;
+   }
+   .head-bz{
+    display: flex;
+justify-content: space-between;
+}
+.back{
+   position: relative;
+   left: 35px;
+   top: 35px;
+}
+.zarb{
+    position: relative;
+   right: 35px;
+    top: 35px;
+}
+.bold{
+    font-size: 40px;
+    position: relative;
+    left: 116px;
+    top: 50px;
+    color: white;
+    font-weight: bold;
+}
+
+ 
+  
+  .word-button {
+   
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: white;
+    transition: background-color 0.3s ease;
+    border-bottom: 2px solid transparent; 
+  }
+  
+  .word-button.active {
+    border-bottom: 2px #FFB800  solid; 
+  }
+  .button-group{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    position: relative;
+    top: 170px;
+    z-index: 100;
+  }
+.description{
+display: flex;
+justify-content: end;
+text-align: end;
+ position: relative;
+ right: 50px;
+    top: 300px;
+    z-index: 100;
+}
+  .text{
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+
+  }
+  .h-text{
+    color: white;
+    font-weight: bold;
+  }
+  .span-h{
+
+    display: flex;
+    justify-content: end;
+  }
+  .span-yel{
+    color:  #FFB800;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .line{
+    line-height: 70px;
+  }
+  .line-b{
+    position: relative;
+    top: 10px;
+  }
+ 
