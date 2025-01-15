@@ -1,9 +1,9 @@
 import './App.css';
-import Help from './Help';
+import Splash from './Pageone/SplashScren';
 function App() {
   return (
     <>
-    <Help/>
+    <Splash/>
     
     </>
   );
