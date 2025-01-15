@@ -1,0 +1,58 @@
+.head{
+    display: flex;
+    justify-content: center;
+ }
+ .container{
+    background-color: #891515;
+    width: 430px;
+    height: 932px;
+    border-radius: 50px;
+}
+.eye-logo{
+
+    position: relative;
+    top:  70px;
+    left: 80px;
+}
+.text-logo{
+
+    position: relative;
+    top: 100px;
+    left: 115px;
+}
+.giah-png{
+ position: relative;
+ top: 350px;
+border-radius: 50px;
+}
+.but{
+    width: 330px;
+    height: 70px;
+    position: relative;
+    left: 50px;
+    top: 125px;
+    color: white;
+    background-color: transparent;
+    border: 2px #FFB800 solid;
+    border-radius: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    cursor: pointer;
+}
+.but-tow{
+    width: 330px;
+    height: 70px;
+    background-color: #FFB800;
+    color: white;
+    font-size: 40px;
+    border-radius: 15px;
+    position: relative;
+    left: 50px;
+    top: 140px;
+    z-index: 100;
+    border: none;
+    font-family: 'Playfair Display', serif;
+    cursor: pointer;
+
+}

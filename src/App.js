@@ -1,9 +1,9 @@
 import './App.css';
-import Splash from './SplashScren';
+import Home from './Home.js';
 function App() {
   return (
     <>
-    <Splash/>
+    <Home/>
     
     </>
   );
