@@ -97,3 +97,6 @@ text-align: end;
     position: relative;
     top: 10px;
   }
+  .line-a{
+line-height: 35px;
+  }
