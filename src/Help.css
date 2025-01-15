@@ -11,9 +11,9 @@ body{overflow-y: hidden;}
 }
 .giah-png{
     position: relative;
-   bottom: 60px;
+   bottom: 350px;
     border-radius: 50px;
-position: fixed;
+
    }
    .head-bz{
     display: flex;
