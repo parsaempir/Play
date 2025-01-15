@@ -116,3 +116,31 @@ bottom: 20px;
   color: red;
   z-index: 1000;
 }
+.hr{
+  height: 1px;
+margin: 0px 50px 0px 50px ;
+  background-color:  #ffb7003e;
+  position: relative;
+  top: 600px;
+  z-index: 1000;
+}
+.but{
+  width: 330px;
+  height: 70px;
+  background-color: #FFB800;
+  color: white;
+  font-size: 40px;
+  border-radius: 15px;
+  position: relative;
+  left: 50px;
+  top: 700px;
+  z-index: 100;
+  border: none;
+  font-family: 'Playfair Display', serif;
+  cursor: pointer;
+
+}
+.head-con{
+  position: relative;
+  bottom: 70px;
+}

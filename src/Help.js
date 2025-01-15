@@ -22,9 +22,14 @@ function Help() {
           </span>
 
           <b className="bold">راهنمای بازی</b>
-          <span className='w'></span>
+<div className='hr'></div>   
 
-          <div className="button-group">
+<button className='but'>
+!شروع یازی
+
+</button>
+<div className='head-con'>
+       <div className="button-group">
             <button
               onClick={() => handleClick("بازی")}
               className={`word-button ${selectedWord === "بازی" ? "active" : ""}`}
@@ -84,6 +89,7 @@ function Help() {
                 )}
               </div>
             )}
+          </div>
           </div>
           <img src={giah} className="giah-png" />
         </div>
