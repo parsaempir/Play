@@ -52,7 +52,7 @@ function Help() {
                 {selectedWord === "بازی" && (
                   <p className="text">
                     <span className='span-yel'>:هدف بازی</span><br/>
- <span className='line-b'>هر بازیکن باید نلاش کند تا نقش جاسوس را در میان سایر<br/> بازیکنان شناسایی کند,در حالی که جاسوس باید هویت خود</span><br/> <span  className='line-a'>.را پنهان نگه دارد و بازیکنان دیکر را گمراه کند    </span>  
+ <span className='line-b'>هر بازیکن باید نلاش کند تا نقش جاسوس را در میان سایر<br/> بازیکنان شناسایی کند,در حالی که جاسوس باید هویت خود</span><br/> <span  className='line'>.را پنهان نگه دارد و بازیکنان دیکر را گمراه کند    </span>  
  <br/><span className='span-yel'>:شروع بازی</span><br/>
 <span className='line-b'>بازی با انتخاب کارت ها آغاز میشود. هر بازیکن یک کارت <br/>دریافت می کند که نقش اورا مشخص کی کند.یکی از بازکنان</span><br/>
 <span className='line'>جاسوس است و بقیه در تلاش هستند تااوررا پیدا کنند.</span>

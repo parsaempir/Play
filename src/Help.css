@@ -91,12 +91,10 @@ text-align: end;
     font-weight: bold;
   }
   .line{
-    line-height: 70px;
+    line-height: 35px;
   }
   .line-b{
     position: relative;
     top: 10px;
   }
-  .line-a{
-line-height: 35px;
-  }
+ 
