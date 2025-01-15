@@ -25,7 +25,7 @@ function Help() {
 <div className='hr'></div>   
 
 <button className='but'>
-!شروع یازی
+!شروع بازی
 
 </button>
 <div className='head-con'>
