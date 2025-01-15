@@ -44,7 +44,7 @@ function Help() {
 
           <div className="description">
             {selectedWord && (
-              <div>
+              <div className='po'>
                <span className='span-h'><h2 className="h-text"> قوانین بازی</h2></span>
                 <p className="text">{getDescription(selectedWord)}</p>
                 
