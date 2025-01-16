@@ -126,5 +126,16 @@ color: white;
   }
           
       
-      
-      
+  #h-head{
+position: relative;
+top: 170px;
+     } 
+    #player-container{
+        position: relative;
+top: 170px;
+
+    } 
+    #hr{
+
+        top: 200px;
+    }
