@@ -1,9 +1,9 @@
 import './App.css';
-import Splash from './Pageone/SplashScren';
+import StatusPage from './StatusPage';
 function App() {
   return (
     <>
-    <Splash/>
+    <StatusPage/>
     
     </>
   );

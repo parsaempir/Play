@@ -112,10 +112,7 @@ bottom: 20px;
   position: relative;
   top: 45px;
 }
-.w{
-  color: red;
-  z-index: 1000;
-}
+
 .hr{
   height: 1px;
 margin: 0px 50px 0px 50px ;

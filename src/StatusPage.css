@@ -1,0 +1,135 @@
+.head{
+    display: flex;
+    justify-content: center;
+ }
+ .container{
+    background-color: #891515;
+    width: 430px;
+    height: 932px;
+    border-radius: 50px;
+    position: relative;
+}
+.head-bz{
+    display: flex;
+justify-content: space-between;
+}
+.back{
+   position: relative;
+   left: 35px;
+   top: 35px;
+}
+.zarb{
+    position: relative;
+   right: 35px;
+    top: 35px;
+}
+.eye{
+    position: relative;
+    left: 158px;
+    height: 61px;
+    width: 114px;
+    top: 39px;
+}
+.giah{
+    position: absolute; 
+    bottom: 0px;
+    left: 50%; 
+    transform: translateX(-50%); 
+    border-radius: 50px;
+    object-fit: cover;
+   
+     }
+    .player-container{
+
+display: flex;
+flex-direction: row-reverse;
+position: relative;
+right: 50px;
+top: 120px;
+    }
+      .player-list {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+flex-wrap: wrap;
+max-width: 80%;
+      }
+      
+      .add-player-icon {
+      
+        cursor: pointer;
+        object-fit: contain;
+  
+        z-index: 100;
+
+      }
+      
+  
+      
+      .player-card {
+        position: relative;
+        
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+background-color: transparent;
+      }
+      
+      .player-card .remove-btn {
+        position: absolute;
+     right: 57px;
+        bottom: 85px;
+        background-color: white;
+        color: black;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        z-index: 100;
+
+      }
+      .h-head{
+display: flex;
+flex-direction: row-reverse;
+position: relative;
+right: 50px;
+top: 120px;
+z-index: 100;
+      }
+  .h-text{
+font-weight: bold;
+color: white;
+  }
+  .player-count {
+    position: absolute;
+    right: 310px; 
+    top: 25px;
+    color: #FFB800; 
+    border-radius: 10px;
+    padding: 5px 10px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    z-index: 200;
+  }
+  .hr{
+    height: 1px;
+  margin: 0px 50px 0px 50px ;
+    background-color:  #ffb7003e;
+    position: relative;
+    z-index: 1000;
+    top: 150px;
+  }
+          
+      
+      
+      
