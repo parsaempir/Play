@@ -7,6 +7,7 @@ import Back from './Group.svg';
 import giah from './logo gia.png';
 import addicon from './کارت - اضافه کردن بازیکن.png';
 import icon from './پشت کارت.png';
+import iconzarb from './Group 6.png'
 function StatusPage(){
 
     const [players, setPlayers] = useState([]);
@@ -57,12 +58,12 @@ return(
         {}
         {players.map((player) => (
           <div key={player.id} className="player-card">
-            <button
-              className="remove-btn"
-              onClick={() => removePlayer(player.id)}
-            >
-              ×
-            </button>
+          
+          <img 
+                        onClick={() => removePlayer(player.id)}
+src={iconzarb}
+          className='remove-btn'
+          />
             <img
               src={icon} 
               alt={player.name}
