@@ -204,6 +204,9 @@ function StatusPage() {
                     </div>
                     </div>
                     <div className='hr' id='hr-div'></div>
+                    <span className='h-head' id='p-head'>
+                        <h1 className='h-text'> نقش های خاص</h1>
+                    </span>
                     <div className='role'>
       <img
         src={currentImage}
@@ -215,6 +218,10 @@ function StatusPage() {
         alt="Switchable"
         onClick={handleImageClicke}
       /></div>
+      <div className='but-div'>
+<button className='but-top'>مرحله بعدی</button>
+
+      </div>
                     <img src={giah} className='giah' />
                 </div>
             </div>

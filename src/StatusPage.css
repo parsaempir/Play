@@ -45,7 +45,7 @@ display: flex;
 flex-direction: row-reverse;
 position: relative;
 right: 50px;
-top: 120px;
+top: 100px;
 z-index: 100;
     }
       .player-list {
@@ -99,7 +99,7 @@ display: flex;
 flex-direction: row-reverse;
 position: relative;
 right: 50px;
-top: 120px;
+top: 100px;
 z-index: 100;
       }
   .h-text{
@@ -123,22 +123,22 @@ color: white;
     background-color:  #ffb7003e;
     position: relative;
     z-index: 100;
-    top: 150px;
+    top: 110px;
   }
           
       
   #h-head{
 position: relative;
-top: 170px;
+top: 110px;
      } 
     #player-container{
         position: relative;
-top: 170px;
+top: 110px;
 
     } 
     #hr{
 
-        top: 200px;
+        top: 120px;
     }
 
 
@@ -204,7 +204,7 @@ bottom: 170px;
     flex-direction: row-reverse;
     position: relative;
     right: 50px;
-    top: 205px;
+    top: 105px;
     z-index: 100;}
     .iconzrb{
         position: absolute;
@@ -225,23 +225,44 @@ bottom: 170px;
     }
     #s-head{
         position: relative;
-        top: 215px;
+        top: 120px;
     }
     #hr-div{
          position: relative;
-         top: 215px;
+         top: 115px;
     }
     .role{
   display: flex;
       position: relative;
       flex-direction: row-reverse;
       z-index: 100;
-      top: 230px;
+      top: 100px;
       gap: 20px;
   right: 50px;
     }
     .role img{
       width: 154px;
       height: 55px;
+    }
+    #p-head{
+      position: relative;
+      top: 115px;
+    }
+    .but-div{
+      position: relative;
+      z-index: 100;
+      top: 123px;
+   }
+    .but-top{
+width: 100%;
+      height: 70px;
+      background-color: #FFB800;
+      color: white;
+      font-size: 40px;
+      border-radius: 5px 0px 50px 50px;
+    z-index: 100;
+      border: none;
+      cursor: pointer;
+font-weight: bold;
     }
   
