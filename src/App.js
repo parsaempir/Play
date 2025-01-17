@@ -1,9 +1,9 @@
 import './App.css';
-import StatusPage from './StatusPage';
+import Chooseyourcard from './Chooseyourcard.js';
 function App() {
   return (
     <>
-    <StatusPage/>
+    <Chooseyourcard/>
     
     </>
   );
