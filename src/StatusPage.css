@@ -231,3 +231,17 @@ bottom: 170px;
          position: relative;
          top: 215px;
     }
+    .role{
+  display: flex;
+      position: relative;
+      flex-direction: row-reverse;
+      z-index: 100;
+      top: 230px;
+      gap: 20px;
+  right: 50px;
+    }
+    .role img{
+      width: 154px;
+      height: 55px;
+    }
+  

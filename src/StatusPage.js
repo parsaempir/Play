@@ -11,6 +11,10 @@ import jasosin from './کارت - جاسوس.png';
 import addjas from './کارت - اضافه کردن جاسوس.png';
 import addtime from './Frame 15.png';
 import time from './Frame 16.png';
+import naghsh from './Property 1=Variant2.png';
+import naghsh2 from './Property 1=Default.png';
+import naghsh3 from './Property 1=Variant2 (1).png'
+import naghsh4 from './Property 1=Default (1).png'
 
 function StatusPage() {
     const [players, setPlayers] = useState([]);
@@ -18,7 +22,18 @@ function StatusPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalImage, setModalImage] = useState(null);
     const [extraImage, setExtraImage] = useState(null);
+    const [currentImage, setCurrentImage] = useState(naghsh2);
+    const [currentImage1, setCurrentImage1] = useState(naghsh4);
 
+    const handleImageClicke = () => {
+      setCurrentImage1((prevImage) => (prevImage === naghsh4 ? naghsh3 : naghsh4));
+    };
+  
+
+    const handleImageClicked = () => {
+      setCurrentImage((prevImage) => (prevImage === naghsh2 ? naghsh : naghsh2));
+    };
+  
     const handleImageClick = (imageSrc) => {
         setModalImage(imageSrc);
         setIsModalOpen(true);
@@ -189,7 +204,17 @@ function StatusPage() {
                     </div>
                     </div>
                     <div className='hr' id='hr-div'></div>
-
+                    <div className='role'>
+      <img
+        src={currentImage}
+        alt="Switchable"
+        onClick={handleImageClicked}
+      />
+      <img
+        src={currentImage1}
+        alt="Switchable"
+        onClick={handleImageClicke}
+      /></div>
                     <img src={giah} className='giah' />
                 </div>
             </div>
