@@ -42,7 +42,7 @@
     .back-logo{
         position: relative;
         z-index: 100;
-        left: 35px;
+        margin-left: 35px;
         top: 100px;
     }
     .titr{

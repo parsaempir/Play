@@ -49,23 +49,26 @@ function Chooseyourcard() {
     setShowModal(false);
   };
 
+  // تبدیل دقیقه و ثانیه به دو رقم با استفاده از padStart
+  const formatTime = (time) => time.toString().padStart(2, "0");
+
   return (
     <>
       <div className="head">
         <div className="container">
           <span className="head-bz">
-            <img src={Back} className="back"  />
-            <img src={Zarb} className="zarb" />
+            <img src={Back} className="back" alt="back" />
+            <img src={Zarb} className="zarb" alt="zarb" />
           </span>
           <img src={eye} className="eye" alt="eye" />
           <h2 className="titr">نوبت</h2>
-          <img src={backlogo} className="back-logo" />
+          <img src={backlogo} className="back-logo" alt="back-logo" />
           <div className="but-div">
             <button className="but-top" onClick={() => setShowModal(true)}>
               شروع
             </button>
           </div>
-          <img src={giah} className="giah-png"  />
+          <img src={giah} className="giah-png" alt="giah" />
         </div>
       </div>
 
@@ -81,11 +84,11 @@ function Chooseyourcard() {
               >
                 <div className="time-display">
                   <div className="time-number less">
-                    {minutes === 0 ? 10 : minutes - 1}
+                    {formatTime(minutes === 0 ? 10 : minutes - 1)}
                   </div>
-                  <div className="time-number active">{minutes}</div>
+                  <div className="time-number active">{formatTime(minutes)}</div>
                   <div className="time-number less">
-                    {minutes === 10 ? 10 : minutes + 1}
+                    {formatTime(minutes === 10 ? 0 : minutes + 1)}
                   </div>
                 </div>
                 <span>دقیقه</span>
@@ -98,11 +101,11 @@ function Chooseyourcard() {
               >
                 <div className="time-display">
                   <div className="time-number less">
-                    {seconds === 0 ? 59 : seconds - 1}
+                    {formatTime(seconds === 0 ? 59 : seconds - 1)}
                   </div>
-                  <div className="time-number active">{seconds.toString().padStart(2, "0")}</div>
+                  <div className="time-number active">{formatTime(seconds)}</div>
                   <div className="time-number less">
-                    {seconds === 59 ? 0 : seconds + 1}
+                    {formatTime(seconds === 59 ? 0 : seconds + 1)}
                   </div>
                 </div>
                 <span>ثانیه</span>
