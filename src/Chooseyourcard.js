@@ -54,18 +54,18 @@ function Chooseyourcard() {
       <div className="head">
         <div className="container">
           <span className="head-bz">
-            <img src={Back} className="back" alt="back" />
-            <img src={Zarb} className="zarb" alt="zarb" />
+            <img src={Back} className="back"  />
+            <img src={Zarb} className="zarb" />
           </span>
           <img src={eye} className="eye" alt="eye" />
           <h2 className="titr">نوبت</h2>
-          <img src={backlogo} className="back-logo" alt="back-logo" />
+          <img src={backlogo} className="back-logo" />
           <div className="but-div">
             <button className="but-top" onClick={() => setShowModal(true)}>
               شروع
             </button>
           </div>
-          <img src={giah} className="giah-png" alt="giah" />
+          <img src={giah} className="giah-png"  />
         </div>
       </div>
 
