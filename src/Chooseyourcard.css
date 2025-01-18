@@ -71,4 +71,141 @@
         cursor: pointer;
   font-weight: bold;
       }
-    
+ /* پس‌زمینه مودال */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  /* مودال خود */
+  .modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* انیمیشن ورود مودال */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* عنوان مودال */
+  .modal h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* استایل برای دکمه‌ها */
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .start-btn,
+  .back-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .start-btn {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .start-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .back-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .back-btn:hover {
+    background-color: #e53935;
+  }
+  
+  /* استایل برای انتخاب زمان */
+  .time-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    transition: transform 0.5s ease;
+  }
+  
+  .time-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.5s ease;
+  }
+  
+  .time-number {
+    font-size: 2rem;
+    margin: 5px 0;
+    opacity: 1;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .time-number.active {
+    color: #000; /* رنگ اصلی */
+  }
+  
+  .time-number.less {
+    color: rgba(0, 0, 0, 0.4); /* کم‌رنگ‌تر */
+    transform: scale(0.9); /* کم کردن اندازه برای اعداد کم‌رنگ */
+  }
+  
+  .colon {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 10px;
+  }
+  
+  .arrow-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+    transition: transform 0.3s ease;
+  }
+  
+  .arrow-btn:hover {
+    transform: scale(1.2);
+  }
+  
