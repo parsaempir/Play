@@ -27,6 +27,24 @@ function Chooseyourcard() {
     }
   };
 
+  const handleTouchMoveMinutes = (event) => {
+    const touch = event.touches[0];
+    if (touch.clientY < window.innerHeight / 2) {
+      setMinutes((prev) => (prev + 1 > 10 ? 10 : prev + 1));
+    } else {
+      setMinutes((prev) => (prev - 1 < 0 ? 0 : prev - 1));
+    }
+  };
+
+  const handleTouchMoveSeconds = (event) => {
+    const touch = event.touches[0];
+    if (touch.clientY < window.innerHeight / 2) {
+      setSeconds((prev) => (prev + 1 > 59 ? 0 : prev + 1));
+    } else {
+      setSeconds((prev) => (prev - 1 < 0 ? 59 : prev - 1));
+    }
+  };
+
   const handleStart = () => {
     setShowModal(false);
   };
@@ -40,7 +58,7 @@ function Chooseyourcard() {
             <img src={Zarb} className="zarb" alt="zarb" />
           </span>
           <img src={eye} className="eye" alt="eye" />
-          <h2 className="titr">,نوبت</h2>
+          <h2 className="titr">نوبت</h2>
           <img src={backlogo} className="back-logo" alt="back-logo" />
           <div className="but-div">
             <button className="but-top" onClick={() => setShowModal(true)}>
@@ -56,7 +74,11 @@ function Chooseyourcard() {
           <div className="modal">
             <h2>زمان بازی</h2>
             <div className="time-selector">
-              <div className="time-box" onWheel={handleWheelMinutes}>
+              <div
+                className="time-box"
+                onWheel={handleWheelMinutes}
+                onTouchMove={handleTouchMoveMinutes}
+              >
                 <div className="time-display">
                   <div className="time-number less">
                     {minutes === 0 ? 10 : minutes - 1}
@@ -69,7 +91,11 @@ function Chooseyourcard() {
                 <span>دقیقه</span>
               </div>
               <span className="colon">:</span>
-              <div className="time-box" onWheel={handleWheelSeconds}>
+              <div
+                className="time-box"
+                onWheel={handleWheelSeconds}
+                onTouchMove={handleTouchMoveSeconds}
+              >
                 <div className="time-display">
                   <div className="time-number less">
                     {seconds === 0 ? 59 : seconds - 1}
