@@ -9,7 +9,7 @@
     border-radius: 50px;
     position: relative;
 }
-.giah-png{
+.Plant-png{
   position: absolute; 
   bottom: 0px;
   left: 50%; 
@@ -19,7 +19,7 @@
  
    }
    
-   .head-bz{
+   .head-bc{
     display: flex;
 justify-content: space-between;
 }
@@ -28,7 +28,7 @@ justify-content: space-between;
    left: 35px;
    top: 35px;
 }
-.zarb{
+.close{
     position: relative;
    right: 35px;
     top: 35px;
@@ -81,18 +81,18 @@ text-align: end;
     font-weight: bold;
 
   }
-  .h-text{
+  .text-one{
     color: white;
     font-weight: bold;
 position: relative;
 bottom: 20px;
   }
-  .span-h{
+  .span-one{
 
     display: flex;
     justify-content: end;
   }
-  .span-yel{
+  .span-yellow{
     color:  #FFB800;
     font-size: 20px;
     font-weight: bold;
@@ -104,11 +104,11 @@ bottom: 20px;
     bottom: 10px;
     line-height: 20px;
   }
- #yel{
+ #yellow{
   position: relative;
   top: 30px;
  }
-.line-b{
+.line-span{
   position: relative;
   top: 45px;
 }
@@ -137,7 +137,7 @@ margin: 0px 50px 0px 50px ;
   cursor: pointer;
 
 }
-.head-con{
+.head-container{
   position: relative;
   bottom: 70px;
 }

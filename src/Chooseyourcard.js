@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Chooseyourcard.css";
-import giah from "./logo gia.png";
+import Plant from "./logo gia.png";
 import backlogo from "./Group 12.png";
-import Zarb from "./Vector.svg";
+import close from "./Vector.svg";
 import Back from "./Group.svg";
 import eye from "./Logo.svg";
 
@@ -13,7 +13,7 @@ function Chooseyourcard() {
 
   const handleWheelMinutes = (event) => {
     if (event.deltaY < 0) {
-      setMinutes((prev) => (prev + 1 > 10 ? 0 : prev + 1)); // محدود کردن دقیقه‌ها به ۱۰
+      setMinutes((prev) => (prev + 1 > 10 ? 0 : prev + 1)); 
     } else {
       setMinutes((prev) => (prev - 1 < 0 ? 10 : prev - 1));
     }
@@ -49,26 +49,25 @@ function Chooseyourcard() {
     setShowModal(false);
   };
 
-  // تبدیل دقیقه و ثانیه به دو رقم با استفاده از padStart
   const formatTime = (time) => time.toString().padStart(2, "0");
 
   return (
     <>
       <div className="head">
         <div className="container">
-          <span className="head-bz">
-            <img src={Back} className="back" alt="back" />
-            <img src={Zarb} className="zarb" alt="zarb" />
+          <span className="head-bc">
+            <img src={Back} className="back" />
+            <img src={close} className="close" />
           </span>
-          <img src={eye} className="eye" alt="eye" />
+          <img src={eye} className="eye"  />
           <h2 className="titr">نوبت</h2>
-          <img src={backlogo} className="back-logo" alt="back-logo" />
+          <img src={backlogo} className="back-logo"  />
           <div className="but-div">
             <button className="but-top" onClick={() => setShowModal(true)}>
               شروع
             </button>
           </div>
-          <img src={giah} className="giah-png" alt="giah" />
+          <img src={Plant} className="Plant-png" />
         </div>
       </div>
 

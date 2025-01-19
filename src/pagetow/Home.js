@@ -1,7 +1,7 @@
 import './Home.css';
 import eye from './Logo.svg';
 import text from './Group 3.svg';
-import giah from './Group 2 (1).png';
+import Plant from './Group 2 (1).png';
 function Home(){
 
 return(
@@ -14,7 +14,7 @@ return(
 <img src={eye} className='eye-logo'/>
 <img src={text} className='text-logo'/>
 
-<img src={giah} className='giah-png'/>
+<img src={giah} className='Plant-png'/>
 
 <button className='but'>راهنمای بازی؟</button>
 <button className='but-tow'>!شروع بازی</button>

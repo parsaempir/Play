@@ -1,23 +1,23 @@
 import './Help.css';
-import Zarb from './Vector.svg';
+import close from './Vector.svg';
 import Back from './Group.svg';
-import giah from './logo gia.png';
+import Plant from './logo gia.png';
 import React, { useState } from 'react';
 
 function Help() {
-  const [selectedWord, setSelectedWord] = useState("بازی"); // کلمه انتخاب‌شده
+  const [selectedWord, setSelectedWord] = useState("بازی"); 
 
   const handleClick = (word) => {
-    setSelectedWord(word); // تنظیم کلمه انتخاب‌شده
+    setSelectedWord(word); 
   };
 
   return (
     <>
       <div className="head">
         <div className="container">
-          <span className="head-bz">
+          <span className="head-bc">
             <img src={Back} className="back" />
-            <img src={Zarb} className="zarb" />
+            <img src={close} className="zarb" />
 
           </span>
 
@@ -28,7 +28,7 @@ function Help() {
 !شروع بازی
 
 </button>
-<div className='head-con'>
+<div className='head-container'>
        <div className="button-group">
             <button
               onClick={() => handleClick("بازی")}
@@ -52,37 +52,37 @@ function Help() {
 
           <div className="description">
             {selectedWord && (
-              <div className='po'>
+              <div >
                 <p className="text">{getDescription(selectedWord)}</p>
                 
                 {/* متن اضافی زیر هر بخش */}
                 {selectedWord === "بازی" && (
 
                   <p className="text">
-                                                     <span className='span-h'><h1 className="h-text"> قوانین بازی</h1></span>
+                                                     <span className='span-one'><h1 className="text-one"> قوانین بازی</h1></span>
 
-                    <span className='span-yel'>:هدف بازی</span><br/>
+                    <span className='span-yellow'>:هدف بازی</span><br/>
 <span className='line'>هر بازیکن باید تلاش کند تا نقش جاسوس را در میان سایر<br/>بازیکنان شناسایی کند.درحالی که جاسوس باید هویت خود<br/>را پنهان نگه دارد و بازکنان دیگر را گمراه کند</span>
 
- <br/><span className='span-yel' id='yel'>:شروع بازی</span><br/>
- <span className='line-b'>بازی با انتخاب کارت ها آغاز میشود.هر بازیکن یک کارت<br/>دریاقت می کند که نقش اورا مشخص می کند.یکی از بازیکنان<br/>جاسوس است و یقسه در تلاش هستند تااورا پیدا کنند</span>
+ <br/><span className='span-yellow' id='yellow'>:شروع بازی</span><br/>
+ <span className='line-span'>بازی با انتخاب کارت ها آغاز میشود.هر بازیکن یک کارت<br/>دریاقت می کند که نقش اورا مشخص می کند.یکی از بازیکنان<br/>جاسوس است و یقسه در تلاش هستند تااورا پیدا کنند</span>
             </p>
 
                 )}
                 {selectedWord === "نقش‌ها" && (
                   <p className="text">     
                   
-                  <span className='span-h'><h1 className="h-text"> نقش های بازی</h1></span>
+                  <span className='span-one'><h1 className="text-one"> نقش های بازی</h1></span>
 
-                                  <span className='span-yel' >:جاسوس</span><br/>
+                                  <span className='span-yellow' >:جاسوس</span><br/>
 <span  className='line'>جاسوس باید تلاش کند تا هویت خود را پنهان نگه<br/>دارد و بازکنان دیگررا گمراه کند.هدف او این<br/>است که تا پایان بازی شناسایی نشود.</span>
-<br/><span className='span-yel' id='yel'>:شهروند</span><br/>
-<span className='line-b'>شهروندان باید با همکاری و تبادل نظر با یکدیگر<br/>تلاش کنند تا جاسوس را شناسایی کنند و مانع <br/>موفقیت او شوند</span>
+<br/><span className='span-yellow' id='yellow'>:شهروند</span><br/>
+<span className='line-span'>شهروندان باید با همکاری و تبادل نظر با یکدیگر<br/>تلاش کنند تا جاسوس را شناسایی کنند و مانع <br/>موفقیت او شوند</span>
                   </p>
                 )}
                 {selectedWord === "جاسوس" && (
                   <p className="text">          
-                                    <span className='span-h'><h1 className="h-text">قوانین جاسوس</h1></span>
+                                    <span className='span-one'><h1 className="text-one">قوانین جاسوس</h1></span>
 
 <span>جاسوس باید با پنهان کاری و پاسح های هوشمندانه هویت<br/>خودرا مخفی نگه دارد,بازسمنان دیگر را گمراه کند و تا پایان<br/>بازی شناسایی نشود تا بتواند برنده شود.</span>
                   </p>
@@ -91,7 +91,7 @@ function Help() {
             )}
           </div>
           </div>
-          <img src={giah} className="giah-png" />
+          <img src={Plant} className="Plant-png" />
         </div>
       </div>
     </>

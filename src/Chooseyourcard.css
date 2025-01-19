@@ -9,7 +9,7 @@
     border-radius: 50px;
     position: relative;
 }
-.giah-png{
+.Plant-png{
     position: absolute; 
     bottom: 0px;
     left: 50%; 
@@ -18,7 +18,7 @@
     object-fit: cover;
    
      }
-     .head-bz{
+     .head-bc{
         display: flex;
     justify-content: space-between;
     }
@@ -27,7 +27,7 @@
         left: 35px;
         top: 35px;
      }
-     .zarb{
+     .close{
          position: relative;
         right: 35px;
          top: 35px;

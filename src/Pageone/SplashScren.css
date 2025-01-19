@@ -21,7 +21,7 @@
     top: 660px;
     z-index: 100;
 }
-.tik{
+.piece{
     position: absolute;
     object-fit: cover;
     width: 100%;

@@ -1,20 +1,20 @@
 import './StatusPage.css';
 import React, { useState } from 'react';
-import eye from './Logo.svg';
-import Zarb from './Vector.svg';
-import Back from './Group.svg';
-import giah from './logo gia.png';
-import addicon from './کارت - اضافه کردن بازیکن.png';
-import icon from './پشت کارت.png';
-import iconzarb from './Group 6.png';
-import jasosin from './کارت - جاسوس.png';
-import addjas from './کارت - اضافه کردن جاسوس.png';
-import addtime from './Frame 15.png';
-import time from './Frame 16.png';
-import naghsh from './Property 1=Variant2.png';
-import naghsh2 from './Property 1=Default.png';
-import naghsh3 from './Property 1=Variant2 (1).png'
-import naghsh4 from './Property 1=Default (1).png'
+import eye from '../Logo.svg';
+import close from '../Vector.svg';
+import Back from '../Group.svg';
+import Plant from '../logo gia.png';
+import addicon from '../کارت - اضافه کردن بازیکن.png';
+import icon from '../پشت کارت.png';
+import iconcross from '../Group 6.png';
+import jasosin from '../کارت - جاسوس.png';
+import addjas from '../کارت - اضافه کردن جاسوس.png';
+import addtime from '../Frame 15.png';
+import time from '../Frame 16.png';
+import naghsh from '../Property 1=Variant2.png';
+import joker from '../Property 1=Default.png';
+import sheriff from '../Property 1=Variant2 (1).png'
+import sheriffOff from '../Property 1=Default (1).png'
 
 function StatusPage() {
     const [players, setPlayers] = useState([]);
@@ -22,16 +22,16 @@ function StatusPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalImage, setModalImage] = useState(null);
     const [extraImage, setExtraImage] = useState(null);
-    const [currentImage, setCurrentImage] = useState(naghsh2);
-    const [currentImage1, setCurrentImage1] = useState(naghsh4);
+    const [currentImage, setCurrentImage] = useState(joker);
+    const [currentImage1, setCurrentImage1] = useState(sheriffOff);
 
     const handleImageClicke = () => {
-      setCurrentImage1((prevImage) => (prevImage === naghsh4 ? naghsh3 : naghsh4));
+      setCurrentImage1((prevImage) => (prevImage === sheriffOff ? sheriff : sheriffOff));
     };
   
 
     const handleImageClicked = () => {
-      setCurrentImage((prevImage) => (prevImage === naghsh2 ? naghsh : naghsh2));
+      setCurrentImage((prevImage) => (prevImage === joker ? naghsh : joker));
     };
   
     const handleImageClick = (imageSrc) => {
@@ -54,7 +54,7 @@ function StatusPage() {
             const newJasos = { id: Date.now(), name: `جاسوس ${jasos.length + 1}` };
             setJasos([...jasos, newJasos]);
         } else {
-            alert("فقط ۲ جاسوس می‌توانید اضافه کنید");
+            alert("فقط 2 جاسوس می‌توانید اضافه کنید");
         }
     };
 
@@ -63,11 +63,11 @@ function StatusPage() {
     };
 
     const addPlayer = () => {
-        if (players.length < 4) {
+        if (players.length < 3) {
             const newPlayer = { id: Date.now(), name: `بازیکن ${players.length + 1}` };
             setPlayers([...players, newPlayer]);
         } else {
-            alert("فقط ۴ بازیکن می‌توانید اضافه کنید!");
+            alert("فقط 3 بازیکن می‌توانید اضافه کنید!");
         }
     };
 
@@ -103,13 +103,13 @@ function StatusPage() {
         <>
             <div className='head'>
                 <div className='container'>
-                    <span className="head-bz">
+                    <span className="head-bc">
                         <img src={Back} className="back" />
-                        <img src={Zarb} className="zarb" />
+                        <img src={close} className="close-cross" />
                     </span>
                     <img src={eye} className='eye' />
-                    <span className='h-head'>
-                        <h1 className='h-text'>بازیکنان</h1>
+                    <span className='span-text'>
+                        <h1 className='text-one'>بازیکنان</h1>
                         <div className="player-count">{players.length}</div>
                     </span>
 
@@ -126,7 +126,7 @@ function StatusPage() {
                                 <div key={player.id} className="player-card">
                                     <img
                                         onClick={() => removePlayer(player.id)}
-                                        src={iconzarb}
+                                        src={iconcross}
                                         className='remove-btn'
                                     />
                                     <img
@@ -141,8 +141,8 @@ function StatusPage() {
                     </div>
 
                     <div className='hr'></div>
-                    <span className='h-head' id='h-head'>
-                        <h1 className='h-text'>تعداد جاسوس ها</h1>
+                    <span className='span-text' id='span-text'>
+                        <h1 className='text-one'>تعداد جاسوس ها</h1>
                         <div className="player-count">{jasos.length}</div>
                     </span>
 
@@ -159,7 +159,7 @@ function StatusPage() {
                                 <div key={jas.id} className="player-card">
                                     <img
                                         onClick={() => removeJasos(jas.id)}
-                                        src={iconzarb}
+                                        src={iconcross}
                                         className='remove-btn'
                                     />
                                     <img
@@ -174,10 +174,10 @@ function StatusPage() {
                     </div>
 
                     <div className='hr' id='hr'></div>
-                    <span className='h-head' id='s-head'>
-                        <h1 className='h-text'> دسته بندی کلمات</h1>
+                    <span className='span-text' id='span-text'>
+                        <h1 className='text-one '> دسته بندی کلمات</h1>
                     </span>
-                    <div className='contin'>
+                    <div className='container-div'>
                         <div className='player-list'>
                         <img
                             src={addtime}
@@ -204,8 +204,8 @@ function StatusPage() {
                     </div>
                     </div>
                     <div className='hr' id='hr-div'></div>
-                    <span className='h-head' id='p-head'>
-                        <h1 className='h-text'> نقش های خاص</h1>
+                    <span className='span-text' id='span-text'>
+                        <h1 className='text-one'> نقش های خاص</h1>
                     </span>
                     <div className='role'>
       <img
@@ -222,7 +222,7 @@ function StatusPage() {
 <button className='but-top'>مرحله بعدی</button>
 
       </div>
-                    <img src={giah} className='giah' />
+                    <img src={Plant} className='Plant' />
                 </div>
             </div>
         </>

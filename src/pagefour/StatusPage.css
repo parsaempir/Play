@@ -9,18 +9,18 @@
     border-radius: 50px;
     position: relative;
 }
-.head-bz{
+.head-bc{
     display: flex;
 justify-content: space-between;
 }
 .back{
-   position: relative;
-   left: 35px;
-   top: 35px;
+  position: relative;
+  left: 35px;
+  top: 35px;
 }
-.zarb{
+.close-cross{
     position: relative;
-   right: 35px;
+    right: 35px;
     top: 35px;
 }
 .eye{
@@ -30,7 +30,7 @@ justify-content: space-between;
     width: 114px;
     top: 39px;
 }
-.giah{
+.Plant{
     position: absolute; 
     bottom: 0px;
     left: 50%; 
@@ -94,7 +94,7 @@ background-color: transparent;
         z-index: 100;
 
       }
-      .h-head{
+      .span-text{
 display: flex;
 flex-direction: row-reverse;
 position: relative;
@@ -102,7 +102,7 @@ right: 50px;
 top: 90px;
 z-index: 100;
       }
-  .h-text{
+  .text-one{
 font-weight: bold;
 color: white;
   }
@@ -127,7 +127,7 @@ color: white;
   }
           
       
-  #h-head{
+  #span-text{
 position: relative;
 top: 100px;
      } 
@@ -200,13 +200,13 @@ bottom: 170px;
   
  
   
-.contin{display: flex;
+  .container-div{display: flex;
     flex-direction: row-reverse;
     position: relative;
     right: 50px;
     top: 110px;
     z-index: 100;}
-    .iconzrb{
+    /*.iconzrb{
         position: absolute;
         right: 57px;
            
@@ -218,15 +218,12 @@ bottom: 170px;
            align-items: center;
            z-index: 100;
 
-    }
+    }*/
     .bold{
     color: #FFB800;
     font-weight: bold
     }
-    #s-head{
-        position: relative;
-        top: 110px;
-    }
+   
     #hr-div{
          position: relative;
          top: 120px;
