@@ -1,5 +1,5 @@
 import './App.css';
-import Chooseyourcard from './pagefour/StatusPage';
+import Chooseyourcard from './Chooseyourcard';
 function App() {
   return (
     <>
