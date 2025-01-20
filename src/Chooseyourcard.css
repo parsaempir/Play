@@ -223,7 +223,7 @@ font-size: 1.2rem;
      }
      .container{
         background-color: #891515;
-        width: 430px;
+        width: 100%;
         height: 932px;
         border-radius: 50px;
         position: relative;
