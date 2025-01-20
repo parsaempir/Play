@@ -214,10 +214,19 @@ font-size: 1.2rem;
   }
 
   @media only screen and (max-width: 768px) {
-    .container {
-      width: 100%;
-      padding: 0;
+  
+      .head{
+        display: flex;
+        justify-content: center;
+     }
+     .container{
+        background-color: #891515;
+        width: 430px;
+        height: 932px;
+        border-radius: 50px;
+        position: relative;
     }
+    
   
     .Plant-png {
       width: 100%;
