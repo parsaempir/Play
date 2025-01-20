@@ -10,6 +10,11 @@ function Chooseyourcard() {
   const [showModal, setShowModal] = useState(false);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
+  if (showModal) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
 
   const handleWheelMinutes = (event) => {
     if (event.deltaY < 0) {
@@ -75,7 +80,7 @@ function Chooseyourcard() {
         <div className="modal-overlay">
           <div className="modal">
             <div className="head-mod">
-            <div>زمان بازی</div>
+            <div className="text-heder">زمان بازی</div>
             <div className="time-selector">
               <div
                 className="time-box"
