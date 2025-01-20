@@ -217,7 +217,7 @@ font-size: 1.2rem;
     .container {
       width: 100%;
       margin: auto;
-      padding: auto;
+      padding: 0;
     }
   
     .Plant-png {
