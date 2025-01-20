@@ -85,7 +85,6 @@
     backdrop-filter: blur(5px);
   }
   
-  /* مودال خود */
   .modal {
     background-color: #1E2133;
     padding: 15px;
@@ -99,14 +98,12 @@
   
   
   
-  /* عنوان مودال */
   .modal h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
     color: #333;
   }
   
-  /* استایل برای دکمه‌ها */
   .modal-buttons {
     display: flex;
     justify-content: center;
