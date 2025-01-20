@@ -212,34 +212,82 @@ font-size: 1.2rem;
     position: relative;
     top: 15px;
   }
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
+    .container {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      position: relative;
+    }
+  
+    .Plant-png {
+      width: 80%;
+      height: auto;
+      position: relative;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .head-bc {
+      display: block;
+      text-align: center;
+    }
+  
+    .back, .close {
+      position: static;
+      margin: 10px;
+    }
+  
     .eye {
-      width: 60px;
-      height: 40px;
+      width: 80px;
+      height: 45px;
+      margin: 0 auto;
+      display: block;
+      top: 20px;
     }
   
     .titr {
-      font-size: 18px;
+      font-size: 20px;
+      position: static;
+      top: 0;
+      text-align: center;
+    }
+  
+    .but-div {
+      position: static;
+      top: 0;
+      text-align: center;
     }
   
     .but-top {
-      font-size: 18px;
-      height: 50px;
+      font-size: 30px;
+      height: 60px;
+      border-radius: 5px 0px 30px 30px;
     }
   
     .modal {
-      padding: 15px;
+      width: 90%;
+      height: auto;
+      padding: 10px;
     }
   
-    .time-number.active {
-      font-size: 1.2rem;
-    }
-  
-    .time-number.less {
+    .start-btn, .back-btn {
+      width: 100px;
+      height: 40px;
       font-size: 1rem;
     }
   
+    .time-selector {
+      flex-direction: column;
+    }
+  
+    .time-box {
+      margin: 10px 0;
+    }
+  
     .colon {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
+      margin: 10px 0;
     }
   }
