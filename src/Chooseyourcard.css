@@ -212,3 +212,34 @@ font-size: 1.2rem;
     position: relative;
     top: 15px;
   }
+  @media (max-width: 480px) {
+    .eye {
+      width: 60px;
+      height: 40px;
+    }
+  
+    .titr {
+      font-size: 18px;
+    }
+  
+    .but-top {
+      font-size: 18px;
+      height: 50px;
+    }
+  
+    .modal {
+      padding: 15px;
+    }
+  
+    .time-number.active {
+      font-size: 1.2rem;
+    }
+  
+    .time-number.less {
+      font-size: 1rem;
+    }
+  
+    .colon {
+      font-size: 1.2rem;
+    }
+  }
