@@ -213,9 +213,11 @@ font-size: 1.2rem;
     top: 15px;
   }
 
-  @media only screen and (max-width: 768px) {
+  @media (max-width: 480px) {
     body {
       overflow-x: hidden; 
+      margin: 0;
+      padding: 0;
     }
       .head{
         display: flex;
