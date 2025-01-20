@@ -212,82 +212,94 @@ font-size: 1.2rem;
     position: relative;
     top: 15px;
   }
-  @media (max-width: 768px) {
+
+  @media only screen and (max-width: 768px) {
     .container {
       width: 100%;
-      height: auto;
-      border-radius: 20px;
-      position: relative;
+      height: 100vh;
+      border-radius: 0;
+      padding: 0;
     }
   
     .Plant-png {
-      width: 80%;
+      width: 90%;
       height: auto;
-      position: relative;
+      position: absolute;
       bottom: 10px;
       left: 50%;
       transform: translateX(-50%);
     }
   
-    .head-bc {
-      display: block;
-      text-align: center;
+    .back {
+      position: absolute;
+      left: 20px;
+      top: 20px;
     }
   
-    .back, .close {
-      position: static;
-      margin: 10px;
+    .close {
+      position: absolute;
+      right: 20px;
+      top: 20px;
     }
   
     .eye {
-      width: 80px;
-      height: 45px;
-      margin: 0 auto;
-      display: block;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 50px;
+      width: auto;
       top: 20px;
     }
   
     .titr {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
       font-size: 20px;
-      position: static;
-      top: 0;
+      top: 40px;
       text-align: center;
     }
   
     .but-div {
-      position: static;
-      top: 0;
-      text-align: center;
+      position: relative;
+      width: 90%;
+      margin: 0 auto;
+      top: 60px;
     }
   
     .but-top {
-      font-size: 30px;
+      width: 100%;
       height: 60px;
-      border-radius: 5px 0px 30px 30px;
+      font-size: 30px;
     }
   
     .modal {
       width: 90%;
       height: auto;
-      padding: 10px;
-    }
-  
-    .start-btn, .back-btn {
-      width: 100px;
-      height: 40px;
-      font-size: 1rem;
-    }
-  
-    .time-selector {
-      flex-direction: column;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     }
   
     .time-box {
-      margin: 10px 0;
+      margin: 0 5px;
+      top: 10px;
     }
   
     .colon {
+      margin: 0 20px;
       font-size: 1.5rem;
-      margin: 10px 0;
+    }
+  
+    .modal-buttons {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .start-btn,
+    .back-btn {
+      width: 100%;
+      height: 50px;
+      font-size: 1rem;
     }
   }
