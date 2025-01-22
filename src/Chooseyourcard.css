@@ -228,7 +228,7 @@ font-size: 1.2rem;
     
     .container {
       width: 100%;
-      height: auto;
+      height: 750px;
       transform-origin: top center;
       background-image: url(logo\ gia.png);
       background-repeat: no-repeat;
