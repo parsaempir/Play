@@ -1,12 +1,12 @@
 html, body {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .head{
@@ -224,59 +224,22 @@ font-size: 1.2rem;
     top: 15px;
   }
 
-  @media only screen and (max-width: 480px) {
+  @media (max-width: 480px) {
     .container {
-      width: 100%;
-      padding: 15px;
+      transform: scale(0.5); /* کاهش اندازه کل کانتینر */
+      transform-origin: top center; /* نقطه شروع مقیاس‌دهی */
     }
-    .head{
-      display: flex;
-      justify-content: center;
-   }
+  
     .eye {
-      height: 40px;
-      top: 10px;
+      width: 100px; /* کوچکتر کردن چشم‌ها */
+      height: 50px;
     }
   
     .titr {
-      font-size: 16px;
-      top: 60px;
+      font-size: 18px; /* کاهش اندازه فونت */
     }
-  
-    .but-div {
-      top: 120px;
-    }
-  
-    .but-top {
-      font-size: 18px;
-      height: 45px;
-    }
-  
-    .modal {
-      width: 95%;
-      padding: 10px;
-    }
-  
-    .text-heder {
-      font-size: 20px;
-    }
-  
-    .start-btn,
-    .back-btn {
-      font-size: 0.9rem;
-      height: 45px;
-    }
-  
-    .colon {
-      margin: 0 5px;
-      font-size: 1.2rem;
-    }
-  
-    .time-number.active {
-      font-size: 1rem;
-    }
-  
-    .time-number.less {
-      font-size: 0.9rem;
-    }
+  .Plant-png{
+    width: 100%;
+  }
+    
   }
