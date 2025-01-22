@@ -1,5 +1,6 @@
 .head{
     display: flex;
+    justify-content: center;
  }
  .container{
     background-color: #891515;
@@ -212,3 +213,56 @@ font-size: 1.2rem;
     top: 15px;
   }
 
+  @media only screen and (max-width: 480px) {
+    .container {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .eye {
+      height: 40px;
+      top: 10px;
+    }
+  
+    .titr {
+      font-size: 16px;
+      top: 60px;
+    }
+  
+    .but-div {
+      top: 120px;
+    }
+  
+    .but-top {
+      font-size: 18px;
+      height: 45px;
+    }
+  
+    .modal {
+      width: 95%;
+      padding: 10px;
+    }
+  
+    .text-heder {
+      font-size: 20px;
+    }
+  
+    .start-btn,
+    .back-btn {
+      font-size: 0.9rem;
+      height: 45px;
+    }
+  
+    .colon {
+      margin: 0 5px;
+      font-size: 1.2rem;
+    }
+  
+    .time-number.active {
+      font-size: 1rem;
+    }
+  
+    .time-number.less {
+      font-size: 0.9rem;
+    }
+  }
