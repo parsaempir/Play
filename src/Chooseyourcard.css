@@ -228,7 +228,7 @@ font-size: 1.2rem;
     
     .container {
       width: 100%;
-      height: 770px;
+      height: 89vh;
       transform-origin: top center;
       background-image: url(logo\ gia.png);
       background-repeat: no-repeat;
@@ -277,4 +277,13 @@ display: none;
   
 
   }
-  
+  /* برای ویژگی‌های Webkit (Safari, Chrome) */
+.example {
+  -webkit-transform: rotate(45deg); /* Safari, Chrome */
+  transform: rotate(45deg); /* مرورگرهای جدیدتر */
+}
+
+/* برای ویژگی‌های Firefox */
+.example {
+  -moz-transform: rotate(45deg); /* Firefox */
+}
