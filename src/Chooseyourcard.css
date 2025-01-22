@@ -226,7 +226,7 @@ font-size: 1.2rem;
 
   @media (max-width: 480px) {
     .container {
-      transform: scale(0.5); /* کاهش اندازه کل کانتینر */
+      transform: scale(0.9); /* کاهش اندازه کل کانتینر */
       transform-origin: top center; /* نقطه شروع مقیاس‌دهی */
     }
   
@@ -241,5 +241,8 @@ font-size: 1.2rem;
   .Plant-png{
     width: 100%;
   }
-    
+    .but-top{
+      position: relative;
+      top: 33px;
+    }
   }
