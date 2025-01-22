@@ -218,7 +218,10 @@ font-size: 1.2rem;
       width: 100%;
       padding: 15px;
     }
-  
+    .head{
+      display: flex;
+      justify-content: center;
+   }
     .eye {
       height: 40px;
       top: 10px;
