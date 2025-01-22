@@ -1,5 +1,5 @@
 html, body {
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 body {
@@ -224,5 +224,57 @@ font-size: 1.2rem;
     top: 15px;
   }
 
- 
+  @media (max-width: 480px) {
+    
+    .container {
+      width: 100%;
+      height: 800px;
+      transform-origin: top center;
+      background-image: url(logo\ gia.png);
+      background-repeat: no-repeat;
+      background-position: 0px  50px;
+      background-size: cover;
+
+    }
+  
+    .Plant-png {
+max-width: 1000px;
+  height: 700px;
+object-fit: cover;
+display: none;
+  
+    }
+  
+    
+  
+    .eye {
+      position: absolute;
+      
+      height: 50px;
+    }
+  
+    .back-logo {
+      margin-left: 50px;
+      top: 100px;
+    height: 500px;
+    }
+  
+    .titr {
+     position: relative;
+      top: 100px;
+    }
+  
+    .but-div {
+      top: 150px;
+    }
+  
+    .but-top {
+      height: 50px;
+      font-size: 1.2rem;
+      position: relative;
+
+}
+  
+
+  }
   
