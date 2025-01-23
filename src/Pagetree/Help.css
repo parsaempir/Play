@@ -28,7 +28,7 @@ justify-content: space-between;
    left: 35px;
    top: 35px;
 }
-.close{
+.close-one{
     position: relative;
    right: 35px;
     top: 35px;
@@ -113,7 +113,7 @@ bottom: 20px;
   top: 45px;
 }
 
-.hr{
+.hr-one{
   height: 1px;
 margin: 0px 50px 0px 50px ;
   background-color:  #ffb7003e;

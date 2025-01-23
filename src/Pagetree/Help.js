@@ -1,9 +1,9 @@
 import './Help.css';
-import close from './Vector.svg';
-import Back from './Group.svg';
-import Plant from './logo gia.png';
+import close from '../Pictures/Vector.svg';
+import Back from '../Pictures/Group.svg';
+import Plant from '../pagefive/logo gia.png';
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 function Help() {
   const [selectedWord, setSelectedWord] = useState("بازی"); 
 
@@ -16,18 +16,18 @@ function Help() {
       <div className="head">
         <div className="container">
           <span className="head-bc">
-            <img src={Back} className="back" />
-            <img src={close} className="zarb" />
+           <Link to='/Home'><img src={Back} className="back" /></Link> 
+            <Link to='/Home'><img src={close} className="close-one" /></Link>
 
           </span>
 
           <b className="bold">راهنمای بازی</b>
-<div className='hr'></div>   
+<div className='hr-one'></div>   
 
-<button className='but'>
+<Link to='/StatusPage'><button className='but'>
 !شروع بازی
 
-</button>
+</button></Link>
 <div className='head-container'>
        <div className="button-group">
             <button

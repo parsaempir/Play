@@ -68,9 +68,9 @@ body {
     .but-div{
         position: relative;
         z-index: 100;
-        top:194px;
+        top:186px;
      }
-      .but-top{
+      .but-top-one{
   width: 100%;
         height: 70px;
         background-color: #FFB800;

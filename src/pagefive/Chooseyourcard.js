@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./Chooseyourcard.css";
-import Plant from "./logo gia.png";
-import backlogo from "./Group 12.png";
-import close from "./Vector.svg";
-import Back from "./Group.svg";
-import eye from "./Logo.svg";
-
+import Plant2 from "./logo gia.png";
+import backlogo from "../Pictures/Group 12.png";
+import close from "../Pictures/Vector.svg";
+import Back from "../Pictures/Group.svg";
+import eye from "../Pictures/Logo.svg";
+import { Link } from "react-router-dom";
 function Chooseyourcard() {
   const [showModal, setShowModal] = useState(false);
   const [minutes, setMinutes] = useState(0);
@@ -78,18 +78,18 @@ function Chooseyourcard() {
       <div className="head">
         <div className="container">
           <span className="head-bc">
-            <img src={Back} className="back" />
-            <img src={close} className="close" />
+          <Link to='/StatusPage'>  <img src={Back} className="back" /></Link>
+          <Link to='/Home'> <img src={close} className="close" /></Link>
           </span>
           <img src={eye} className="eye" />
           <h2 className="titr">نوبت</h2>
           <img src={backlogo} className="back-logo" />
           <div className="but-div">
-            <button className="but-top" onClick={() => setShowModal(true)}>
+            <button className="but-top-one" onClick={() => setShowModal(true)}>
               شروع
             </button>
           </div>
-          <img src={Plant} className="Plant-png" />
+          <img src={Plant2} className="Plant-png" />
         </div>
       </div>
 

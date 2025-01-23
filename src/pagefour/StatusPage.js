@@ -1,20 +1,21 @@
 import './StatusPage.css';
 import React, { useState } from 'react';
-import eye from '../Logo.svg';
-import close from '../Vector.svg';
-import Back from '../Group.svg';
-import Plant from '../logo gia.png';
-import addicon from '../کارت - اضافه کردن بازیکن.png';
-import icon from '../پشت کارت.png';
-import iconcross from '../Group 6.png';
-import jasosin from '../کارت - جاسوس.png';
-import addjas from '../کارت - اضافه کردن جاسوس.png';
-import addtime from '../Frame 15.png';
-import time from '../Frame 16.png';
-import naghsh from '../Property 1=Variant2.png';
-import joker from '../Property 1=Default.png';
-import sheriff from '../Property 1=Variant2 (1).png'
-import sheriffOff from '../Property 1=Default (1).png'
+import { Link } from 'react-router-dom';
+import eye from '../Pictures/Logo.svg';
+import close from '../Pictures/Vector.svg';
+import Back from '../Pictures/Group.svg';
+import Plant from '../pagefive/logo gia.png';
+import addicon from '../Pictures/کارت - اضافه کردن بازیکن.png';
+import icon from '../Pictures/پشت کارت.png';
+import iconcross from '../Pictures/Group 6.png';
+import jasosin from '../Pictures/کارت - جاسوس.png';
+import addjas from '../Pictures/کارت - اضافه کردن جاسوس.png';
+import addtime from '../Pictures/Frame 15.png';
+import time from '../Pictures/Frame 16.png';
+import naghsh from '../Pictures/Property 1=Variant2.png';
+import joker from '../Pictures/Property 1=Default.png';
+import sheriff from '../Pictures/Property 1=Variant2 (1).png';
+import sheriffOff from '../Pictures/Property 1=Default (1).png';
 
 function StatusPage() {
     const [players, setPlayers] = useState([]);
@@ -81,7 +82,7 @@ function StatusPage() {
     
     const Modal = ({ onClose, onAddImage }) => {
         return (
-            <div className="modal">
+            <div className="modal-one">
                 <div className="modal-content">
                     <span className="close" onClick={onClose}>&times;</span>
                     <ul className='bold'>
@@ -104,8 +105,8 @@ function StatusPage() {
             <div className='head'>
                 <div className='container'>
                     <span className="head-bc">
-                        <img src={Back} className="back" />
-                        <img src={close} className="close-cross" />
+                        <Link to='/Home'><img src={Back} className="back" /></Link>
+                      <Link to='/Home'> <img src={close} className="close-cross" /></Link> 
                     </span>
                     <img src={eye} className='eye' />
                     <span className='span-text'>
@@ -142,7 +143,7 @@ function StatusPage() {
 
                     <div className='hr'></div>
                     <span className='span-text' id='span-text'>
-                        <h1 className='text-one'>تعداد جاسوس ها</h1>
+                        <h1 className='h-one'>تعداد جاسوس ها</h1>
                         <div className="player-count">{jasos.length}</div>
                     </span>
 
@@ -175,7 +176,7 @@ function StatusPage() {
 
                     <div className='hr' id='hr'></div>
                     <span className='span-text' id='span-text'>
-                        <h1 className='text-one '> دسته بندی کلمات</h1>
+                        <h1 className='h-one '> دسته بندی کلمات</h1>
                     </span>
                     <div className='container-div'>
                         <div className='player-list'>
@@ -205,7 +206,7 @@ function StatusPage() {
                     </div>
                     <div className='hr' id='hr-div'></div>
                     <span className='span-text' id='span-text'>
-                        <h1 className='text-one'> نقش های خاص</h1>
+                        <h1 className='h-one'> نقش های خاص</h1>
                     </span>
                     <div className='role'>
       <img
@@ -218,8 +219,8 @@ function StatusPage() {
         alt="Switchable"
         onClick={handleImageClicke}
       /></div>
-      <div className='but-div'>
-<button className='but-top'>مرحله بعدی</button>
+      <div className='but-div-one'>
+<Link to='/Chooseyourcard'><button className='but-top'>مرحله بعدی</button></Link>
 
       </div>
                     <img src={Plant} className='Plant' />
