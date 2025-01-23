@@ -85,13 +85,10 @@ function StatusPage() {
             <div className="modal-one">
                 <div className="modal-content">
                     <span className="close" onClick={onClose}>&times;</span>
-                    <ul className='bold'>
+                  <p className='bold-p'>رنگ</p>
+                  <p className='bold-p'>زمان</p>
+                  <p className='bold-p'>مورچه</p>
 
-                        <li>رنگ</li>
-                        <li>زمان</li>
-                        <li>مورچه</li>
-                    </ul>
-         
                    
                     <span className='btn-span'>
                     <button onClick={onAddImage}>انتخاب</button><br/></span>

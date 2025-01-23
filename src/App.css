@@ -1,0 +1,11 @@
+body{
+    font-family: 'CinemaFont';
+
+}
+@font-face {
+    font-family: 'CinemaFont';
+    src: url('/Cinema\ Font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  

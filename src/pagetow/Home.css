@@ -1,4 +1,10 @@
-
+@font-face {
+    font-family: 'CinemaFont';
+    src: url('/Cinema\ Font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
 .head{
     display: flex;
     justify-content: center;
@@ -38,7 +44,7 @@ border-radius: 50px;
     border-radius: 15px;
     font-size: 40px;
     font-weight: bold;
-    font-family: 'Playfair Display', serif;
+    font-family: 'CinemaFont'; 
     cursor: pointer;
 }
 .but-tow{
