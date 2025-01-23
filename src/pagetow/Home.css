@@ -1,3 +1,4 @@
+
 .head{
     display: flex;
     justify-content: center;
@@ -52,7 +53,7 @@ border-radius: 50px;
     top: 140px;
     z-index: 100;
     border: none;
-    font-family: 'Playfair Display', serif;
-    cursor: pointer;
+    font-family: 'CinemaFont'; 
+        cursor: pointer;
 
 }

@@ -224,7 +224,7 @@ font-size: 1.2rem;
     top: 15px;
   }
 
-  @media (max-width: 480px) {
+  /*@media (max-width: 480px) {
   
     .container {
       width: 100%;
@@ -276,5 +276,5 @@ display: none;
 }
   
 
-  }
+  }*/
 
