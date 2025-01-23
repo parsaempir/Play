@@ -1,4 +1,9 @@
-
+@font-face {
+  font-family: 'CinemaFont';
+  src: url('/Cinema\ Font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
     width: 100%;
     height: 100%;
@@ -61,11 +66,13 @@ body {
         left: 215px;
         top: 110px;
         z-index: 100;
+        font-family: 'CinemaFont';
+
     }
     .but-div{
         position: relative;
         z-index: 100;
-        top:186px;
+        top:190px;
      }
       .but-top-one{
   width: 100%;
@@ -78,6 +85,8 @@ body {
         border: none;
         cursor: pointer;
   font-weight: bold;
+  font-family: 'CinemaFont';
+
       }
 .modal-overlay {
     position: fixed;
@@ -110,6 +119,8 @@ body {
     font-size: 1.8rem;
     margin-bottom: 20px;
     color: #333;
+    font-family: 'CinemaFont';
+
   }
   
   .modal-buttons {
@@ -130,6 +141,8 @@ body {
     cursor: pointer;
     font-weight: bold;
     font-size: 24px;
+    font-family: 'CinemaFont';
+
   }
   
   .start-btn {
@@ -172,12 +185,16 @@ body {
     margin: 5px 0;
     opacity: 1;
     transition: opacity 0.5s ease, transform 0.5s ease;
+    font-family: 'CinemaFont';
+
   }
   
   .time-number.active {
     color: white; 
     font-size: 1.5rem;
     font-weight: bold;
+    font-family: 'CinemaFont';
+
   }
   
   .time-number.less {
@@ -219,6 +236,8 @@ font-size: 1.2rem;
     font-size: 24px;
     position: relative;
     top: 15px;
+    font-family: 'CinemaFont';
+
   }
 
   /*@media (max-width: 480px) {
