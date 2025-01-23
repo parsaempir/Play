@@ -84,10 +84,10 @@ function StatusPage() {
         return (
             <div className="modal-one">
                 <div className="modal-content">
-                    <span className="close" onClick={onClose}>&times;</span>
-                  <p className='bold-p'>رنگ</p>
-                  <p className='bold-p'>زمان</p>
-                  <p className='bold-p'>مورچه</p>
+                    <span className="close-modal" onClick={onClose}>&times;</span>
+                  <span className='bold-span'>رنگ</span><br/>
+                  <span className='bold-span'>زمان</span><br/>
+                  <span className='bold-span'>مورچه</span>
 
                    
                     <span className='btn-span'>

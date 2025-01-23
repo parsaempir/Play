@@ -166,7 +166,7 @@ top: 100px;
     z-index: 10000;
   }
   
-  .close {
+  .close-modal {
     position: absolute;
 bottom: 170px;  
   right: 5px;
@@ -194,7 +194,7 @@ bottom: 170px;
     display: flex;
     justify-content: center;
     position: relative;
- 
+ top: 10px;
   }
 
   
@@ -219,9 +219,10 @@ bottom: 170px;
            z-index: 100;
 
     }*/
-    .bold-p{
+    .bold-span{
     color: #FFB800;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     font-weight: bold;
     }
    
