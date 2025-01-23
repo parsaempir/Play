@@ -97,6 +97,8 @@ text-align: end;
     font-weight: bold;
 position: relative;
 bottom: 20px;
+font-family: 'CinemaFont';
+
   }
   .span-one{
 
@@ -109,6 +111,8 @@ bottom: 20px;
     font-weight: bold;
     position: relative;
     bottom: 20px;
+    font-family: 'CinemaFont';
+
   }
   .line{
     position: relative;
