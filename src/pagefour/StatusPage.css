@@ -194,7 +194,7 @@ bottom: 170px;
     display: flex;
     justify-content: center;
     position: relative;
- top: 10px;
+ top: 45px;
   }
 
   
@@ -224,6 +224,8 @@ bottom: 170px;
     display: flex;
     justify-content: center;
     font-weight: bold;
+    position: relative;
+    top: 20px;
     }
    
     #hr-div{
