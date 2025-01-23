@@ -1,9 +1,9 @@
 @font-face {
-  font-family: 'CinemaFont';
-  src: url('/Cinema\ Font.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+    font-family: 'CinemaFont';
+    src: url('/Cinema\ Font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 .head{
     display: flex;
     justify-content: center;
@@ -42,7 +42,7 @@ justify-content: space-between;
 .bold{
     font-size: 40px;
     position: relative;
-    left: 130px;
+    left: 140px;
     top: 50px;
     color: white;
     font-weight: bold;
@@ -53,8 +53,7 @@ justify-content: space-between;
  
   
   .word-button {
-    font-family: 'CinemaFont';
-
+   
     cursor: pointer;
     background-color: transparent;
     border: none;
@@ -62,6 +61,8 @@ justify-content: space-between;
     color: white;
     transition: background-color 0.3s ease;
     border-bottom: 2px solid transparent; 
+    font-family: 'CinemaFont';
+
   }
   
   .word-button.active {
@@ -74,7 +75,6 @@ justify-content: space-between;
     position: relative;
     top: 170px;
     z-index: 100;
-    font-family: 'CinemaFont';
 
   }
 .description{
@@ -90,7 +90,6 @@ text-align: end;
     color: white;
     font-size: 13px;
     font-weight: bold;
-    font-family: 'CinemaFont';
 
   }
   .text-one{
@@ -98,8 +97,6 @@ text-align: end;
     font-weight: bold;
 position: relative;
 bottom: 20px;
-font-family: 'CinemaFont';
-
   }
   .span-one{
 
@@ -112,8 +109,6 @@ font-family: 'CinemaFont';
     font-weight: bold;
     position: relative;
     bottom: 20px;
-    font-family: 'CinemaFont';
-
   }
   .line{
     position: relative;
@@ -122,8 +117,7 @@ font-family: 'CinemaFont';
   }
  #yellow{
   position: relative;
-  top: 30px; 
-
+  top: 30px;
  }
 .line-span{
   position: relative;
@@ -150,9 +144,8 @@ margin: 0px 50px 0px 50px ;
   top: 700px;
   z-index: 100;
   border: none;
-  cursor: pointer;
   font-family: 'CinemaFont';
-
+  cursor: pointer;
 
 }
 .head-container{

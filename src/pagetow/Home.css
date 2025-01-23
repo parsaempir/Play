@@ -34,7 +34,8 @@ border-radius: 50px;
 }
 .but-one{
     width: 330px;
-    height: 70px;
+    padding: 10px 0px 20px  0px;
+
     position: relative;
     left: 50px;
     top: 125px;
@@ -49,7 +50,7 @@ border-radius: 50px;
 }
 .but-tow{
     width: 330px;
-    height: 70px;
+   padding: 10px 0px 20px  0px;
     background-color: #FFB800;
     color: white;
     font-size: 40px;
