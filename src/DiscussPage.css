@@ -1,0 +1,121 @@
+
+.head-close{
+  display: flex;
+justify-content: end;
+}
+
+.close{
+   position: relative;
+  right: 35px;
+   top: 35px;
+}
+  .game-container {
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    top: 170px;
+    font-weight: bold;
+    font-family: 'CinemaFont';
+  }
+  
+  
+  
+  .timer-circle {
+    position: relative;
+    width: 213px;
+    height: 213px;
+    margin: 0 auto;
+  }
+  
+  .timer-circle svg {
+    transform: rotate(-90deg);
+  }
+  
+  .timer-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .buttons {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   position: relative;
+   left: 120px;
+   top: 20px;
+  }
+  
+.btn.pause{
+  width: 147px;
+  height: 43px;
+  background-color: #FFB800;
+        color: white;
+        font-size: 25px;
+      z-index: 100;
+        border: none;
+        cursor: pointer;
+  font-weight: bold;
+  font-family: 'CinemaFont';
+  border-radius: 15px;
+  padding: 5px 0px 10px  0px;
+
+}
+
+  .btn.reset{
+    width: 147px;
+  height: 43px;
+  background-color: transparent;
+  border: 2px #FFB800 solid;
+        color: white;
+        font-size: 25px;
+      z-index: 100;
+        cursor: pointer;
+  font-weight: bold;
+  font-family: 'CinemaFont';
+  border-radius: 15px;
+  padding: 0px 0px 5px  0px;
+
+  }
+
+
+  
+ .game-over{
+  position: relative;
+  z-index: 1000;
+  top: 328px;
+
+ }
+  
+  .game-over-btn {
+    width: 100%;
+    padding: 10px 0px 20px  0px;
+    background-color: #FFB800;
+          color: white;
+          font-size: 40px;
+          border-radius: 5px 0px 50px 50px;
+        z-index: 100;
+          border: none;
+          cursor: pointer;
+    font-weight: bold;
+    font-family: 'CinemaFont';
+  }
+.h-text-head{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 100px;
+  z-index: 1000;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'CinemaFont';
+}

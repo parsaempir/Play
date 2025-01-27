@@ -132,9 +132,9 @@ function Chooseyourcard() {
                 </div>
               </div>
               <div className="modal-buttons">
-                <button className="start-btn" onClick={handleStart}>
+               <Link to='/DiscussPage'><button className="start-btn" onClick={handleStart}>
                   شروع
-                </button>
+                </button></Link> 
                 <button className="back-btn" onClick={() => setShowModal(false)}>
                   بازگشت
                 </button>
