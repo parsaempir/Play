@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './DiscussPage.css';
-import Plant2 from './pagefive/logo gia.png';
-import close from "./Pictures/Vector.svg";
+import Plant2 from '../pagefive/logo gia.png';
+import close from "../Pictures/Vector.svg";
 import { Link } from 'react-router-dom';
-import eye from "./Pictures/Logo.svg";
+import eye from "../Pictures/Logo.svg";
 
 const Countdown = () => {
   const [seconds, setSeconds] = useState(60); // مقدار اولیه زمان
@@ -76,7 +76,7 @@ const Countdown = () => {
     </div>
     
     <div className="game-over">
-          <button className="btn game-over-btn">!پایان بازی</button>
+        <Link to='/DiscussPagetwo'>  <button className="btn game-over-btn">!پایان بازی</button></Link>
         </div>
     <img src={Plant2} className="Plant-png" />
 
