@@ -62,7 +62,7 @@ justify-content: space-between;
     transition: background-color 0.3s ease;
     border-bottom: 2px solid transparent; 
     font-family: 'CinemaFont';
-
+ 
   }
   
   .word-button.active {
@@ -90,8 +90,10 @@ text-align: end;
     color: white;
     font-size: 13px;
     font-weight: bold;
+    overflow: scroll;
+max-height: 320px;
 
-  }
+}
   .text-one{
     color: white;
     font-weight: bold;
@@ -121,11 +123,11 @@ font-family: 'CinemaFont';
   }
  #yellow{
   position: relative;
-  top: 30px;
+  top: 7px;
  }
 .line-span{
   position: relative;
-  top: 45px;
+  top: 22px;
 }
 
 .hr-one{
@@ -155,4 +157,20 @@ margin: 0px 50px 0px 50px ;
 .head-container{
   position: relative;
   bottom: 70px;
+}
+#yellow-one{
+  position: relative;
+  top: 37px;
+}
+#line-span{
+  position: relative;
+  top: 50px;
+}
+#yellow-two{
+  position: relative;
+  top: 25px;
+}
+#line-span-one{
+  position: relative;
+  top: 40px;
 }
