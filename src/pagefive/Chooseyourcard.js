@@ -1,21 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Chooseyourcard.css";
 import Plant2 from "./logo gia.png";
 import backlogo from "../Pictures/Group 12.png";
 import close from "../Pictures/Vector.svg";
 import Back from "../Pictures/Group.svg";
 import eye from "../Pictures/Logo.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 function Chooseyourcard() {
   const [showModal, setShowModal] = useState(false);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
   const [isScrollingMinutes, setIsScrollingMinutes] = useState(false);
   const [isScrollingSeconds, setIsScrollingSeconds] = useState(false);
+  const navigate = useNavigate();
 
-  if (showModal) {
-    document.body.style.overflow = "hidden";
-  }
+  const handleStart = () => {
+    setShowModal(false);
+    navigate(`/DiscussPage?minutes=${minutes}&seconds=${seconds}`);
+  };
+
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = "hidden"; 
+    } else {
+      document.body.style.overflow = "auto"; 
+    }
+  }, [showModal]);
 
   const handleWheelMinutes = (event) => {
     if (!isScrollingMinutes) {
@@ -63,23 +74,17 @@ function Chooseyourcard() {
       } else {
         setSeconds((prev) => (prev - 1 < 0 ? 59 : prev - 1));
       }
-      setTimeout(() => setIsScrollingSeconds(false), 1); 
+      setTimeout(() => setIsScrollingSeconds(false), 300); 
     }
   };
-
-  const handleStart = () => {
-    setShowModal(false);
-  };
-
-  const formatTime = (time) => time.toString().padStart(2, "0");
 
   return (
     <>
       <div className="head">
         <div className="container">
           <span className="head-bc">
-          <Link to='/StatusPage'>  <img src={Back} className="back" /></Link>
-          <Link to='/Home'> <img src={close} className="close" /></Link>
+            <Link to='/StatusPage'><img src={Back} className="back" /></Link>
+            <Link to='/Home'><img src={close} className="close" /></Link>
           </span>
           <img src={eye} className="eye" />
           <h2 className="titr">نوبت</h2>
@@ -105,13 +110,9 @@ function Chooseyourcard() {
                   onTouchMove={handleTouchMoveMinutes}
                 >
                   <div className="time-display">
-                    <div className="time-number less">
-                      {formatTime(minutes === 0 ? 10 : minutes - 1)}
-                    </div>
-                    <div className="time-number active">{formatTime(minutes)}</div>
-                    <div className="time-number less">
-                      {formatTime(minutes === 10 ? 0 : minutes + 1)}
-                    </div>
+                    <div className="time-number less">{minutes === 0 ? 10 : minutes - 1}</div>
+                    <div className="time-number active">{minutes}</div>
+                    <div className="time-number less">{minutes === 10 ? 0 : minutes + 1}</div>
                   </div>
                 </div>
                 <span className="colon">:</span>
@@ -121,23 +122,15 @@ function Chooseyourcard() {
                   onTouchMove={handleTouchMoveSeconds}
                 >
                   <div className="time-display">
-                    <div className="time-number less">
-                      {formatTime(seconds === 0 ? 59 : seconds - 1)}
-                    </div>
-                    <div className="time-number active">{formatTime(seconds)}</div>
-                    <div className="time-number less">
-                      {formatTime(seconds === 59 ? 0 : seconds + 1)}
-                    </div>
+                    <div className="time-number less">{seconds === 0 ? 59 : seconds - 1}</div>
+                    <div className="time-number active">{seconds}</div>
+                    <div className="time-number less">{seconds === 59 ? 0 : seconds + 1}</div>
                   </div>
                 </div>
               </div>
               <div className="modal-buttons">
-               <Link to='/DiscussPage'><button className="start-btn" onClick={handleStart}>
-                  شروع
-                </button></Link> 
-                <button className="back-btn" onClick={() => setShowModal(false)}>
-                  بازگشت
-                </button>
+                <button className="start-btn" onClick={handleStart}>شروع</button>
+                <button className="back-btn" onClick={() => setShowModal(false)}>بازگشت</button>
               </div>
             </div>
           </div>

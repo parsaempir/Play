@@ -94,6 +94,8 @@ text-align: end;
 max-height: 320px;
 display: flex;
 flex-direction: column;
+
+
 }
   .text-one{
     color: white;
