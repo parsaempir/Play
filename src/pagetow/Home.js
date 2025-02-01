@@ -6,12 +6,24 @@ import Plant from '../Pictures/Group 2 (1).png';
 import { Link } from 'react-router-dom';
 function Home(){
     useEffect(() => {
-        // قفل کردن صفحه در حالت عمودی (portrait)
-        if (window.screen.orientation) {
-          window.screen.orientation.lock("portrait").catch((err) => {
-            console.error("Error locking orientation:", err);
-          });
-        }
+        // جلوگیری از چرخش به حالت افقی
+        const handleOrientation = (e) => {
+          if (window.matchMedia("(orientation: landscape)").matches) {
+            // جلوگیری از چرخش به افقی
+            document.body.style.display = 'none';
+          } else {
+            document.body.style.display = 'block';
+          }
+        };
+    
+        window.addEventListener("resize", handleOrientation);
+        
+        // فراخوانی اولیه
+        handleOrientation();
+    
+        return () => {
+          window.removeEventListener("resize", handleOrientation);
+        };
       }, []);
     
 return(
