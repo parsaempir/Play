@@ -1,10 +1,25 @@
 import './Home.css';
+import { useEffect } from 'react';
 import eye from '../Pictures/Logo.svg';
 import text from '../Pictures/Group 3.svg';
 import Plant from '../Pictures/Group 2 (1).png';
 import { Link } from 'react-router-dom';
 function Home(){
-
+    useEffect(() => {
+        const preventPortrait = () => {
+          if (window.innerHeight > window.innerWidth) {
+            // اگر صفحه در حالت عمودی باشد، فوراً به حالت افقی برگردونیم
+            window.screen.orientation.lock("landscape").catch((err) => console.error("Error locking orientation:", err));
+          }
+        };
+    
+        preventPortrait();
+        window.addEventListener('resize', preventPortrait); // وقتی صفحه تغییر اندازه میده
+    
+        return () => {
+          window.removeEventListener('resize', preventPortrait);
+        };
+      }, []);
     
 return(
 

@@ -19,7 +19,11 @@
     margin: 0px auto;
 
 } 
-
+@media screen and (orientation: portrait) {
+  body {
+    display: none; /* یا از هر روش دیگری برای مخفی کردن صفحه استفاده کن */
+  }
+}
 
 
 
