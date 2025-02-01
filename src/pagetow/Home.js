@@ -11,15 +11,14 @@ return(
 
 <div className='head'>
 
-    <div className='container'>
-<img src={eye} className='eye-logo'/>
-<img src={text} className='text-logo'/>
+    <div className='container1'>
+<img src={eye} className='eye-logo1'/>
+<img src={text} className='text-logo1'/>
 
-<img src={Plant} className='Plant-png-one'/>
-
-<Link to="/Help"><button className='but-one'>راهنمای بازی؟</button></Link>
-<Link to='/StatusPage'><button className='but-tow'>!شروع بازی</button></Link>
-
+<span className='btn-head-home'>
+<Link to="/Help"><button className='but-one1'>راهنمای بازی؟</button></Link>
+<Link to='/StatusPage'><button className='but-tow1'>!شروع بازی</button></Link>
+</span>
     </div>
 </div>
 
