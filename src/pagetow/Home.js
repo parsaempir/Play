@@ -5,7 +5,7 @@ import text from '../Pictures/Group 3.svg';
 import Plant from '../Pictures/Group 2 (1).png';
 import { Link } from 'react-router-dom';
 function Home(){
-    useEffect(() => {
+    /*useEffect(() => {
         // جلوگیری از چرخش به حالت افقی
         const handleOrientation = (e) => {
           if (window.matchMedia("(orientation: landscape)").matches) {
@@ -24,7 +24,7 @@ function Home(){
         return () => {
           window.removeEventListener("resize", handleOrientation);
         };
-      }, []);
+      }, []);*/
     
 return(
 
