@@ -6,6 +6,7 @@
   }
   body{
     overflow: hidden;
+    position: fixed;
   }
   .head-two {
     display: flex;

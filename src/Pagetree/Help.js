@@ -13,8 +13,8 @@ function Help() {
 
   return (
     <>
-      <div className="head">
-        <div className="container">
+      <div className="head-three">
+        <div className="container-three">
           <span className="head-bc">
            <Link to='/Home'><img src={Back} className="back" /></Link> 
             <Link to='/Home'><img src={close} className="close-one" /></Link>
