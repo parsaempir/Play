@@ -1,10 +1,21 @@
 import './Home.css';
+import { useEffect } from 'react';
 import eye from '../Pictures/Logo.svg';
 import text from '../Pictures/Group 3.svg';
 import Plant from '../Pictures/Group 2 (1).png';
 import { Link } from 'react-router-dom';
 function Home(){
-
+    useEffect(() => {
+        const handleScroll = () => {
+          document.body.classList.add('rotate'); // چرخاندن صفحه
+        };
+        
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
 return(
 
 <>
