@@ -21,21 +21,12 @@
 } 
 @media screen and (orientation: landscape) {
   body {
-    transform: rotate(0deg) !important; /* جلوگیری از چرخش */
+    transform: rotate(0deg) !important;
     overflow: hidden;
   }
 }
-.force-portrait {
-  width: 100%;
-  height: 100%;
-  transform: rotate(90deg);
-  transform-origin: center;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: white;
-}
+
+
 
 .container-two {
     width: 100%;

@@ -8,9 +8,14 @@ function Home(){
     useEffect(() => {
         const handleOrientationChange = () => {
           if (window.innerHeight < window.innerWidth) {
-            document.body.classList.add('force-portrait');
+            // اگر صفحه افقی شد، محتوا رو ثابت می‌کنیم
+            document.body.style.transform = 'rotate(90deg)';
+            document.body.style.transformOrigin = 'center';
+            document.body.style.overflow = 'hidden';
           } else {
-            document.body.classList.remove('force-portrait');
+            // اگر صفحه عمودی شد، حالت رو به حالت عادی برمی‌گردونیم
+            document.body.style.transform = 'rotate(0deg)';
+            document.body.style.overflow = 'auto';
           }
         };
     
@@ -21,6 +26,7 @@ function Home(){
           window.removeEventListener('resize', handleOrientationChange);
         };
       }, []);
+    
 return(
 
 <>
