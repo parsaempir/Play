@@ -6,14 +6,19 @@ import Plant from '../Pictures/Group 2 (1).png';
 import { Link } from 'react-router-dom';
 function Home(){
     useEffect(() => {
-        const handleScroll = () => {
-          document.body.classList.add('rotate'); // چرخاندن صفحه
+        const handleOrientationChange = () => {
+          if (window.innerHeight < window.innerWidth) {
+            document.body.classList.add('force-portrait');
+          } else {
+            document.body.classList.remove('force-portrait');
+          }
         };
-        
-        window.addEventListener('scroll', handleScroll);
+    
+        window.addEventListener('resize', handleOrientationChange);
+        handleOrientationChange(); // اجرا در زمان لود صفحه
     
         return () => {
-          window.removeEventListener('scroll', handleScroll);
+          window.removeEventListener('resize', handleOrientationChange);
         };
       }, []);
 return(
