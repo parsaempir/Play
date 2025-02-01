@@ -6,10 +6,11 @@
   }
   body{
     overflow: hidden;
+    transition: transform 0.3s ease; /* انیمیشن چرخش */
+
   }
   body.rotate {
     transform: rotate(10deg); /* مقدار چرخش رو می‌تونی تغییر بدی */
-    transition: transform 0.3s ease; /* انیمیشن چرخش */
 
   }
   .head-two {
@@ -20,12 +21,12 @@
     height: 100vh; 
     min-height: 100vh;  
     margin: 0px auto;
-    position: relative; 
+    position: relative; /* ثابت نگه داشتن محتوا */
   z-index: 1; 
 } 
 
 .container-two {
-  position: absolute; 
+  position: absolute; /* ثابت نگه داشتن این قسمت */
   z-index: 2; 
     width: 100%;
     height: 100%;
