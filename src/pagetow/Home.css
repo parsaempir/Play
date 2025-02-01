@@ -19,12 +19,7 @@
     margin: 0px auto;
 
 } 
-@media screen and (orientation: landscape) {
-  body {
-    transform: rotate(0deg) !important;
-    overflow: hidden;
-  }
-}
+
 
 
 
