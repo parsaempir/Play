@@ -9,9 +9,9 @@ return(
 
 <>
 
-<div className='head'>
+<div className='head-two'>
 
-    <div className='container1'>
+    <div className='container-two'>
 <img src={eye} className='eye-logo1'/>
 <img src={text} className='text-logo1'/>
 

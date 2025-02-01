@@ -7,21 +7,21 @@ import piece from '../Pictures/Group (1).svg'
 function Splash(){
     const navigate = useNavigate();
 
-    useEffect(() => {
+   useEffect(() => {
      
       const timer = setTimeout(() => {
         navigate("/Home"); 
       }, 3000);
   
    
-      return () => clearTimeout(timer);
+    return () => clearTimeout(timer);
     }, [navigate]);
 
 
 return(
 <>
-<div className='head'>
-<div className='container'>
+<div className='head-one'>
+<div className='container-one'>
 <img src={eye} className='eye-logo'/>
 <img src={text} className='text-logo'/>
 <img src={piece} className='piece'/>
