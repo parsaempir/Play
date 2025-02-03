@@ -22,12 +22,8 @@ function Help() {
           </span>
 
           <b className="bold">راهنمای بازی</b>
-<div className='hr-one'></div>   
 
-<Link to='/StatusPage'><button className='but'>
-!شروع بازی
 
-</button></Link>
 <div className='head-container'>
        <div className="button-group">
             <button
@@ -109,7 +105,12 @@ function Help() {
             )}
           </div>
           </div>
-          <img src={Plant} className="Plant-png" />
+          <div className='hr-one'></div>   
+<span className='but-head-top'>
+          <Link to='/StatusPage'><button className='but'>
+!شروع بازی
+
+</button></Link></span>
         </div>
       </div>
     </>
