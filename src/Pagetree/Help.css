@@ -12,7 +12,7 @@
   height: 100vh; 
   min-height: 100vh;  
  
-  margin: 0px auto;
+  margin: auto;
  }
  .container-three{
   width: 100%;
@@ -48,7 +48,8 @@ width: 100%;
 }
 .bold{
     font-size: 40px;
-  
+  position: relative;
+ top: 50px;
     color: white;
     font-weight: bold;
     font-family: 'CinemaFont';
@@ -134,10 +135,9 @@ font-family: 'CinemaFont';
 
 .hr-one{
   height: 1px;
-margin: 0px 50px 0px 50px ;
+/*margin: 0px 50px 0px 50px ;*/
   background-color:  #ffb7003e;
   position: relative;
-  top: 600px;
   z-index: 1000;
 }
 .but{
@@ -167,6 +167,7 @@ gap: 10px;
 .head-container{
   position: relative;
   width: 100%;
+  top: 20%;
 }
 
 
