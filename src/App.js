@@ -8,26 +8,20 @@ import Chooseyourcard from './pagefive/Chooseyourcard';
 import DiscussPage from './Pagesix/DiscussPage';
 import DiscussPagetwo from './discussPagetwo';
 const App = () => {
-      useEffect(() => {
-        // جلوگیری از چرخش به حالت افقی
-        const handleOrientation = (e) => {
-          if (window.matchMedia("(orientation: landscape)").matches) {
-            // جلوگیری از چرخش به افقی
-            document.body.style.display = 'block';
-          } else {
-            document.body.style.display = 'none';
-          }
-        };
-    
-        window.addEventListener("resize", handleOrientation);
-        
-        // فراخوانی اولیه
-        handleOrientation();
-    
-        return () => {
-          window.removeEventListener("resize", handleOrientation);
-        };
-      }, []);
+  useEffect(() => {
+    // اینجا از preventDefault برای جلوگیری از تغییر چرخش صفحه استفاده می‌کنیم.
+    const handleOrientationChange = (event) => {
+      event.preventDefault(); // جلوگیری از چرخش صفحه
+    };
+
+    // اضافه کردن event listener برای جلوگیری از چرخش صفحه
+    window.addEventListener('orientationchange', handleOrientationChange);
+
+    // پاک کردن event listener در هنگام unmount کامپوننت
+    return () => {
+      window.removeEventListener('orientationchange', handleOrientationChange);
+    };
+  }, []);
   return (
     <BrowserRouter>
     <Routes>
