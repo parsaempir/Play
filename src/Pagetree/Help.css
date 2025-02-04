@@ -185,7 +185,11 @@ gap: 10px;
 
 @media (max-width: 400px) {
   .head-container{
- position: absolute;
+    position: relative;
+    transform: translateY(-30px); /* به جای bottom استفاده کن */
 }
-
+.hr-one{
+  position: relative;
+  transform: translateY(-30px);
+}
 }
