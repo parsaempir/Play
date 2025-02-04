@@ -183,13 +183,18 @@ gap: 10px;
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .head-container{
     position: relative;
-    transform: translateY(-30px); /* به جای bottom استفاده کن */
+    transform: translateY(-30px); 
 }
 .hr-one{
   position: relative;
   transform: translateY(-30px);
+  width: 80%;
+}
+.description{
+  position: relative;
+  left: 20px;
 }
 }
