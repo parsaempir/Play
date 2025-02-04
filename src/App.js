@@ -8,27 +8,7 @@ import Chooseyourcard from './pagefive/Chooseyourcard';
 import DiscussPage from './Pagesix/DiscussPage';
 import DiscussPagetwo from './discussPagetwo';
 const App = () => {
-    useEffect(() => {
-      const checkOrientation = () => {
-        const elements = document.querySelectorAll(".hide-on-rotate");
-  
-        if (window.matchMedia("(orientation: landscape)").matches) {
-          elements.forEach(el => el.style.display = "none"); // آیتم‌ها رو مخفی کن
-        } else {
-          elements.forEach(el => el.style.display = "block"); // دوباره نشون بده
-        }
-      };
-  
-      // چک اولیه
-      checkOrientation();
-  
-      // گوش دادن به چرخش صفحه
-      window.addEventListener("orientationchange", checkOrientation);
-  
-      return () => {
-        window.removeEventListener("orientationchange", checkOrientation);
-      };
-    }, []);
+
   
   return (
     <BrowserRouter>
