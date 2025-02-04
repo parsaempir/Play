@@ -8,20 +8,28 @@ import Chooseyourcard from './pagefive/Chooseyourcard';
 import DiscussPage from './Pagesix/DiscussPage';
 import DiscussPagetwo from './discussPagetwo';
 const App = () => {
-  useEffect(() => {
-    // اینجا از preventDefault برای جلوگیری از تغییر چرخش صفحه استفاده می‌کنیم.
-    const handleOrientationChange = (event) => {
-      event.preventDefault(); // جلوگیری از چرخش صفحه
-    };
-
-    // اضافه کردن event listener برای جلوگیری از چرخش صفحه
-    window.addEventListener('orientationchange', handleOrientationChange);
-
-    // پاک کردن event listener در هنگام unmount کامپوننت
-    return () => {
-      window.removeEventListener('orientationchange', handleOrientationChange);
-    };
-  }, []);
+    useEffect(() => {
+      const checkOrientation = () => {
+        const elements = document.querySelectorAll(".hide-on-rotate");
+  
+        if (window.matchMedia("(orientation: landscape)").matches) {
+          elements.forEach(el => el.style.display = "none"); // آیتم‌ها رو مخفی کن
+        } else {
+          elements.forEach(el => el.style.display = "block"); // دوباره نشون بده
+        }
+      };
+  
+      // چک اولیه
+      checkOrientation();
+  
+      // گوش دادن به چرخش صفحه
+      window.addEventListener("orientationchange", checkOrientation);
+  
+      return () => {
+        window.removeEventListener("orientationchange", checkOrientation);
+      };
+    }, []);
+  
   return (
     <BrowserRouter>
     <Routes>
