@@ -183,15 +183,9 @@ gap: 10px;
 }
 
 
-@media (max-width: 768px) {
-.head-container{
-position: relative;
-bottom: 5%;
-
-
+@media (max-width: 400px) {
+  .head-container{
+ position: absolute;
 }
-.hr-one{
-  position: relative;
-  bottom: 3%;
-}
+
 }
