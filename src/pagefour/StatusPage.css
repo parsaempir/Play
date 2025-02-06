@@ -260,8 +260,8 @@ bottom: 170px;
       top: 115px;
     }
     .but-div-one{
-      position: relative;
-      z-index: 100;
+   position: absolute;
+   bottom: 0;
      width: 100%;
    }
     .but-top{
