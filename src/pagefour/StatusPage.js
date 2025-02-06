@@ -99,13 +99,13 @@ function StatusPage() {
 
     return (
         <>
-            <div className='head'>
-                <div className='container'>
+            <div className='head-four'>
+                <div className='container-four'>
                     <span className="head-bc">
                         <Link to='/Home'><img src={Back} className="back" /></Link>
                       <Link to='/Home'> <img src={close} className="close-cross" /></Link> 
                     </span>
-                    <img src={eye} className='eye' />
+                    <img src={eye} className='eye-t' />
                     <span className='span-text'>
                         <h1 className='text-one'>بازیکنان</h1>
                         <div className="player-count">{players.length}</div>
@@ -220,7 +220,6 @@ function StatusPage() {
 <Link to='/Chooseyourcard'><button className='but-top'>مرحله بعدی</button></Link>
 
       </div>
-                    <img src={Plant} className='Plant' />
                 </div>
             </div>
         </>
