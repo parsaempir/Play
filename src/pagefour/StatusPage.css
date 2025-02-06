@@ -42,12 +42,10 @@ justify-content: space-between;
     right: 35px;
     top: 35px;
 }
-.eye{
+.eye-small{
     position: relative;
-    left: 158px;
     height: 61px;
     width: 114px;
-    top: 39px;
 }
 
     .player-container{
@@ -55,14 +53,12 @@ justify-content: space-between;
 display: flex;
 flex-direction: row-reverse;
 position: relative;
-z-index: 100;
     }
       .player-list {
         display: flex;
         gap: 10px;
         justify-content: center;
         align-items: center;
-        z-index: 100;
 flex-wrap: wrap;
       }
       
@@ -71,7 +67,6 @@ flex-wrap: wrap;
         cursor: pointer;
         object-fit: contain;
   
-        z-index: 100;
 
       }
       
@@ -85,7 +80,6 @@ flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        z-index: 100;
 background-color: transparent;
       }
       
@@ -99,7 +93,6 @@ background-color: transparent;
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 100;
 
       }
       .span-text{
@@ -107,7 +100,6 @@ display: flex;
 flex-direction: row-reverse;
 position: relative;
 
-z-index: 100;
 
       }
   .h-one{
@@ -125,7 +117,6 @@ font-family: 'CinemaFont';
     padding: 5px 10px; 
     font-size: 16px; 
     font-weight: bold; 
-    z-index: 200;
 
   }
   .hr{
@@ -133,7 +124,6 @@ font-family: 'CinemaFont';
   margin: 0px 50px 0px 50px ;
     background-color:  #ffb7003e;
     position: relative;
-    z-index: 100;
     
   }
           
@@ -214,7 +204,6 @@ bottom: 170px;
   .container-div{display: flex;
     flex-direction: row-reverse;
     position: relative;
-    z-index: 100;
   }
     /*.iconzrb{
         position: absolute;
@@ -248,7 +237,6 @@ bottom: 170px;
   display: flex;
       position: relative;
       flex-direction: row-reverse;
-      z-index: 100;
       gap: 20px;
     }
     .role img{
