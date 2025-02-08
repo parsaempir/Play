@@ -19,6 +19,7 @@ body {
   height: 100vh; 
   min-height: 100vh;  
   margin: auto;
+  overflow: hidden;
  }
  .container-five{
   width: 100%;
@@ -34,6 +35,8 @@ body {
   background-size: 100% 85% ; 
   background-repeat: no-repeat;
   background-position: bottom;
+  overflow: hidden;
+
 }
 
 .Plant-png{
