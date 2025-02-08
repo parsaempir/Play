@@ -281,7 +281,8 @@ font-family: 'CinemaFont';
     
     .container-four{
       align-items: end;
-overflow-x: scroll;
+      overflow: scroll;
+
 -webkit-overflow-scrolling: touch;
     }
 
