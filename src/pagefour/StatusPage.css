@@ -244,7 +244,6 @@ bottom: 170px;
       gap: 20px;
       position: relative;
       top: 10%;
-      height: 150px;
     }
     #player-count{
   position: absolute;
@@ -261,7 +260,7 @@ bottom: 170px;
     .but-div-one{
       position: absolute;
       bottom: 0;
-     width: 100%;
+   width: 100%;
    }
     .but-top{
 width: 100%;
@@ -279,7 +278,10 @@ font-family: 'CinemaFont';
 
 
   @media (max-width:480px) {
-  
+  .poch{
+    position: relative;
+    top: 130px;
+  }
     .head-four{
   
    

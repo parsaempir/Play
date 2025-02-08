@@ -217,6 +217,7 @@ function StatusPage() {
         alt="Switchable"
         onClick={handleImageClicke}
       /></span>
+      <div className='poch'>&nbsp;</div>
       <div className='but-div-one'>
 <Link to='/Chooseyourcard'><button className='but-top'>مرحله بعدی</button></Link>
 
