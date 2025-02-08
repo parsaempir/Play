@@ -64,6 +64,7 @@ body {
         position: relative;
         height: 61px;
         width: 114px;
+        margin-top: 50px;
     }
     .back-logo{
         position: relative;
@@ -248,7 +249,19 @@ font-size: 1.2rem;
     font-family: 'CinemaFont';
 
   }
+@media (max-width: 480px) {
+  
+.container-five{
+  overflow: hidden;
+}
 
+
+.back-logo{
+  height: 50%;
+}
+
+  
+}
   /*@media (max-width: 480px) {
   
     .container {
