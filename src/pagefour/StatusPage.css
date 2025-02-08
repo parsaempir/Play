@@ -28,6 +28,7 @@ overflow: hidden;
   background-size: 100% 85% ; 
   background-repeat: no-repeat;
   background-position: bottom;
+  overflow: hidden;
 
 }
 .head-bc{
@@ -279,13 +280,13 @@ font-family: 'CinemaFont';
   @media (max-width:480px) {
   .poch{
     position: relative;
-    top: 1300px;
+    top: 180px;
   }
  
     .container-four{
    
       align-items: end;
-      overflow-x: scroll;
+      overflow-y: scroll;
     }
 
     .span-text{
