@@ -277,11 +277,17 @@ font-family: 'CinemaFont';
 
 
   @media (max-width:480px) {
-   
+   .head-four{
+    height: auto; 
+    min-height: 100vh;
+    overflow-y: auto;
+   }
     .container-four{
       align-items: end;
 overflow-x: scroll;
-height: calc(100vh - 20px);
+height: auto;  
+    min-height: 100vh;
+    overflow-y: auto;
     }
 
     .span-text{
