@@ -278,11 +278,11 @@ font-family: 'CinemaFont';
   @media (max-width:480px) {
     .head-four{
       min-height: 100vh;
-      height: 0vh;
+      height: 1vh;
     }
     .container-four{
       align-items: end;
-      overflow-x: auto;
+      overflow-x: auto !important;
 
     }
 
