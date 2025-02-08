@@ -80,8 +80,8 @@ function Chooseyourcard() {
 
   return (
     <>
-      <div className="head">
-        <div className="container">
+      <div className="head-five">
+        <div className="container-five">
           <span className="head-bc">
             <Link to='/StatusPage'><img src={Back} className="back" /></Link>
             <Link to='/Home'><img src={close} className="close" /></Link>
@@ -94,7 +94,6 @@ function Chooseyourcard() {
               شروع
             </button>
           </div>
-          <img src={Plant2} className="Plant-png" />
         </div>
       </div>
 

@@ -11,17 +11,31 @@ body {
     padding: 0;
 }
 
-.head{
-    display: flex;
-    justify-content: center;
+.head-five{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+  min-height: 100vh;  
+  margin: auto;
  }
- .container{
-    background-color: #891515;
-    width: 430px;
-    height: 932px;
-    border-radius: 50px;
-    position: relative;
+ .container-five{
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #891515;
+  background-image: url('../pagefive/logo\ gia.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: 100% 85% ; 
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
+
 .Plant-png{
     position: absolute; 
     bottom: 0px;
@@ -32,8 +46,9 @@ body {
    
      }
      .head-bc{
-        display: flex;
-    justify-content: space-between;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
     }
      .back{
         position: relative;
@@ -47,32 +62,26 @@ body {
      }
      .eye{
         position: relative;
-        left: 158px;
         height: 61px;
         width: 114px;
-        top: 39px;
     }
     .back-logo{
         position: relative;
-        z-index: 100;
-        margin-left: 35px;
-        top: 100px;
+     
     }
     .titr{
         color: white;
         font-size: 25px;
         font-weight: bold;
         position: relative;
-        left: 215px;
-        top: 110px;
-        z-index: 100;
+      
         font-family: 'CinemaFont';
 
     }
     .but-div{
-        position: relative;
-        z-index: 100;
-        top:190px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
      }
       .but-top-one{
   width: 100%;
@@ -80,7 +89,6 @@ body {
   background-color: #FFB800;
         color: white;
         font-size: 40px;
-        border-radius: 5px 0px 50px 50px;
       z-index: 100;
         border: none;
         cursor: pointer;
