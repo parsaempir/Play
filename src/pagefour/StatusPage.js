@@ -1,5 +1,5 @@
 import './StatusPage.css';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import eye from '../Pictures/Logo.svg';
 import close from '../Pictures/Vector.svg';
@@ -96,7 +96,11 @@ function StatusPage() {
             </div>
         );
     };
-
+useEffect = () => {
+    const setFullHeight = () => {
+        document.querySelector('.container-four').style.height = `${window.innerHeight}px`;
+      };
+}
     return (
         <>
             <div className='head-four'>

@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100dvh;
   min-height: 100vh;  
   margin: 0px auto;
 
@@ -281,7 +281,7 @@ font-family: 'CinemaFont';
    
     .container-four{
       align-items: end;
-
+overflow-x: scroll;
     }
 
     .span-text{
@@ -299,7 +299,7 @@ right: 10%;
    
     .but-div-one{
   position: relative;
-     top: 100px;
+  top: 100px;
     }
     .player-container{
       position: relative;
