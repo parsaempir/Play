@@ -286,7 +286,7 @@ font-family: 'CinemaFont';
     .container-four{
    
       align-items: end;
-      overflow-y: scroll;
+     /* overflow-y: scroll;*/
     }
 
     .span-text{
@@ -303,8 +303,7 @@ right: 8%;
       right: 35%;
     }
    
-    .but-div-one{
-    }
+
     .player-container{
       position: relative;
      right: 10%;
