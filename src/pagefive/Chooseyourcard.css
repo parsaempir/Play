@@ -62,7 +62,7 @@
         position: relative;
         height: 61px;
         width: 114px;
-        margin-top: 50px;
+        top: 50px;
     }
     .back-logo{
         position: relative;
@@ -263,7 +263,10 @@ font-size: 1.2rem;
   position: relative;
   top: 0;
 }
-
+.eye{
+  position: relative;
+  top: 5%;
+}
   
 }
 
