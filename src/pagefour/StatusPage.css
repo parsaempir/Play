@@ -28,6 +28,8 @@
   background-size: 100% 85% ; 
   background-repeat: no-repeat;
   background-position: bottom;
+  overflow-x: scroll;
+
 }
 .head-bc{
     display: flex;
@@ -276,13 +278,9 @@ font-family: 'CinemaFont';
 
 
   @media (max-width:480px) {
-    .head-four{
-      min-height: 100vh;
-      height: 1vh;
-    }
+   
     .container-four{
       align-items: end;
-      overflow-x: auto !important;
 
     }
 
