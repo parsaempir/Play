@@ -289,7 +289,7 @@ font-family: 'CinemaFont';
     .container-four{
    
       align-items: end;
-      overflow: scroll;
+      overflow-x: scroll;
     }
 
     .span-text{
