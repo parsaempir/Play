@@ -12,6 +12,7 @@
   margin: 0px auto;
 height: 100vh;
 min-height: 100vh;
+overflow: hidden;
  }
  .container-four{
   width: 100%;
@@ -278,7 +279,7 @@ font-family: 'CinemaFont';
   @media (max-width:480px) {
   .poch{
     position: relative;
-    top: 130px;
+    top: 1300px;
   }
  
     .container-four{
