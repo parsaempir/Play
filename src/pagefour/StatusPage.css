@@ -280,12 +280,12 @@ font-family: 'CinemaFont';
   
     .head-four{
       height: 91vh;
-      min-height: 90vh
+      min-height: 91vh
     }
     .container-four{
       align-items: end;
       overflow: scroll;
-      min-height: 90vh;
+      min-height: 91vh;
    
     }
 
