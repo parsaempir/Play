@@ -9,6 +9,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
   min-height: 100vh;  
   margin: 0px auto;
 
@@ -280,6 +281,7 @@ font-family: 'CinemaFont';
     .container-four{
       align-items: end;
 overflow-x: scroll;
+height: calc(100vh - 20px);
     }
 
     .span-text{
