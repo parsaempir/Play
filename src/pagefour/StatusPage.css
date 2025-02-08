@@ -9,15 +9,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-   min-height: 100vh;  
   margin: 0px auto;
+height: 100vh;
+min-height: 100vh;
 
  }
  .container-four{
   width: 100%;
   height: 100%;
   min-height: 100vh;
+
   background-color: #891515;
   background-image: url('../pagefive/logo\ gia.png');
   background-size: cover;
@@ -243,6 +244,7 @@ bottom: 170px;
       gap: 20px;
       position: relative;
       top: 10%;
+      height: 150px;
     }
     #player-count{
   position: absolute;
@@ -257,8 +259,8 @@ bottom: 170px;
       top: 115px;
     }
     .but-div-one{
-   position: absolute;
-   bottom: 0;
+      position: absolute;
+      bottom: 0;
      width: 100%;
    }
     .but-top{
@@ -279,14 +281,13 @@ font-family: 'CinemaFont';
   @media (max-width:480px) {
   
     .head-four{
-      height: 91vh;
-      min-height: 91vh
+  
+   
     }
     .container-four{
+   
       align-items: end;
       overflow: scroll;
-      min-height: 91vh;
-   
     }
 
     .span-text{
@@ -296,6 +297,7 @@ right: 10%;
     .role-one{
 right: 8%;
       position: relative;
+
     }
     .eye-small{
       position: relative;
@@ -311,6 +313,7 @@ right: 8%;
     .container-div{
       position: relative;
       right: 10%;
+
     }
     .player-count{
       position: relative;
