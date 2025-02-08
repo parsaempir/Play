@@ -96,11 +96,7 @@ function StatusPage() {
             </div>
         );
     };
-useEffect = () => {
-    const setFullHeight = () => {
-        document.querySelector('.container-four').style.height = `${window.innerHeight}px`;
-      };
-}
+
     return (
         <>
             <div className='head-four'>
