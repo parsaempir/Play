@@ -4,12 +4,7 @@
   font-weight: normal;
   font-style: normal;
 }
-body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
+
 
 .head-five{
   display: flex;
@@ -93,7 +88,6 @@ body {
   background-color: #FFB800;
         color: white;
         font-size: 40px;
-      z-index: 100;
         border: none;
         cursor: pointer;
   font-weight: bold;
@@ -272,57 +266,4 @@ font-size: 1.2rem;
 
   
 }
-  /*@media (max-width: 480px) {
-  
-    .container {
-      width: 100%;
-      height: 760px;
-      transform-origin: top center;
-      background-image: url(logo\ gia.png);
-      background-repeat: no-repeat;
-      background-position: 0px  50px;
-      background-size: cover;
-
-    }
-  
-    .Plant-png {
-max-width: 1000px;
-  height: 700px;
-object-fit: cover;
-display: none;
-  
-    }
-  
-    
-  
-    .eye {
-      position: absolute;
-      
-      height: 50px;
-    }
-  
-    .back-logo {
-      margin-left: 50px;
-      top: 100px;
-    height: 55%;
-    }
-  
-    .titr {
-     position: relative;
-      top: 100px;
-    }
-  
-    .but-div {
-      top: 190px;
-    }
-  
-    .but-top {
-      height: 50px;
-      font-size: 1.2rem;
-      position: relative;
-
-}
-  
-
-  }*/
 
