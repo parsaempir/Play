@@ -276,10 +276,7 @@ font-family: 'CinemaFont';
 
 
   @media (max-width:480px) {
-    html, body {
-      height: 100%;
-      overflow: auto !important;
-  }
+ 
     .container-four{
       align-items: end;
       overflow-x: auto;
@@ -315,6 +312,5 @@ right: 10%;
       position: relative;
       right: 37%;
    }
-    #player-count{
-    }
+  
   }
