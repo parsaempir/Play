@@ -4,6 +4,9 @@
   font-weight: normal;
   font-style: normal;
 }
+body{
+  overflow-x: hidden;
+}
 
 
 .head-five{
@@ -34,15 +37,6 @@
 
 }
 
-.Plant-png{
-    position: absolute; 
-    bottom: 0px;
-    left: 50%; 
-    transform: translateX(-50%); 
-    border-radius: 50px;
-    object-fit: cover;
-   
-     }
      .head-bc{
       display: flex;
       justify-content: space-between;
@@ -62,7 +56,7 @@
         position: relative;
         height: 61px;
         width: 114px;
-        top: 50px;
+  margin-top: 50px;
     }
     .back-logo{
         position: relative;
@@ -263,10 +257,7 @@ font-size: 1.2rem;
   position: relative;
   top: 0;
 }
-.eye{
-  position: relative;
-  top: 5%;
-}
+
   
 }
 
