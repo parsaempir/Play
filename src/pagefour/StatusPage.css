@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  min-height: 100vh;  
+   min-height: 100vh;  
   margin: 0px auto;
 
  }
@@ -55,8 +55,8 @@ justify-content: space-between;
 display: flex;
 flex-direction: row-reverse;
 position: relative;
-top: 50px;
-    }
+top: 10%;
+}
       .player-list {
         display: flex;
         gap: 10px;
@@ -102,7 +102,7 @@ background-color: transparent;
 display: flex;
 flex-direction: row-reverse;
 position: relative;
-top: 50px;
+top: 10%;
 
       }
   .h-one{
@@ -207,7 +207,7 @@ bottom: 170px;
   .container-div{display: flex;
     flex-direction: row-reverse;
     position: relative;
-    top: 50px;
+    top: 10%;
   }
     /*.iconzrb{
         position: absolute;
@@ -242,7 +242,7 @@ bottom: 170px;
       flex-direction: row-reverse;
       gap: 20px;
       position: relative;
-      bottom: 100px;
+      top: 10%;
     }
     #player-count{
   position: absolute;
@@ -278,10 +278,15 @@ font-family: 'CinemaFont';
 
   @media (max-width:480px) {
   
-    
+    .head-four{
+      height: 91vh;
+      min-height: 90vh
+    }
     .container-four{
       align-items: end;
       overflow: scroll;
+      min-height: 90vh;
+   
     }
 
     .span-text{
@@ -289,7 +294,7 @@ position: relative;
 right: 10%;
     }
     .role-one{
-right: 10%;
+right: 8%;
       position: relative;
     }
     .eye-small{
