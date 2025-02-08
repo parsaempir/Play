@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; 
+  height: 100vh;
   min-height: 100vh;  
   margin: 0px auto;
 
@@ -276,7 +276,10 @@ font-family: 'CinemaFont';
 
 
   @media (max-width:480px) {
- 
+    .head-four{
+      min-height: 100vh;
+      height: 0vh;
+    }
     .container-four{
       align-items: end;
       overflow-x: auto;
@@ -297,9 +300,8 @@ right: 10%;
     }
    
     .but-div-one{
-     position: relative;
+  position: relative;
      top: 100px;
-     
     }
     .player-container{
       position: relative;
