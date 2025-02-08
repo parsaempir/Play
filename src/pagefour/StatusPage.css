@@ -298,8 +298,7 @@ right: 10%;
     }
    
     .but-div-one{
-      position: absolute;
-      bottom: 0;
+  position: relative;
     }
     .player-container{
       position: relative;
