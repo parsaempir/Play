@@ -9,7 +9,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   min-height: 100vh;  
   margin: 0px auto;
 
@@ -275,19 +274,13 @@ font-family: 'CinemaFont';
 
     }
 
-    @supports (-webkit-overflow-scrolling: touch) {
-      .container-four, .head-four {
-        height: auto;
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
-      }
-    }
+
   @media (max-width:480px) {
   
     
     .container-four{
       align-items: end;
-      overflow: scroll;
+      overflow-x: scroll;
 
     }
 
@@ -305,8 +298,8 @@ right: 10%;
     }
    
     .but-div-one{
-  position: relative;
-  top: 100px;
+      position: absolute;
+      bottom: 0;
     }
     .player-container{
       position: relative;
