@@ -106,9 +106,10 @@ function StatusPage() {
                       <Link to='/Home'> <img src={close} className="close-cross" /></Link> 
                     </span>
                     <img src={eye} className='eye-small' />
+                    
                     <span className='span-text'>
                         <h1 className='text-one'>بازیکنان</h1>
-                        <div className="player-count">{players.length}</div>
+                        <div className="player-count" id='player-count'>{players.length}</div>
                     </span>
 
                     <div className="player-container">
@@ -141,7 +142,7 @@ function StatusPage() {
                     <div className='hr'></div>
                     <span className='span-text' id='span-text'>
                         <h1 className='h-one'>تعداد جاسوس ها</h1>
-                        <div className="player-count">{jasos.length}</div>
+                        <div className="player-count" >{jasos.length}</div>
                     </span>
 
                     <div className="player-container" id='player-container'>
@@ -203,9 +204,9 @@ function StatusPage() {
                     </div>
                     <div className='hr' id='hr-div'></div>
                     <span className='span-text' id='span-text'>
-                        <h1 className='h-one'> نقش های خاص</h1>
+                        <h1 className='h-one' id='h-one'> نقش های خاص</h1>
                     </span>
-                    <div className='role'>
+                    <span className='role-one'>
       <img
         src={currentImage}
         alt="Switchable"
@@ -215,7 +216,7 @@ function StatusPage() {
         src={currentImage1}
         alt="Switchable"
         onClick={handleImageClicke}
-      /></div>
+      /></span>
       <div className='but-div-one'>
 <Link to='/Chooseyourcard'><button className='but-top'>مرحله بعدی</button></Link>
 

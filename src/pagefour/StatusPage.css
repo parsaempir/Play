@@ -12,6 +12,7 @@
   height: 100vh; 
   min-height: 100vh;  
   margin: 0px auto;
+
  }
  .container-four{
   width: 100%;
@@ -53,6 +54,7 @@ justify-content: space-between;
 display: flex;
 flex-direction: row-reverse;
 position: relative;
+top: 10%;
     }
       .player-list {
         display: flex;
@@ -99,7 +101,7 @@ background-color: transparent;
 display: flex;
 flex-direction: row-reverse;
 position: relative;
-
+top: 10%;
 
       }
   .h-one{
@@ -204,6 +206,7 @@ bottom: 170px;
   .container-div{display: flex;
     flex-direction: row-reverse;
     position: relative;
+    top: 10%;
   }
     /*.iconzrb{
         position: absolute;
@@ -233,13 +236,18 @@ bottom: 170px;
          position: relative;
          top: 120px;
     }
-    .role{
+    .role-one{
   display: flex;
-      position: relative;
       flex-direction: row-reverse;
       gap: 20px;
+      position: relative;
+      top: 10%;
     }
-    .role img{
+    #player-count{
+  position: absolute;
+  right: 262px;
+    }
+    .role-one img{
       width: 154px;
       height: 55px;
     }
@@ -265,4 +273,48 @@ font-weight: bold;
 font-family: 'CinemaFont';
 
     }
-  
+
+
+  @media (max-width:480px) {
+    html, body {
+      height: 100%;
+      overflow: auto !important;
+  }
+    .container-four{
+      align-items: end;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .span-text{
+position: relative;
+right: 10%;
+    }
+    .role-one{
+right: 10%;
+      position: relative;
+    }
+    .eye-small{
+      position: relative;
+      right: 35%;
+    }
+   
+    .but-div-one{
+      position: relative;
+      top: 100px;
+    }
+    .player-container{
+      position: relative;
+     right: 10%;
+    }
+    .container-div{
+      position: relative;
+      right: 10%;
+    }
+    .player-count{
+      position: relative;
+      right: 37%;
+   }
+    #player-count{
+    }
+  }
