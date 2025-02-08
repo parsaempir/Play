@@ -68,14 +68,14 @@ body {
     }
     .back-logo{
         position: relative;
-     
+     top: 8%;
     }
     .titr{
         color: white;
         font-size: 25px;
         font-weight: bold;
         position: relative;
-      
+      top: 10%;
         font-family: 'CinemaFont';
 
     }
@@ -257,10 +257,14 @@ font-size: 1.2rem;
 .container-five{
   overflow: hidden;
 }
-
+.titr{
+  top: 0;
+}
 
 .back-logo{
   height: 50%;
+  position: relative;
+  top: 0;
 }
 
   
