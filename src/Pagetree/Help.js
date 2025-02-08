@@ -56,12 +56,12 @@ function Help() {
                   <p className="text">
                                                      <span className='span-one'><h1 className="text-one"> قوانین بازی</h1></span>
 
-                    <span className='span-yellow'>:هدف بازی</span><br/>
+                    <span className='span-yellow'>هذف بازی:</span><br/>
 <span className='line'>هر بازیکن باید تلاش کند تا نقش جاسوس را در میان سایر<br/>بازیکنان شناسایی کند.درحالی که جاسوس باید هویت خود<br/>را پنهان نگه دارد و بازکنان دیگر را گمراه کند</span>
 
- <br/><span className='span-yellow' id='yellow'>:شروع بازی</span><br/>
+ <br/><span className='span-yellow' id='yellow'>شروع بازی:</span><br/>
  <span className='line-span'>بازی با انتخاب کارت ها آغاز میشود.هر بازیکن یک کارت<br/>دریاقت می کند که نقش اورا مشخص می کند.یکی از بازیکنان<br/>جاسوس است و یقسه در تلاش هستند تااورا پیدا کنند</span>
- <br/><span className='span-yellow' id='yellow-one'>:نحوه بازی</span><br/>
+ <br/><span className='span-yellow' id='yellow-one'>نحوه بازی:</span><br/>
 <span className='line-span' id='line-span'>
 
  
@@ -79,12 +79,12 @@ function Help() {
                   
                   <span className='span-one'><h1 className="text-one"> نقش های بازی</h1></span>
 
-                                  <span className='span-yellow' >:جاسوس</span><br/>
+                                  <span className='span-yellow' >جاسوس:</span><br/>
 <span  className='line'>جاسوس باید تلاش کند تا هویت خود را پنهان نگه<br/>دارد و بازکنان دیگررا گمراه کند.هدف او این<br/>است که تا پایان بازی شناسایی نشود.</span>
-<br/><span className='span-yellow' id='yellow'>:شهروند</span><br/>
+<br/><span className='span-yellow' id='yellow'>شهروند:</span><br/>
 <span className='line-span'>شهروندان باید با همکاری و تبادل نظر با یکدیگر<br/>تلاش کنند تا جاسوس را شناسایی کنند و مانع <br/>موفقیت او شوند</span><br/>
 
-<br/><span className='span-yellow' id='yellow-two'>:جوکر</span><br/>
+<br/><span className='span-yellow' id='yellow-two'>جوکر:</span><br/>
 <span className='line-span' id='line-span-one'>
 
 جوکر: جوکر نقش متغیری دارد. او ممکن است به نفع <br/>جاسوس یا شهروندان بازی کند. هدف او این<br/> است که بازی را پیچیده‌تر کند و گیج‌کننده باشد.<br/>
