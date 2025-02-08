@@ -82,7 +82,6 @@ width: 100%;
   }
 .description{
 display: flex;
-text-align: end;
  position: relative;
     z-index: 100;
 justify-content: center;
@@ -98,7 +97,7 @@ display: flex;
 flex-direction: column;
 width: 100%;
 position: relative;
-
+direction: rtl;
 }
   .text-one{
     color: white;
@@ -107,11 +106,11 @@ position: relative;
 bottom: 20px;
 font-family: 'CinemaFont';
 
+
   }
   .span-one{
 
     display: flex;
-    justify-content: end;
   }
   .span-yellow{
     color:  #FFB800;
@@ -120,7 +119,6 @@ font-family: 'CinemaFont';
     position: relative;
     bottom: 20px;
     font-family: 'CinemaFont';
-
   }
   .line{
     position: relative;
@@ -131,6 +129,7 @@ font-family: 'CinemaFont';
 .line-span{
   position: relative;
   bottom: 22px;
+
 }
 
 .hr-one{

@@ -280,7 +280,7 @@ font-family: 'CinemaFont';
     .container-four{
       align-items: end;
       overflow-x: auto;
-      white-space: nowrap;
+
     }
 
     .span-text{
@@ -297,8 +297,9 @@ right: 10%;
     }
    
     .but-div-one{
-      position: relative;
-      top: 100px;
+     position: relative;
+     top: 100px;
+     
     }
     .player-container{
       position: relative;
