@@ -57,8 +57,8 @@ overflow-y: hidden;
 }
 .btn-head-home{
     position: absolute;
-    bottom: 5%;
-    width: 90%;
+    bottom: 0;
+    width: 100%;
 display: flex;
 flex-direction: column;
 gap: 10px;
@@ -66,13 +66,10 @@ gap: 10px;
 .but-one1{
     width: 100%;
     padding: 10px 0px 20px  0px;
-
     position: relative;
-
     color: white;
     background-color: transparent;
     border: 2px #FFB800 solid;
-    border-radius: 15px;
     font-size: 40px;
     font-weight: bold;
     font-family: 'CinemaFont'; 
@@ -84,7 +81,6 @@ gap: 10px;
     background-color: #FFB800;
     color: white;
     font-size: 40px;
-    border-radius: 15px;
     position: relative;
     z-index: 100;
     border: none;
