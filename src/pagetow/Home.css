@@ -4,11 +4,7 @@
     font-weight: normal;
     font-style: normal;
   }
-  body{
-    position: relative;
-    overflow: hidden;
-
-  }
+ 
 
   .head-two {
     display: flex;
@@ -18,7 +14,8 @@
     height: 100vh; 
     min-height: 100vh;  
     margin: 0px auto;
-
+position: relative;
+overflow: hidden;
 } 
 
 
@@ -38,6 +35,8 @@
     background-size: 100% 50% ; 
     background-repeat: no-repeat;
     background-position: bottom;
+    position: relative;
+overflow: hidden;
 }
 
 .eye-logo1{
