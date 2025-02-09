@@ -36,7 +36,7 @@ function Chooseyourcard() {
       } else {
         setMinutes((prev) => (prev - 1 < 0 ? 10 : prev - 1));
       }
-      setTimeout(() => setIsScrollingMinutes(false), 1000); 
+      setTimeout(() => setIsScrollingMinutes(false), 300); 
     }
   };
 
@@ -61,7 +61,7 @@ function Chooseyourcard() {
       } else {
         setMinutes((prev) => (prev - 1 < 0 ? 10 : prev - 1));
       }
-      setTimeout(() => setIsScrollingMinutes(false), 1); 
+      setTimeout(() => setIsScrollingMinutes(false), 300); 
     }
   };
 
@@ -74,7 +74,7 @@ function Chooseyourcard() {
       } else {
         setSeconds((prev) => (prev - 1 < 0 ? 59 : prev - 1));
       }
-      setTimeout(() => setIsScrollingSeconds(false), 1000); 
+      setTimeout(() => setIsScrollingSeconds(false), 1); 
     }
   };
 
