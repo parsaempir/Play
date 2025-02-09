@@ -13,7 +13,7 @@
   height: 100dvh; 
   min-height: 100dvh;  
   margin: auto;
-  overflow: hidden;
+  overflow-y: hidden;
  }
  .container-five{
   width: 100%;
@@ -29,7 +29,7 @@
   background-size: 100% 85% ; 
   background-repeat: no-repeat;
   background-position: bottom;
-overflow: hidden;
+overflow-y: hidden;
 }
 
      .head-bc{
