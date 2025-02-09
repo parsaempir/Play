@@ -6,7 +6,7 @@ import Help from './Pagetree/Help';
 import StatusPage from './pagefour/StatusPage';
 import Chooseyourcard from './pagefive/Chooseyourcard';
 import DiscussPage from './Pagesix/DiscussPage';
-import DiscussPagetwo from './discussPagetwo';
+import DiscussPagetwo from './Pageseven/discussPagetwo';
 const App = () => {
 
   

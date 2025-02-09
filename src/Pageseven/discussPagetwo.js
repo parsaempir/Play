@@ -1,14 +1,14 @@
 import './discussPagetwo.css';
-import Plant2 from './pagefive/logo gia.png';
-import close from "./Pictures/Vector.svg";
+import Plant2 from '../pagefive/logo gia.png';
+import close from "../Pictures/Vector.svg";
 import { Link } from 'react-router-dom';
-import eye from "./Pictures/Logo.svg";
-import oncard from './Pictures/روی کارت - جاسوس.png'
+import eye from "../Pictures/Logo.svg";
+import oncard from '../Pictures/روی کارت - جاسوس.png'
 const discussPagetwo = () => {
   
   return (<>
-  <div className='head'>
-  <div className="container">
+  <div className='head-seven'>
+  <div className="container-seven">
     <span className='head-close'>
   <Link to='/Home'> <img src={close} className="close" /></Link>
   </span>
@@ -24,7 +24,6 @@ const discussPagetwo = () => {
 
 
 </div>
-    <img src={Plant2} className="Plant-png" />
 
     </div>
     </div>
