@@ -40,3 +40,10 @@
   transform: translateX(-50%); 
   z-index: 0;
 }
+@media (max-width: 480px) {
+    .eye-logo,
+    .text-logo{
+        height: 61px;
+        width: 114px;
+    }
+}

@@ -88,5 +88,12 @@ gap: 10px;
         cursor: pointer;
     
 }
-
+@media (max-width: 480px) {
+    .eye-logo1,
+    .text-logo1{
+        position: relative;
+        height: 61px;
+        width: 114px;
+    }
+}
   
