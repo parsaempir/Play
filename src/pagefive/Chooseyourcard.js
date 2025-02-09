@@ -48,7 +48,7 @@ function Chooseyourcard() {
       } else {
         setSeconds((prev) => (prev - 1 < 0 ? 59 : prev - 1));
       }
-      setTimeout(() => setIsScrollingSeconds(false), 0); 
+      setTimeout(() => setIsScrollingSeconds(false),100); 
     }
   };
 
@@ -74,7 +74,7 @@ function Chooseyourcard() {
       } else {
         setSeconds((prev) => (prev - 1 < 0 ? 59 : prev - 1));
       }
-      setTimeout(() => setIsScrollingSeconds(false), 0); 
+      setTimeout(() => setIsScrollingSeconds(false), 100); 
     }
   };
 
