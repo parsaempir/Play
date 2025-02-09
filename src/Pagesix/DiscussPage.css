@@ -2,8 +2,35 @@
 .head-close{
   display: flex;
 justify-content: end;
+width: 100%;
 }
+.head-six{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh; 
+  min-height: 100dvh;  
+  margin: auto;
+  overflow-y: hidden;
+}
+.container-six{
+  width: 100%;
+  height: 100%;
+  min-height: 100dvh;
+  background-color: #891515;
+  background-image: url('../pagefive/logo\ gia.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: 100% 85% ; 
+  background-repeat: no-repeat;
+  background-position: bottom;
+  overflow-y: hidden;
 
+}
 .close{
    position: relative;
   right: 35px;
@@ -16,8 +43,6 @@ justify-content: end;
     position: relative;
     display: flex;
     flex-direction: column;
-    z-index: 1000;
-    top: 170px;
     font-weight: bold;
     font-family: 'CinemaFont';
   }
@@ -48,9 +73,9 @@ justify-content: end;
   .buttons {
    display: flex;
    flex-direction: column;
+   align-items: center;
    gap: 10px;
    position: relative;
-   left: 120px;
    top: 20px;
   }
   
@@ -60,7 +85,6 @@ justify-content: end;
   background-color: #FFB800;
         color: white;
         font-size: 25px;
-      z-index: 100;
         border: none;
         cursor: pointer;
   font-weight: bold;
@@ -77,7 +101,6 @@ justify-content: end;
   border: 2px #FFB800 solid;
         color: white;
         font-size: 25px;
-      z-index: 100;
         cursor: pointer;
   font-weight: bold;
   font-family: 'CinemaFont';
@@ -89,10 +112,9 @@ justify-content: end;
 
   
  .game-over{
-  position: relative;
-  z-index: 1000;
-  top: 328px;
-
+  position: absolute;
+bottom: 0;
+width: 100%;
  }
   
   .game-over-btn {
@@ -101,7 +123,6 @@ justify-content: end;
     background-color: #FFB800;
           color: white;
           font-size: 40px;
-          border-radius: 5px 0px 50px 50px;
         z-index: 100;
           border: none;
           cursor: pointer;
@@ -112,8 +133,6 @@ justify-content: end;
   display: flex;
   justify-content: center;
   position: relative;
-  top: 100px;
-  z-index: 1000;
   color: white;
   font-size: 2rem;
   font-weight: bold;

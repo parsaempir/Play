@@ -27,8 +27,8 @@ const Countdown = () => {
 
   return (
     <>
-      <div className='head'>
-        <div className="container">
+      <div className='head-six'>
+        <div className="container-six">
           <span className='head-close'>
             <Link to='/Home'><img src={close} className="close" /></Link>
           </span>
@@ -54,7 +54,6 @@ const Countdown = () => {
           <div className="game-over">
             <Link to='/DiscussPagetwo'><button className="btn game-over-btn">!پایان بازی</button></Link>
           </div>
-          <img src={Plant2} className="Plant-png" />
         </div>
       </div>
     </>
