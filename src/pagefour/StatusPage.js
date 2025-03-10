@@ -11,12 +11,12 @@ import iconcross from '../Pictures/Group 6.png';
 import jasosin from '../Pictures/کارت - جاسوس.png';
 import addjas from '../Pictures/کارت - اضافه کردن جاسوس.png';
 import addtime from '../Pictures/Frame 15.png';
-import time from '../Pictures/Frame 16.png';
+import time from '../Pictures/Frame 16.svg';
 import naghsh from '../Pictures/Property 1=Variant2.svg';
 import joker from '../Pictures/Property 1=Default (1).svg';
 import sheriff from '../Pictures/Property 1=Variant2 (1).svg';
 import sheriffOff from '../Pictures/Property 1=Default.svg';
-
+import closemodal from '../Pictures/Group 6.svg';
 function StatusPage() {
     const [players, setPlayers] = useState([]);
     const [jasos, setJasos] = useState([]);
@@ -25,7 +25,8 @@ function StatusPage() {
     const [extraImage, setExtraImage] = useState(null);
     const [currentImage, setCurrentImage] = useState(joker);
     const [currentImage1, setCurrentImage1] = useState(sheriffOff);
-
+    const [playerName, setPlayerName] = useState("");
+   
     const handleImageClicke = () => {
       setCurrentImage1((prevImage) => (prevImage === sheriffOff ? sheriff : sheriffOff));
     };
@@ -35,14 +36,14 @@ function StatusPage() {
       setCurrentImage((prevImage) => (prevImage === joker ? naghsh : joker));
     };
   
-    const handleImageClick = (imageSrc) => {
-        setModalImage(imageSrc);
+    const handleOpenModal = () => {
+       
         setIsModalOpen(true);
     };
 
     const handleCloseModal = () => {
         setIsModalOpen(false);
-        setModalImage(null);
+        setPlayerName("");
     };
 
     const handleAddImage = () => {
@@ -62,15 +63,32 @@ function StatusPage() {
     const removeJasos = (id) => {
         setJasos(jasos.filter((jas) => jas.id !== id));
     };
-
-    const addPlayer = () => {
+const handleConfirmAddPlayer = () => {
+    if(!playerName.trim()){
+        alert("لطفاً نام بازیکن را وارد کنید!");
+        return;
+    }
+if(players.some(player => player.name === playerName)){
+    alert('این نام قبلاً اضافه شده است!');
+      return;
+}
+if(players.length < 30){
+    const newPlayer = {id: Date.now(),name: playerName};
+    setPlayers([...players, newPlayer]);
+    setIsModalOpen(false);
+    setPlayerName("");
+}else{
+    alert("فقط 30 بازیکن می‌توانید اضافه کنید!");
+}};
+    /*const handleConfirmAddPlayer = () => {
         if (players.length < 30) {
             const newPlayer = { id: Date.now(), name: `بازیکن ${players.length + 1}` };
             setPlayers([...players, newPlayer]);
+            setIsModalOpen(false)
         } else {
             alert("فقط 30 بازیکن می‌توانید اضافه کنید!");
         }
-    };
+    };*/
 
     const removePlayer = (id) => {
         setPlayers(players.filter((player) => player.id !== id));
@@ -80,7 +98,7 @@ function StatusPage() {
         setExtraImage(null); 
     };
     
-    const Modal = ({ onClose, onAddImage }) => {
+    /*const Modal = ({ onClose, onAddImage }) => {
         return (
             <div className="modal-one">
                 <div className="modal-content">
@@ -95,7 +113,7 @@ function StatusPage() {
                 </div>
             </div>
         );
-    };
+    };*/
 
     return (
         <>
@@ -118,8 +136,9 @@ function StatusPage() {
                                 src={addicon}
                                 alt="افزودن بازیکن"
                                 className="add-player-icon"
-                                onClick={addPlayer}
+                                onClick={handleOpenModal}
                                 height='100px'
+                              
                             />
                             {players.map((player) => (
                                 <div key={player.id} className="player-card">
@@ -134,11 +153,40 @@ function StatusPage() {
                                         className="player-img"
                                         height='100px'
                                     />
+                                    <span className='player-name-add'><h5>{player.name}</h5></span>
                                 </div>
                             ))}
                         </div>
                     </div>
 
+                    {isModalOpen && (
+                     <>
+                        <div className="modal-head">
+                    <div className="modal-head-one">
+                        <div className='head-mod-one'>
+                        <span className="closemodal-one" onClick={handleCloseModal}><img src={closemodal}/></span>
+                        <h3>نام بازیکن</h3>
+                        <span className='inp-modal'><input type='text'  value={playerName} 
+                        onChange={(e) => setPlayerName(e.target.value)
+
+                        }/></span>
+                        <span className='btn-modal'>
+                        <button onClick={handleConfirmAddPlayer}>تأیید</button></span>
+                        </div>
+                    </div>
+                </div>
+                     
+                     
+                     </>
+
+                    )}
+
+                        {}
+                        {extraImage && (
+                            <div className="extra-image-container">
+                                <img src={time} alt="Extra" height="56px" />
+                          </div>
+                        )}
                     <div className='hr'></div>
                     <span className='span-text' id='span-text'>
                         <h1 className='h-one'>تعداد جاسوس ها</h1>
@@ -179,27 +227,34 @@ function StatusPage() {
                     <div className='container-div'>
                         <div className='player-list'>
                         <img
-                            src={addtime}
+                            src={time}
                             className='img-add'
                             height='56px'
                             alt="Thumbnail"
-                            onClick={() => handleImageClick('image.jpg')}
+                          
+                        />
+                         <img
+                            src={time}
+                            className='img-add'
+                            height='56px'
+                            alt="Thumbnail"
+                          
+                        />
+                         <img
+                            src={time}
+                            className='img-add'
+                            height='56px'
+                            alt="Thumbnail"
+                          
+                        />
+                         <img
+                            src={time}
+                            className='img-add'
+                            height='56px'
+                            alt="Thumbnail"
+                          
                         />
 
-                        {isModalOpen && (
-                            <Modal
-                                imageSrc={modalImage}
-                                onClose={handleCloseModal}
-                                onAddImage={handleAddImage}
-                            />
-                        )}
-
-                        {}
-                        {extraImage && (
-                            <div className="extra-image-container">
-                                <img src={time} alt="Extra" height="56px" />
-                          </div>
-                        )}
                     </div>
                     </div>
                     <div className='hr' id='hr-div'></div>

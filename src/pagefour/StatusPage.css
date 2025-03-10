@@ -275,8 +275,97 @@ font-weight: bold;
 font-family: 'CinemaFont';
 
     }
+    .modal-head {
+      position: fixed;
+   
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.792);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      backdrop-filter: blur(5px);
+    }
+    .modal-head-one {
+      background-color: #1E2133;
+      padding: 15px;
+      border-radius: 15px;
+      width: 310px;
+      height: 200px;
+      text-align: center;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 0.3s ease-in-out;
+    }
+    .head-mod-one{
+      border: 3px white solid;
+      height: 200px;
+      border-radius: 7px;
+    }
+    .closemodal-one{
+      position: relative;
+    }
+    .closemodal-one img{
+position: absolute;
+right: 145px;
+bottom: -5px;
+cursor: pointer;
+    }
+    .btn-modal{
+      width: 100%;
 
+    }
+   .btn-modal button{
+      width: 90%;
+      border-radius: 15px;
+      background-color: #FFB800;
+            color: white;
+            font-size: 30px;
+            border: none;
+            cursor: pointer;
+      font-weight: bold;
+      font-family: 'CinemaFont';
+      margin-top: 25px;
+    }
+    .head-mod-one h3{
+color: white;
+font-weight: bold;
+font-family: 'CinemaFont';
+font-size: 25px;
+margin: 10px 0px 20px 0px;
+    }
+    .inp-modal{
+      width: 100%;
+ 
+    }
+    .inp-modal input{
+      width: 90%;
+      background-color:#333;
+      border: none;
+      border-radius: 15px;
+      height: 20px;
+    padding: 25px 0px;
+     text-align: center;
+     color: white;
+     font-weight: bold;
+     font-family: 'CinemaFont';
+     font-size: 20px;
+    }
+    .player-name-add{
 
+  display: flex;
+  flex-wrap: wrap;
+
+    }
+    .player-name-add h5{
+bottom: -2;
+      left: 0;
+      color: white;
+     margin: 0;
+     position: absolute;
+ max-width: 70px;
+     word-wrap: break-word; 
+    }
   @media (max-width:480px) {
   .poch{
     position: relative;
@@ -308,11 +397,7 @@ right: 8%;
       position: relative;
 margin-right: 40px;
     }
-    .container-div{
-      position: relative;
-      right: 10%;
-
-    }
+   
     .player-count{
       position: relative;
       right: 37%;
