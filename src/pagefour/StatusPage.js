@@ -12,10 +12,10 @@ import jasosin from '../Pictures/کارت - جاسوس.png';
 import addjas from '../Pictures/کارت - اضافه کردن جاسوس.png';
 import addtime from '../Pictures/Frame 15.png';
 import time from '../Pictures/Frame 16.png';
-import naghsh from '../Pictures/Property 1=Variant2.png';
-import joker from '../Pictures/Property 1=Default.png';
-import sheriff from '../Pictures/Property 1=Variant2 (1).png';
-import sheriffOff from '../Pictures/Property 1=Default (1).png';
+import naghsh from '../Pictures/Property 1=Variant2.svg';
+import joker from '../Pictures/Property 1=Default (1).svg';
+import sheriff from '../Pictures/Property 1=Variant2 (1).svg';
+import sheriffOff from '../Pictures/Property 1=Default.svg';
 
 function StatusPage() {
     const [players, setPlayers] = useState([]);
@@ -51,11 +51,11 @@ function StatusPage() {
     };
 
     const addJasos = () => {
-        if (jasos.length < 2) {
+        if (jasos.length < 30) {
             const newJasos = { id: Date.now(), name: `جاسوس ${jasos.length + 1}` };
             setJasos([...jasos, newJasos]);
         } else {
-            alert("فقط 2 جاسوس می‌توانید اضافه کنید");
+            alert("فقط 30 جاسوس می‌توانید اضافه کنید");
         }
     };
 
@@ -64,11 +64,11 @@ function StatusPage() {
     };
 
     const addPlayer = () => {
-        if (players.length < 3) {
+        if (players.length < 30) {
             const newPlayer = { id: Date.now(), name: `بازیکن ${players.length + 1}` };
             setPlayers([...players, newPlayer]);
         } else {
-            alert("فقط 3 بازیکن می‌توانید اضافه کنید!");
+            alert("فقط 30 بازیکن می‌توانید اضافه کنید!");
         }
     };
 
