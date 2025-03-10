@@ -306,7 +306,7 @@ right: 8%;
 
     .player-container{
       position: relative;
-     right: 10%;
+margin-right: 40px;
     }
     .container-div{
       position: relative;
