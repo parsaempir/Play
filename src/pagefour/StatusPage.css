@@ -12,7 +12,7 @@
   margin: 0px auto;
 height: 100dvh;
 min-height: 100dvh;
-overflow: hidden;
+
 background-color: #000000;
  }
  .container-four{
@@ -409,5 +409,7 @@ margin-right: 40px;
       position: relative;
       right: 37%;
    }
-  
+   .but-div-one{
+    bottom: 0;
+   }
   }
