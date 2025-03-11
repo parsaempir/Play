@@ -10,14 +10,14 @@
   align-items: center;
   justify-content: center;
   margin: 0px auto;
-
+height: 100dvh;
+min-height: 100dvh;
 overflow: hidden;
 background-color: #000000;
  }
  .container-four{
   width: 100%;
   height: 100%;
- height: 100dvh;
   min-height: 100dvh;
   background-color: #891515;
   background-image: url('../pagefive/logo\ gia.png');
