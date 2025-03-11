@@ -10,9 +10,9 @@
   align-items: center;
   justify-content: center;
   margin: 0px auto;
-
+height: 100dvh;
 min-height: 100dvh;
-
+overflow: hidden;
 background-color: #000000;
  }
  .container-four{
@@ -266,6 +266,7 @@ bottom: 170px;
       position: absolute;
       bottom: 0;
    width: 100%;
+
    }
     .but-top{
 width: 100%;
@@ -278,7 +279,8 @@ background-color: #FFB800;
       cursor: pointer;
 font-weight: bold;
 font-family: 'CinemaFont';
-
+position: absolute;
+bottom: 0;
     }
     .modal-head {
       position: fixed;
