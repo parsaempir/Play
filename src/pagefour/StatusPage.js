@@ -126,7 +126,7 @@ if(players.length < 30){
                     <img src={eye} className='eye-small' />
                     
                     <span className='span-text'>
-                        <h1 className='text-one'>بازیکنان</h1>
+                        <h1 className='text-one-h1'>بازیکنان</h1>
                         <div className="player-count" id='player-count'>{players.length}</div>
                     </span>
 

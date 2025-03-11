@@ -13,6 +13,7 @@
 height: 100dvh;
 min-height: 100dvh;
 overflow: hidden;
+background-color: #000000;
  }
  .container-four{
   width: 100%;
@@ -28,7 +29,6 @@ overflow: hidden;
   background-size: 100% 85% ; 
   background-repeat: no-repeat;
   background-position: bottom;
-  overflow: hidden;
 
 }
 .head-bc{
@@ -63,7 +63,8 @@ top: 10%;
         gap: 10px;
         justify-content: center;
         align-items: center;
-flex-wrap: wrap;
+        flex-wrap:wrap-reverse;
+
       }
       
       .add-player-icon {
@@ -73,8 +74,7 @@ flex-wrap: wrap;
   
 
       }
-      
-  
+    
       
       .player-card {
         position: relative;
@@ -122,6 +122,11 @@ font-family: 'CinemaFont';
     font-size: 16px; 
     font-weight: bold; 
 
+  }
+  .text-one-h1{
+    font-weight: bold;
+color: white;
+font-family: 'CinemaFont';
   }
   .hr{
     height: 1px;
@@ -371,11 +376,13 @@ bottom: -2;
     position: relative;
     top: 180px;
   }
- 
+.head-four{
+  overflow-y: scroll;
+}
     .container-four{
-   
+
       align-items: end;
-      overflow-y: scroll;
+
     }
 
     .span-text{
