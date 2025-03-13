@@ -157,6 +157,9 @@ function StatusPage() {
     assignJasos();
     navigate("/Chooseyourcard");
     }
+
+
+    
     return (
         <>
             <div className='head-four'>
@@ -208,7 +211,7 @@ function StatusPage() {
                         <div className='head-mod-one'>
                         <span className="closemodal-one" onClick={handleCloseModal}><img src={closemodal}/></span>
                         <h3>نام بازیکن</h3>
-                        <span className='inp-modal'><input type='text'  value={playerName} 
+                        <span className='inp-modal'><input type='text' maxLength={9} value={playerName} 
                         onChange={(e) => setPlayerName(e.target.value)
 
                         }/></span>
