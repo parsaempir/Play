@@ -5,6 +5,8 @@ import backlogo from "../Pictures/Group 12.png";
 import close from "../Pictures/Vector.svg";
 import Back from "../Pictures/Group.svg";
 import eye from "../Pictures/Logo.svg";
+import spyCard from '../Pictures/jasoscard.svg';
+import citizenCard from '../Pictures/shaharvand.svg';
 import { Link, useNavigate } from "react-router-dom";
 
 function Chooseyourcard() {
@@ -13,6 +15,12 @@ function Chooseyourcard() {
   const [seconds, setSeconds] = useState(0);
   const [isScrollingMinutes, setIsScrollingMinutes] = useState(false);
   const [isScrollingSeconds, setIsScrollingSeconds] = useState(false);
+  const [assignedPlayers, setAssignedPlayers] = useState([]);
+  const [revealedRoles, setRevealedRoles] = useState({});
+  const [flippedCard, setFlippedCard] = useState(null); 
+const [currentPlayerIndex, setCurrentPlayerIndex] = useState(0);
+const [lastRole, setLastRole] = useState(null);
+
   const navigate = useNavigate();
 
   const handleStart = () => {
@@ -78,6 +86,67 @@ function Chooseyourcard() {
     }
   };
 
+useEffect (() => {
+  const savedPlayers = JSON.parse(localStorage.getItem("assignedPlayers")) || [];
+  setAssignedPlayers(savedPlayers)
+}, []);
+/*const revealRole = () => {
+  if (flippedCard !== null) return;
+
+  const player = assignedPlayers[currentPlayerIndex];
+  if (!player) return;
+
+
+  const randomRole = Math.random() < 0.5 ? spyCard : citizenCard;
+
+
+  setFlippedCard(player.id);
+  setRevealedRoles(prev => ({ ...prev, [player.id]: randomRole }));
+};*/
+
+/*const handleCardClick = () => {
+  
+  setFlippedCard(null);  
+  setTimeout(() => {
+    setCurrentPlayerIndex(prevIndex => prevIndex + 1);  
+  }, 600);
+};*/
+
+const revealRole = () => {
+  if (flippedCard !== null) return;
+
+  const player = assignedPlayers[currentPlayerIndex];
+  if (!player) return;
+
+  // انتخاب تصادفی بین دو نقش
+  const randomRole = Math.random() < 0.5 ? spyCard : citizenCard;
+
+  // ذخیره نقش در استیت جدید
+  setLastRole(randomRole);
+
+  // نمایش نقش روی کارت
+  setFlippedCard(player.id);
+  setRevealedRoles(prev => ({ ...prev, [player.id]: randomRole }));
+};
+
+
+const handleCardClick = () => {
+  // وقتی روی کارت کلیک شد، بلافاصله نفر بعدی را نمایش می‌دهیم
+  setFlippedCard(null);  // کارت به حالت پیش‌فرض باز می‌گردد
+  
+  // اگر به آخر لیست رسیدیم، مودال تایمر را نمایش می‌دهیم
+  setTimeout(() => {
+    setCurrentPlayerIndex(prevIndex => {
+      const nextIndex = prevIndex + 1;
+      if (nextIndex >= assignedPlayers.length) {
+        // اگر به آخر رسید، مودال تایمر را نشان بده
+        setShowModal(true);
+      }
+      return nextIndex;
+    });
+  }, 600);
+};
+
   return (
     <>
       <div className="head-five">
@@ -87,8 +156,27 @@ function Chooseyourcard() {
             <Link to='/Home'><img src={close} className="close" /></Link>
           </span>
           <img src={eye} className="eye" />
-          <h2 className="titr">نوبت</h2>
-          <img src={backlogo} className="back-logo" />
+          {currentPlayerIndex < assignedPlayers.length && (
+      <div key={assignedPlayers[currentPlayerIndex].id} className="player-card-one">
+        <h2 className="titr"><span className="name-player">{assignedPlayers[currentPlayerIndex].name}</span> ،نوبت</h2>
+        <div className="card-container" onClick={revealRole}>
+          <div className={`card ${flippedCard === assignedPlayers[currentPlayerIndex].id ? "flipped" : ""}`}>
+            <div className="card-front"></div>
+            <div
+  className="card-back"
+  onClick={handleCardClick}
+  style={{
+    backgroundImage: `url(${flippedCard === assignedPlayers[currentPlayerIndex].id ? revealedRoles[assignedPlayers[currentPlayerIndex].id] : lastRole})`
+  }}
+>
+</div>
+
+          </div>
+        </div>
+      </div>
+    )}
+
+       
           <div className="but-div">
             <button className="but-top-one" onClick={() => setShowModal(true)}>
               شروع
@@ -129,7 +217,7 @@ function Chooseyourcard() {
               </div>
               <div className="modal-buttons">
                 <button className="start-btn" onClick={handleStart}>شروع</button>
-                <button className="back-btn" onClick={() => setShowModal(false)}>بازگشت</button>
+             <Link to='/StatusPage'> <button className="back-btn" onClick={() => setShowModal(false)}>بازگشت</button></Link>
               </div>
             </div>
           </div>

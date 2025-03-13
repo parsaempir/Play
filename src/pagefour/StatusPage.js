@@ -1,5 +1,6 @@
 import './StatusPage.css';
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import eye from '../Pictures/Logo.svg';
 import close from '../Pictures/Vector.svg';
@@ -17,6 +18,44 @@ import joker from '../Pictures/Property 1=Default (1).svg';
 import sheriff from '../Pictures/Property 1=Variant2 (1).svg';
 import sheriffOff from '../Pictures/Property 1=Default.svg';
 import closemodal from '../Pictures/Group 6.svg';
+const useAssignJasos = (players, jasos) => {
+    const navigate = useNavigate();
+    const assignJasos = () => {
+        if (jasos.length >= players.length) {
+            alert("تعداد جاسوس‌ها نباید بیشتر یا مساوی تعداد بازیکنان باشد!");
+            return;
+        }
+    
+        
+        const shuffledPlayers = [...players].sort(() => Math.random() - 0.5);
+    
+     
+        const selectedJasos = shuffledPlayers.slice(0, jasos.length);
+    
+   
+        const assignedPlayers = players.map(player => {
+            if (selectedJasos.includes(player)) {
+                return {
+                    ...player,
+                    role: "جاسوس"
+                };
+            } else {
+                return {
+                    ...player,
+                    role: "شهروند"
+                };
+            }
+        });
+    
+     
+        localStorage.setItem("assignedPlayers", JSON.stringify(assignedPlayers));
+        navigate("/pagefive/Chooseyourcard");
+    };
+    
+    
+
+    return assignJasos;
+};
 function StatusPage() {
     const [players, setPlayers] = useState([]);
     const [jasos, setJasos] = useState([]);
@@ -26,18 +65,20 @@ function StatusPage() {
     const [currentImage, setCurrentImage] = useState(joker);
     const [currentImage1, setCurrentImage1] = useState(sheriffOff);
     const [playerName, setPlayerName] = useState("");
-   
+    const [updatedJasos, setUpdatedJasos] = useState([]);
+
+    const navigate = useNavigate();
+    const assignJasos = useAssignJasos(players, jasos);
+
     const handleImageClicke = () => {
-      setCurrentImage1((prevImage) => (prevImage === sheriffOff ? sheriff : sheriffOff));
+        setCurrentImage1((prevImage) => (prevImage === sheriffOff ? sheriff : sheriffOff));
     };
-  
 
     const handleImageClicked = () => {
-      setCurrentImage((prevImage) => (prevImage === joker ? naghsh : joker));
+        setCurrentImage((prevImage) => (prevImage === joker ? naghsh : joker));
     };
-  
+
     const handleOpenModal = () => {
-       
         setIsModalOpen(true);
     };
 
@@ -47,74 +88,84 @@ function StatusPage() {
     };
 
     const handleAddImage = () => {
-        setExtraImage('image.jpg'); 
-        setIsModalOpen(false); 
+        setExtraImage('image.jpg');
+        setIsModalOpen(false);
     };
+
+    useEffect(() => {
+        const savedJasos = JSON.parse(localStorage.getItem("jasos")) || [];
+        setJasos(savedJasos);
+    }, []);
 
     const addJasos = () => {
         if (jasos.length < 30) {
             const newJasos = { id: Date.now(), name: `جاسوس ${jasos.length + 1}` };
-            setJasos([...jasos, newJasos]);
+            setJasos(prevJasos => {
+                const updatedJasos = [...prevJasos, newJasos];
+                localStorage.setItem("jasos", JSON.stringify(updatedJasos));
+                return updatedJasos;
+            });
         } else {
             alert("فقط 30 جاسوس می‌توانید اضافه کنید");
         }
     };
-
+    
     const removeJasos = (id) => {
-        setJasos(jasos.filter((jas) => jas.id !== id));
+        setJasos(prevJasos => {
+            const updatedJasos = prevJasos.filter(jas => jas.id !== id);
+            localStorage.setItem("jasos", JSON.stringify(updatedJasos));
+            return updatedJasos;
+        });
     };
-const handleConfirmAddPlayer = () => {
-    if(!playerName.trim()){
-        alert("لطفاً نام بازیکن را وارد کنید!");
-        return;
-    }
-if(players.some(player => player.name === playerName)){
-    alert('این نام قبلاً اضافه شده است!');
-      return;
-}
-if(players.length < 30){
-    const newPlayer = {id: Date.now(),name: playerName};
-    setPlayers([...players, newPlayer]);
-    setIsModalOpen(false);
-    setPlayerName("");
-}else{
-    alert("فقط 30 بازیکن می‌توانید اضافه کنید!");
-}};
-    /*const handleConfirmAddPlayer = () => {
+    useEffect(() => {
+       
+        localStorage.removeItem("jasos");
+        setJasos([]); 
+    }, []);
+    
+    const handleConfirmAddPlayer = () => {
+        if (!playerName.trim()) {
+            alert("لطفاً نام بازیکن را وارد کنید!");
+            return;
+        }
+        if (players.some(player => player.name === playerName)) {
+            alert('این نام قبلاً اضافه شده است!');
+            return;
+        }
+     
         if (players.length < 30) {
-            const newPlayer = { id: Date.now(), name: `بازیکن ${players.length + 1}` };
+            const newPlayer = { id: Date.now(), name: playerName };
             setPlayers([...players, newPlayer]);
-            setIsModalOpen(false)
+            setIsModalOpen(false);
+            setPlayerName("");
         } else {
             alert("فقط 30 بازیکن می‌توانید اضافه کنید!");
         }
-    };*/
+    };
 
     const removePlayer = (id) => {
         setPlayers(players.filter((player) => player.id !== id));
     };
 
     const handleRemoveExtraImage = () => {
-        setExtraImage(null); 
+        setExtraImage(null);
     };
-    
-    /*const Modal = ({ onClose, onAddImage }) => {
-        return (
-            <div className="modal-one">
-                <div className="modal-content">
-                    <span className="close-modal" onClick={onClose}>&times;</span>
-                  <span className='bold-span'>رنگ</span><br/>
-                  <span className='bold-span'>زمان</span><br/>
-                  <span className='bold-span'>مورچه</span>
-
-                   
-                    <span className='btn-span'>
-                    <button onClick={onAddImage}>انتخاب</button><br/></span>
-                </div>
-            </div>
-        );
-    };*/
-
+    const handleNextStep = () => {
+        if(players.length === 0){
+            alert("لطفاً حداقل یک بازیکن اضافه کنید!");
+            return;
+        }
+        if (jasos.length === 0) {
+            alert("لطفاً حداقل یک جاسوس اضافه کنید!");
+            return;
+        }
+        if (players.length <= jasos.length) {
+            alert("تعداد جاسوس‌ها نباید بیشتر یا مساوی تعداد بازیکنان باشد!");
+            return;
+        }
+    assignJasos();
+    navigate("/Chooseyourcard");
+    }
     return (
         <>
             <div className='head-four'>
@@ -274,7 +325,7 @@ if(players.length < 30){
       /></span>
       <div className='poch'>&nbsp;</div>
       <div className='but-div-one'>
-<Link to='/Chooseyourcard'><button className='but-top'>مرحله بعدی</button></Link>
+<button className='but-top' onClick={handleNextStep}>مرحله بعدی</button>
 
       </div>
                 </div>
