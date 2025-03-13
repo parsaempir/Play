@@ -26,29 +26,20 @@ const useAssignJasos = (players, jasos) => {
             return;
         }
     
-        
+       
         const shuffledPlayers = [...players].sort(() => Math.random() - 0.5);
     
-     
-        const selectedJasos = shuffledPlayers.slice(0, jasos.length);
-    
-   
-        const assignedPlayers = players.map(player => {
-            if (selectedJasos.includes(player)) {
-                return {
-                    ...player,
-                    role: "جاسوس"
-                };
-            } else {
-                return {
-                    ...player,
-                    role: "شهروند"
-                };
-            }
-        });
+        const selectedJasosIds = shuffledPlayers.slice(0, jasos.length).map(player => player.id);
     
      
+        const assignedPlayers = players.map(player => ({
+            ...player,
+            role: selectedJasosIds.includes(player.id) ? "جاسوس" : "شهروند"
+        }));
+    
+        
         localStorage.setItem("assignedPlayers", JSON.stringify(assignedPlayers));
+    
         navigate("/pagefive/Chooseyourcard");
     };
     

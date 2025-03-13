@@ -118,28 +118,26 @@ const revealRole = () => {
   const player = assignedPlayers[currentPlayerIndex];
   if (!player) return;
 
-  // انتخاب تصادفی بین دو نقش
-  const randomRole = Math.random() < 0.5 ? spyCard : citizenCard;
 
-  // ذخیره نقش در استیت جدید
-  setLastRole(randomRole);
+  const roleImage = player.role === "جاسوس" ? spyCard : citizenCard;
 
-  // نمایش نقش روی کارت
+  setLastRole(roleImage);
+
   setFlippedCard(player.id);
-  setRevealedRoles(prev => ({ ...prev, [player.id]: randomRole }));
+  setRevealedRoles(prev => ({ ...prev, [player.id]: roleImage }));
 };
 
 
+
 const handleCardClick = () => {
-  // وقتی روی کارت کلیک شد، بلافاصله نفر بعدی را نمایش می‌دهیم
-  setFlippedCard(null);  // کارت به حالت پیش‌فرض باز می‌گردد
+ 
+  setFlippedCard(null); 
   
-  // اگر به آخر لیست رسیدیم، مودال تایمر را نمایش می‌دهیم
+ 
   setTimeout(() => {
     setCurrentPlayerIndex(prevIndex => {
       const nextIndex = prevIndex + 1;
       if (nextIndex >= assignedPlayers.length) {
-        // اگر به آخر رسید، مودال تایمر را نشان بده
         setShowModal(true);
       }
       return nextIndex;
