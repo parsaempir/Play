@@ -24,6 +24,10 @@ const [lastRole, setLastRole] = useState(null);
   const navigate = useNavigate();
 
   const handleStart = () => {
+    if(minutes === 0 && seconds === 0){
+      alert("لطفاً یک زمان معتبر انتخاب کنید!");  
+    return; 
+    }
     setShowModal(false);
     navigate(`/DiscussPage?minutes=${minutes}&seconds=${seconds}`);
   };
