@@ -382,6 +382,10 @@
   .container-four {
     align-items: end;
   }
+  .content-wrapper{
+    align-items: end;
+
+  }
   .span-text {
     position: relative;
     right: 10%;
@@ -392,6 +396,7 @@
   }
   .eye-small {
     position: relative;
+    right: 35%;
   }
   .player-container {
     position: relative;
