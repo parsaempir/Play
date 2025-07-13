@@ -81,7 +81,9 @@
   align-items: center;
   flex-wrap: wrap;
 }
-
+.img-add{
+  cursor: pointer;
+}
 .add-player-icon {
   cursor: pointer;
   object-fit: contain;
