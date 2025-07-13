@@ -53,6 +53,7 @@
   position: relative;
   left: 35px;
   top: 35px;
+  cursor: pointer;
 }
 
 .close-cross {

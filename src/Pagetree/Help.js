@@ -2,29 +2,43 @@ import './Help.css';
 import close from '../Pictures/Vector.svg';
 import Back from '../Pictures/Group.svg';
 import Plant from '../pagefive/logo gia.png';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+
 function Help() {
   const [selectedWord, setSelectedWord] = useState("بازی"); 
+      const [contentOpacity, setContentOpacity] = useState(0); 
+      useEffect(() => {
+      
+        const timer = setTimeout(() => {
+            setContentOpacity(1);
+        }, 100); 
+        return () => clearTimeout(timer);
+    }, []);
+  const navigate = useNavigate();
 
   const handleClick = (word) => {
     setSelectedWord(word); 
   };
+  const handleGoBack = () => {
+    navigate('/Home', { state: { fromStatusPage: true } });
+};
 
   return (
     <>
-      <div className="head-three">
+      <div className="head-three" >
         <div className="container-three">
-          <span className="head-bc">
-           <Link to='/Home'><img src={Back} className="back" /></Link> 
+          <span className="head-bc" style={{ opacity: contentOpacity }}>
+           <img src={Back} className="back"onClick={handleGoBack} />
             <Link to='/Home'><img src={close} className="close-one" /></Link>
 
           </span>
 
-          <b className="bold">راهنمای بازی</b>
+          <b className="bold" style={{ opacity: contentOpacity }}>راهنمای بازی</b>
 
 
-<div className='head-container'>
+<div className='head-container' style={{ opacity: contentOpacity }}>
        <div className="button-group">
             <button
               onClick={() => handleClick("بازی")}
@@ -107,8 +121,8 @@ function Help() {
             )}
           </div>
           </div>
-          <div className='hr-one'></div>   
-<span className='but-head-top'>
+          <div className="hr-one" style={{ opacity: contentOpacity }}></div>   
+<span className='but-head-top' style={{ opacity: contentOpacity }}>
           <Link to='/StatusPage'><button className='but'>
 !شروع بازی
 

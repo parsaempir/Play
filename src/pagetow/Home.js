@@ -51,7 +51,16 @@ function Home() {
             navigate('/StatusPage', { state: { animateEntry: true } });
         }, 1500); 
     };
-
+    const handleGoToHelp = () => {
+        setAnimateExit(true);      
+        setAnimateBg(true);         
+        setElementsOpacity(0);      
+    
+        setTimeout(() => {
+            navigate('/Help', { state: { animateEntry: true } });  
+        }, 1500); 
+    };
+    
     return (
         <>
             <div className={`head-two ${animateExit ? 'content-fade-out-up' : ''}`}>
@@ -62,7 +71,10 @@ function Home() {
                     <img src={text} className='text-logo1' alt="Text Logo" style={{ opacity: elementsOpacity }} />
 
                     <span className='btn-head-home' style={{ opacity: elementsOpacity }}>
-                        <Link to="/Help"><button className='but-one1'>راهنمای بازی؟</button></Link>
+                        <span>
+                        <button className='but-one1' onClick={handleGoToHelp}>راهنمای بازی؟</button>
+
+                        </span>
                         <span>
                         <button className='but-tow1' onClick={handleStartGame}>!شروع بازی</button></span>
                     </span>

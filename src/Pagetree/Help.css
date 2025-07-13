@@ -25,12 +25,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-size: 100% 85% ; 
+  background-size: 100% 90% ; 
   background-repeat: no-repeat;
   background-position: bottom;
   overflow-y: hidden;
 
 }
+.head-bc,
+.bold,
+.head-container,
+.hr-one,
+.but-head-top{
+  transition: opacity 1s ease-in-out; 
+}
+
 
    
    .head-bc{
