@@ -272,31 +272,14 @@ function StatusPage() {
                             <h1 className='h-one '> دسته بندی کلمات</h1>
                         </span>
                         <div className='container-div'>
-                            <div className='player-list'>
+                            <div className='player-list' id='player-list-time'>
                                 <img
-                                    src={time}
+                                    src={addjas}
                                     className='img-add'
-                                    height='56px'
+                                    height='100px'
                                     alt="Thumbnail"
                                 />
-                                <img
-                                    src={time}
-                                    className='img-add'
-                                    height='56px'
-                                    alt="Thumbnail"
-                                />
-                                <img
-                                    src={time}
-                                    className='img-add'
-                                    height='56px'
-                                    alt="Thumbnail"
-                                />
-                                <img
-                                    src={time}
-                                    className='img-add'
-                                    height='56px'
-                                    alt="Thumbnail"
-                                />
+                             
                             </div>
                         </div>
                         <div className='hr' id='hr-div'></div>

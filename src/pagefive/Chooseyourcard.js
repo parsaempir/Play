@@ -44,9 +44,9 @@ const [lastRole, setLastRole] = useState(null);
     if (!isScrollingMinutes) {
       setIsScrollingMinutes(true);
       if (event.deltaY < 0) {
-        setMinutes((prev) => (prev + 1 > 10 ? 0 : prev + 1));
+        setMinutes((prev) => (prev + 1 > 30 ? 0 : prev + 1));
       } else {
-        setMinutes((prev) => (prev - 1 < 0 ? 10 : prev - 1));
+        setMinutes((prev) => (prev - 1 < 0 ? 30 : prev - 1));
       }
       setTimeout(() => setIsScrollingMinutes(false), 300); 
     }
@@ -69,9 +69,9 @@ const [lastRole, setLastRole] = useState(null);
       setIsScrollingMinutes(true);
       const touch = event.touches[0];
       if (touch.clientY < window.innerHeight / 2) {
-        setMinutes((prev) => (prev + 1 > 10 ? 0 : prev + 1));
+        setMinutes((prev) => (prev + 1 > 30 ? 0 : prev + 1));
       } else {
-        setMinutes((prev) => (prev - 1 < 0 ? 10 : prev - 1));
+        setMinutes((prev) => (prev - 1 < 0 ? 30 : prev - 1));
       }
       setTimeout(() => setIsScrollingMinutes(false), 300); 
     }
@@ -199,9 +199,9 @@ const handleCardClick = () => {
                   onTouchMove={handleTouchMoveMinutes}
                 >
                   <div className="time-display">
-                    <div className="time-number less">{minutes === 0 ? 10 : minutes - 1}</div>
+                    <div className="time-number less">{minutes === 0 ? 30 : minutes - 1}</div>
                     <div className="time-number active">{minutes}</div>
-                    <div className="time-number less">{minutes === 10 ? 0 : minutes + 1}</div>
+                    <div className="time-number less">{minutes === 30 ? 0 : minutes + 1}</div>
                   </div>
                 </div>
                 <span className="colon">:</span>

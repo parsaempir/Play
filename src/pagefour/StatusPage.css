@@ -79,7 +79,7 @@
   gap: 20px;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
 }
 
 .add-player-icon {
@@ -405,5 +405,9 @@
   .player-count {
     position: relative;
     right: 37%;
+  }
+  #player-list-time{
+    position: relative;
+    margin-right: 40px;
   }
 }
