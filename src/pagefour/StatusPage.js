@@ -18,6 +18,7 @@ import joker from '../Pictures/Property 1=Default (1).svg';
 import sheriff from '../Pictures/Property 1=Variant2 (1).svg';
 import sheriffOff from '../Pictures/Property 1=Default.svg';
 import closemodal from '../Pictures/Group 6.svg';
+
 const useAssignJasos = (players, jasos) => {
     const navigate = useNavigate();
     const assignJasos = () => {
@@ -25,28 +26,21 @@ const useAssignJasos = (players, jasos) => {
             alert("تعداد جاسوس‌ها نباید بیشتر یا مساوی تعداد بازیکنان باشد!");
             return;
         }
-    
-       
+
         const shuffledPlayers = [...players].sort(() => Math.random() - 0.5);
-    
         const selectedJasosIds = shuffledPlayers.slice(0, jasos.length).map(player => player.id);
-    
-     
+
         const assignedPlayers = players.map(player => ({
             ...player,
             role: selectedJasosIds.includes(player.id) ? "جاسوس" : "شهروند"
         }));
-    
-        
+
         localStorage.setItem("assignedPlayers", JSON.stringify(assignedPlayers));
-    
         navigate("/pagefive/Chooseyourcard");
     };
-    
-    
-
     return assignJasos;
 };
+
 function StatusPage() {
     const [players, setPlayers] = useState([]);
     const [jasos, setJasos] = useState([]);
@@ -56,10 +50,18 @@ function StatusPage() {
     const [currentImage, setCurrentImage] = useState(joker);
     const [currentImage1, setCurrentImage1] = useState(sheriffOff);
     const [playerName, setPlayerName] = useState("");
-    const [updatedJasos, setUpdatedJasos] = useState([]);
+    const [contentOpacity, setContentOpacity] = useState(0); 
 
     const navigate = useNavigate();
     const assignJasos = useAssignJasos(players, jasos);
+
+    useEffect(() => {
+      
+        const timer = setTimeout(() => {
+            setContentOpacity(1);
+        }, 100); 
+        return () => clearTimeout(timer);
+    }, []);
 
     const handleImageClicke = () => {
         setCurrentImage1((prevImage) => (prevImage === sheriffOff ? sheriff : sheriffOff));
@@ -100,7 +102,7 @@ function StatusPage() {
             alert("فقط 30 جاسوس می‌توانید اضافه کنید");
         }
     };
-    
+
     const removeJasos = (id) => {
         setJasos(prevJasos => {
             const updatedJasos = prevJasos.filter(jas => jas.id !== id);
@@ -108,12 +110,12 @@ function StatusPage() {
             return updatedJasos;
         });
     };
+
     useEffect(() => {
-       
         localStorage.removeItem("jasos");
-        setJasos([]); 
+        setJasos([]);
     }, []);
-    
+
     const handleConfirmAddPlayer = () => {
         if (!playerName.trim()) {
             alert("لطفاً نام بازیکن را وارد کنید!");
@@ -123,7 +125,7 @@ function StatusPage() {
             alert('این نام قبلاً اضافه شده است!');
             return;
         }
-     
+
         if (players.length < 30) {
             const newPlayer = { id: Date.now(), name: playerName };
             setPlayers([...players, newPlayer]);
@@ -141,8 +143,9 @@ function StatusPage() {
     const handleRemoveExtraImage = () => {
         setExtraImage(null);
     };
+
     const handleNextStep = () => {
-        if(players.length === 0){
+        if (players.length === 0) {
             alert("لطفاً حداقل یک بازیکن اضافه کنید!");
             return;
         }
@@ -154,178 +157,172 @@ function StatusPage() {
             alert("تعداد جاسوس‌ها نباید بیشتر یا مساوی تعداد بازیکنان باشد!");
             return;
         }
-    assignJasos();
-    navigate("/Chooseyourcard");
+        assignJasos();
+        navigate("/Chooseyourcard");
     }
+    const navigatee = useNavigate(); 
 
-
-    
+    const handleGoBack = () => {
+        navigate('/Home', { state: { fromStatusPage: true } });
+    };
     return (
         <>
             <div className='head-four'>
                 <div className='container-four'>
-                    <span className="head-bc">
-                        <Link to='/Home'><img src={Back} className="back" /></Link>
-                      <Link to='/Home'> <img src={close} className="close-cross" /></Link> 
-                    </span>
-                    <img src={eye} className='eye-small' />
-                    
-                    <span className='span-text'>
-                        <h1 className='text-one-h1'>بازیکنان</h1>
-                        <div className="player-count" id='player-count'>{players.length}</div>
-                    </span>
+                    <div className='content-wrapper' style={{ opacity: contentOpacity }}>
+                        <span className="head-bc">
+                           <img src={Back} className="back" alt="Back" onClick={handleGoBack}/>
+                            <Link to='/Home'> <img src={close} className="close-cross" alt="Close" /></Link>
+                        </span>
+                        <img src={eye} className='eye-small' alt="Eye Logo" />
 
-                    <div className="player-container">
-                        <div className="player-list">
-                            <img
-                                src={addicon}
-                                alt="افزودن بازیکن"
-                                className="add-player-icon"
-                                onClick={handleOpenModal}
-                                height='100px'
-                              
-                            />
-                            {players.map((player) => (
-                                <div key={player.id} className="player-card">
-                                    <img
-                                        onClick={() => removePlayer(player.id)}
-                                        src={iconcross}
-                                        className='remove-btn'
-                                    />
-                                    <img
-                                        src={icon}
-                                        alt={player.name}
-                                        className="player-img"
-                                        height='100px'
-                                    />
-                                    <span className='player-name-add'><h5>{player.name}</h5></span>
+                        <span className='span-text'>
+                            <h1 className='text-one-h1'>بازیکنان</h1>
+                            <div className="player-count" id='player-count'>{players.length}</div>
+                        </span>
+
+                        <div className="player-container">
+                            <div className="player-list">
+                                <img
+                                    src={addicon}
+                                    alt="افزودن بازیکن"
+                                    className="add-player-icon"
+                                    onClick={handleOpenModal}
+                                    height='100px'
+                                />
+                                {players.map((player) => (
+                                    <div key={player.id} className="player-card">
+                                        <img
+                                            onClick={() => removePlayer(player.id)}
+                                            src={iconcross}
+                                            className='remove-btn'
+                                            alt="Remove Player"
+                                        />
+                                        <img
+                                            src={icon}
+                                            alt={player.name}
+                                            className="player-img"
+                                            height='100px'
+                                        />
+                                        <span className='player-name-add'><h5>{player.name}</h5></span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {isModalOpen && (
+                            <>
+                                <div className="modal-head">
+                                    <div className="modal-head-one">
+                                        <div className='head-mod-one'>
+                                            <span className="closemodal-one" onClick={handleCloseModal}><img src={closemodal} alt="Close Modal" /></span>
+                                            <h3>نام بازیکن</h3>
+                                            <span className='inp-modal'><input type='text' maxLength={9} value={playerName}
+                                                onChange={(e) => setPlayerName(e.target.value)}
+                                            /></span>
+                                            <span className='btn-modal'>
+                                                <button onClick={handleConfirmAddPlayer}>تأیید</button></span>
+                                        </div>
+                                    </div>
                                 </div>
-                            ))}
-                        </div>
-                    </div>
+                            </>
+                        )}
 
-                    {isModalOpen && (
-                     <>
-                        <div className="modal-head">
-                    <div className="modal-head-one">
-                        <div className='head-mod-one'>
-                        <span className="closemodal-one" onClick={handleCloseModal}><img src={closemodal}/></span>
-                        <h3>نام بازیکن</h3>
-                        <span className='inp-modal'><input type='text' maxLength={9} value={playerName} 
-                        onChange={(e) => setPlayerName(e.target.value)
-
-                        }/></span>
-                        <span className='btn-modal'>
-                        <button onClick={handleConfirmAddPlayer}>تأیید</button></span>
-                        </div>
-                    </div>
-                </div>
-                     
-                     
-                     </>
-
-                    )}
-
-                        {}
                         {extraImage && (
                             <div className="extra-image-container">
                                 <img src={time} alt="Extra" height="56px" />
-                          </div>
+                            </div>
                         )}
-                    <div className='hr'></div>
-                    <span className='span-text' id='span-text'>
-                        <h1 className='h-one'>تعداد جاسوس ها</h1>
-                        <div className="player-count" >{jasos.length}</div>
-                    </span>
+                        <div className='hr'></div>
+                        <span className='span-text' id='span-text'>
+                            <h1 className='h-one'>تعداد جاسوس ها</h1>
+                            <div className="player-count" >{jasos.length}</div>
+                        </span>
 
-                    <div className="player-container" id='player-container'>
-                        <div className="player-list">
-                            <img
-                                src={addjas}
-                                alt="افزودن جاسوس"
-                                className="add-player-icon"
-                                onClick={addJasos}
-                                height='100px'
-                            />
-                            {jasos.map((jas) => (
-                                <div key={jas.id} className="player-card">
-                                    <img
-                                        onClick={() => removeJasos(jas.id)}
-                                        src={iconcross}
-                                        className='remove-btn'
-                                    />
-                                    <img
-                                        src={jasosin}
-                                        alt={jas.name}
-                                        className="player-img"
-                                        height='100px'
-                                    />
-                                </div>
-                            ))}
+                        <div className="player-container" id='player-container'>
+                            <div className="player-list">
+                                <img
+                                    src={addjas}
+                                    alt="افزودن جاسوس"
+                                    className="add-player-icon"
+                                    onClick={addJasos}
+                                    height='100px'
+                                />
+                                {jasos.map((jas) => (
+                                    <div key={jas.id} className="player-card">
+                                        <img
+                                            onClick={() => removeJasos(jas.id)}
+                                            src={iconcross}
+                                            className='remove-btn'
+                                            alt="Remove Jasos"
+                                        />
+                                        <img
+                                            src={jasosin}
+                                            alt={jas.name}
+                                            className="player-img"
+                                            height='100px'
+                                        />
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                    </div>
 
-                    <div className='hr' id='hr'></div>
-                    <span className='span-text' id='span-text'>
-                        <h1 className='h-one '> دسته بندی کلمات</h1>
-                    </span>
-                    <div className='container-div'>
-                        <div className='player-list'>
-                        <img
-                            src={time}
-                            className='img-add'
-                            height='56px'
-                            alt="Thumbnail"
-                          
-                        />
-                         <img
-                            src={time}
-                            className='img-add'
-                            height='56px'
-                            alt="Thumbnail"
-                          
-                        />
-                         <img
-                            src={time}
-                            className='img-add'
-                            height='56px'
-                            alt="Thumbnail"
-                          
-                        />
-                         <img
-                            src={time}
-                            className='img-add'
-                            height='56px'
-                            alt="Thumbnail"
-                          
-                        />
-
-                    </div>
-                    </div>
-                    <div className='hr' id='hr-div'></div>
-                    <span className='span-text' id='span-text'>
-                        <h1 className='h-one' id='h-one'> نقش های خاص</h1>
-                    </span>
-                    <span className='role-one'>
-      <img
-        src={currentImage}
-        alt="Switchable"
-        onClick={handleImageClicked}
-      />
-      <img
-        src={currentImage1}
-        alt="Switchable"
-        onClick={handleImageClicke}
-      /></span>
-      <div className='poch'>&nbsp;</div>
-      <div className='but-div-one'>
-<button className='but-top' onClick={handleNextStep}>مرحله بعدی</button>
-
-      </div>
+                        <div className='hr' id='hr'></div>
+                        <span className='span-text' id='span-text'>
+                            <h1 className='h-one '> دسته بندی کلمات</h1>
+                        </span>
+                        <div className='container-div'>
+                            <div className='player-list'>
+                                <img
+                                    src={time}
+                                    className='img-add'
+                                    height='56px'
+                                    alt="Thumbnail"
+                                />
+                                <img
+                                    src={time}
+                                    className='img-add'
+                                    height='56px'
+                                    alt="Thumbnail"
+                                />
+                                <img
+                                    src={time}
+                                    className='img-add'
+                                    height='56px'
+                                    alt="Thumbnail"
+                                />
+                                <img
+                                    src={time}
+                                    className='img-add'
+                                    height='56px'
+                                    alt="Thumbnail"
+                                />
+                            </div>
+                        </div>
+                        <div className='hr' id='hr-div'></div>
+                        <span className='span-text' id='span-text'>
+                            <h1 className='h-one' id='h-one'> نقش های خاص</h1>
+                        </span>
+                        <span className='role-one'>
+                            <img
+                                src={currentImage}
+                                alt="Switchable Joker"
+                                onClick={handleImageClicked}
+                            />
+                            <img
+                                src={currentImage1}
+                                alt="Switchable Sheriff"
+                                onClick={handleImageClicke}
+                            /></span>
+                        <div className='poch'>&nbsp;</div>
+                        <div className='but-div-one'>
+                            <button className='but-top' onClick={handleNextStep}>مرحله بعدی</button>
+                        </div>
+                    </div> 
                 </div>
             </div>
         </>
     );
 }
-//<img src={iconzarb}className='iconzrb'  onClick={handleRemoveExtraImage} />  
+
 export default StatusPage;

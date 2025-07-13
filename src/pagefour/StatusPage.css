@@ -4,411 +4,402 @@
   font-weight: normal;
   font-style: normal;
 }
-.head-four{
+
+.head-four {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0px auto;
-height: 100dvh;
-min-height: 100dvh;
-overflow: hidden;
-background-color: #000000;
- }
- .container-four{
+  height: 100dvh;
+  min-height: 100dvh;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.container-four {
   width: 100%;
   height: 100%;
   min-height: 100dvh;
   background-color: #891515;
-  background-image: url('../pagefive/logo\ gia.png');
+  background-image: url('../pagefive/logo gia.png');
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-size: 100% 85% ; 
+  background-size: 100% 85%;
   background-repeat: no-repeat;
   background-position: bottom;
+}
 
-}
-.head-bc{
+.content-wrapper {
+    width: 100%; 
+    height: 100%; 
     display: flex;
-justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 1s ease-in-out; 
+    opacity: 0; 
 }
-.back{
+
+
+.head-bc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.back {
   position: relative;
   left: 35px;
   top: 35px;
 }
-.close-cross{
-    position: relative;
-    right: 35px;
-    top: 35px;
-}
-.eye-small{
-    position: relative;
-    height: 61px;
-    width: 114px;
+
+.close-cross {
+  position: relative;
+  right: 35px;
+  top: 35px;
 }
 
-    .player-container{
-
-display: flex;
-flex-direction: row-reverse;
-position: relative;
-top: 10%;
+.eye-small {
+  position: relative;
+  height: 61px;
+  width: 114px;
 }
-      .player-list {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        align-items: center;
-        flex-wrap:wrap-reverse;
 
-      }
-      
-      .add-player-icon {
-      
-        cursor: pointer;
-        object-fit: contain;
-  
+.player-container {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  top: 10%;
+}
 
-      }
-    
-      
-      .player-card {
-        position: relative;
-        
-        border: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-background-color: transparent;
-      }
-      
-      .player-card .remove-btn {
-        position: absolute;
-     right: 57px;
-        bottom: 85px;
-        cursor: pointer;
-        width: 20px;
-        height: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+.player-list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+}
 
-      }
-      .span-text{
-display: flex;
-flex-direction: row-reverse;
-position: relative;
-top: 10%;
+.add-player-icon {
+  cursor: pointer;
+  object-fit: contain;
+}
 
-      }
-  .h-one{
-font-weight: bold;
-color: white;
-font-family: 'CinemaFont';
+.player-card {
+  position: relative;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
 
-  }
-  .player-count {
-    position: absolute;
-    right: 310px; 
-    top: 25px;
-    color: #FFB800; 
-    border-radius: 10px;
-    padding: 5px 10px; 
-    font-size: 16px; 
-    font-weight: bold; 
+.player-card .remove-btn {
+  position: absolute;
+  right: 57px;
+  bottom: 85px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  }
-  .text-one-h1{
-    font-weight: bold;
-color: white;
-font-family: 'CinemaFont';
-  }
-  .hr{
-    height: 1px;
-  margin: 0px 50px 0px 50px ;
-    background-color:  #ffb7003e;
-    position: relative;
-    
-  }
-          
-      
-  #span-text{
-position: relative;
-     } 
-    #player-container{
-        position: relative;
+.span-text {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  top: 10%;
+}
 
-    } 
-    #hr{
+.h-one {
+  font-weight: bold;
+  color: white;
+  font-family: 'CinemaFont';
+}
 
-        top: 110px;
-    }
+.player-count {
+  position: absolute;
+  right: 310px;
+  top: 25px;
+  color: #FFB800;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
 
+.text-one-h1 {
+  font-weight: bold;
+  color: white;
+  font-family: 'CinemaFont';
+}
 
-  
+.hr {
+  height: 1px;
+  margin: 0px 50px 0px 50px;
+  background-color: #ffb7003e;
+  position: relative;
+}
+
+#span-text {
+  position: relative;
+}
+
+#player-container {
+  position: relative;
+}
+
+#hr {
+  top: 110px;
+}
 
 .modal-one {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.806);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10000; 
-  }
-  
- .modal-content {
-    position: relative;
-    background-color: white;
-    border-radius: 10px;
-    width: 300px;
-    height: 200px;
-    z-index: 10000;
-  }
-  
-  .close-modal {
-    position: absolute;
-bottom: 170px;  
-  right: 5px;
-    font-size: 30px;
-    font-weight: bold;
-    color: #333;
-    cursor: pointer;
-  }
-  
-
-  
-  .modal-content button {
-    padding: 10px 20px;
-    background-color: #FFB800;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-   font-weight: bold;
-   font-family: 'CinemaFont';
-
-  }
-  
- 
-  .btn-span{
-    display: flex;
-    justify-content: center;
-    position: relative;
- top: 45px;
-  }
-
-  
- 
-  
-  .container-div{display: flex;
-    flex-direction: row-reverse;
-    position: relative;
-    top: 10%;
-  }
-    /*.iconzrb{
-        position: absolute;
-        right: 57px;
-           
-           cursor: pointer;
-           width: 20px;
-           height: 20px;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           z-index: 100;
-
-    }*/
-    .bold-span{
-    color: #FFB800;
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-    position: relative;
-    top: 20px;
-    font-family: 'CinemaFont';
-
-    }
-   
-    #hr-div{
-         position: relative;
-         top: 120px;
-    }
-    .role-one{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.806);
   display: flex;
-      flex-direction: row-reverse;
-      gap: 20px;
-      position: relative;
-      top: 10%;
-    }
-    #player-count{
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.modal-content {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  width: 300px;
+  height: 200px;
+  z-index: 10000;
+}
+
+.close-modal {
+  position: absolute;
+  bottom: 170px;
+  right: 5px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  background-color: #FFB800;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'CinemaFont';
+}
+
+.btn-span {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 45px;
+}
+
+.container-div {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  top: 10%;
+}
+
+.bold-span {
+  color: #FFB800;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  position: relative;
+  top: 20px;
+  font-family: 'CinemaFont';
+}
+
+#hr-div {
+  position: relative;
+  top: 120px;
+}
+
+.role-one {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+  position: relative;
+  top: 10%;
+}
+
+#player-count {
   position: absolute;
   right: 262px;
-    }
-    .role-one img{
-      width: 154px;
-      height: 55px;
-    }
-    #p-head{
-      position: relative;
-      top: 115px;
-    }
-    .but-div-one{
-      position: absolute;
-   bottom: 0;
-   width: 100%;
+}
 
-   }
-    .but-top{
-width: 100%;
-padding: 10px 0px 20px  0px;
-background-color: #FFB800;
-      color: white;
-      font-size: 40px;
-    z-index: 100;
-      border: none;
-      cursor: pointer;
-font-weight: bold;
-font-family: 'CinemaFont';
+.role-one img {
+  width: 154px;
+  height: 55px;
+}
 
-    }
-    .modal-head {
-      position: fixed;
-   
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.792);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      backdrop-filter: blur(5px);
-    }
-    .modal-head-one {
-      background-color: #1E2133;
-      padding: 15px;
-      border-radius: 15px;
-      width: 310px;
-      height: 200px;
-      text-align: center;
-      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-      animation: fadeIn 0.3s ease-in-out;
-    }
-    .head-mod-one{
-      border: 3px white solid;
-      height: 200px;
-      border-radius: 7px;
-    }
-    .closemodal-one{
-      position: relative;
-    }
-    .closemodal-one img{
-position: absolute;
-right: 145px;
-bottom: -5px;
-cursor: pointer;
-    }
-    .btn-modal{
-      width: 100%;
+#p-head {
+  position: relative;
+  top: 115px;
+}
 
-    }
-   .btn-modal button{
-      width: 90%;
-      border-radius: 15px;
-      background-color: #FFB800;
-            color: white;
-            font-size: 30px;
-            border: none;
-            cursor: pointer;
-      font-weight: bold;
-      font-family: 'CinemaFont';
-      margin-top: 25px;
-    }
-    .head-mod-one h3{
-color: white;
-font-weight: bold;
-font-family: 'CinemaFont';
-font-size: 25px;
-margin: 10px 0px 20px 0px;
-    }
-    .inp-modal{
-      width: 100%;
- 
-    }
-    .inp-modal input{
-      width: 90%;
-      background-color:#333;
-      border: none;
-      border-radius: 15px;
-      height: 20px;
-    padding: 25px 0px;
-     text-align: center;
-     color: white;
-     font-weight: bold;
-     font-family: 'CinemaFont';
-     font-size: 20px;
-    }
-    .player-name-add{
+.but-div-one {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 
+.but-top {
+  width: 100%;
+  padding: 10px 0px 20px 0px;
+  background-color: #FFB800;
+  color: white;
+  font-size: 40px;
+  z-index: 100;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'CinemaFont';
+}
+
+.modal-head {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.792);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(5px);
+}
+
+.modal-head-one {
+  background-color: #1E2133;
+  padding: 15px;
+  border-radius: 15px;
+  width: 310px;
+  height: 200px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.head-mod-one {
+  border: 3px white solid;
+  height: 200px;
+  border-radius: 7px;
+}
+
+.closemodal-one {
+  position: relative;
+}
+
+.closemodal-one img {
+  position: absolute;
+  right: 145px;
+  bottom: -5px;
+  cursor: pointer;
+}
+
+.btn-modal {
+  width: 100%;
+}
+
+.btn-modal button {
+  width: 90%;
+  border-radius: 15px;
+  background-color: #FFB800;
+  color: white;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'CinemaFont';
+  margin-top: 25px;
+}
+
+.head-mod-one h3 {
+  color: white;
+  font-weight: bold;
+  font-family: 'CinemaFont';
+  font-size: 25px;
+  margin: 10px 0px 20px 0px;
+}
+
+.inp-modal {
+  width: 100%;
+}
+
+.inp-modal input {
+  width: 90%;
+  background-color: #333;
+  border: none;
+  border-radius: 15px;
+  height: 20px;
+  padding: 25px 0px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-family: 'CinemaFont';
+  font-size: 20px;
+}
+
+.player-name-add {
   display: flex;
   flex-wrap: wrap;
+}
 
-    }
-    .player-name-add h5{
-bottom: -2;
-      left: 0;
-      color: white;
-     margin: 0;
-     position: absolute;
- max-width: 70px;
-     word-wrap: break-word; 
-    }
-  @media (max-width:480px) {
-  .poch{
+.player-name-add h5 {
+  bottom: -2;
+  left: 0;
+  color: white;
+  margin: 0;
+  position: absolute;
+  max-width: 70px;
+  word-wrap: break-word;
+}
+
+@media (max-width:480px) {
+  .poch {
     position: relative;
     top: 180px;
   }
-.head-four{
-  overflow-y: scroll;
-}
-    .container-four{
-
-      align-items: end;
-
-    }
-
-    .span-text{
-position: relative;
-right: 10%;
-    }
-    .role-one{
-right: 8%;
-      position: relative;
-
-    }
-    .eye-small{
-      position: relative;
-      right: 35%;
-    }
-   
-
-    .player-container{
-      position: relative;
-margin-right: 40px;
-    }
-   
-    .player-count{
-      position: relative;
-      right: 37%;
-   }
-
+  .head-four {
+    overflow-y: scroll;
   }
+  .container-four {
+    align-items: end;
+  }
+  .span-text {
+    position: relative;
+    right: 10%;
+  }
+  .role-one {
+    right: 8%;
+    position: relative;
+  }
+  .eye-small {
+    position: relative;
+    right: 35%;
+  }
+  .player-container {
+    position: relative;
+    margin-right: 40px;
+  }
+  .player-count {
+    position: relative;
+    right: 37%;
+  }
+}

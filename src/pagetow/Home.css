@@ -1,99 +1,167 @@
 @font-face {
     font-family: 'CinemaFont';
-    src: url('/Cinema\ Font.ttf') format('truetype');
+    src: url('/Cinema Font.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
- 
-
+  
   .head-two {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100dvh; 
-    min-height: 100dvh;  
+    height: 100dvh;
+    min-height: 100dvh;
     margin: 0px auto;
-position: relative;
-overflow-y: hidden;
-} 
-
-
-
-
-.container-two {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  @keyframes fadeOutUp {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+  }
+  
+  .content-fade-out-up .eye-logo1,
+  .content-fade-out-up .text-logo1,
+  .content-fade-out-up .btn-head-home {
+    animation: fadeOutUp 0.8s ease-out forwards;
+  }
+  
+  .content-fade-out-up .eye-logo1 {
+    animation-delay: 0s;
+  }
+  
+  .content-fade-out-up .text-logo1 {
+    animation-delay: 0.1s;
+  }
+  
+  .content-fade-out-up .btn-head-home {
+    animation-delay: 0.2s;
+  }
+  
+  .container-two {
     width: 100%;
     height: 100%;
     min-height: 100dvh;
     background-color: #891515;
     background-image: url('../Pictures/Group 2 (1).png');
-    background-size: cover;
-    background-position: center;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    background-position: bottom;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-size: 100% 50% ; 
-    background-repeat: no-repeat;
-    background-position: bottom;
     position: relative;
-overflow-y: hidden;
-}
+    overflow: hidden;
+    
+  }
+  
+  @keyframes backgroundSlideUp {
+    0% {
+      background-image: url('../Pictures/Group 2 (1).png');
+      background-size: 100% 50%;
+      background-position: bottom;
+    }
+    100% {
+      background-image: url('../pagefive/logo gia.png');
+      background-size: 100% 85%;
+      background-position: bottom;
+    }
+  }
+  
+  .container-two.background-slide-up {
+    animation: backgroundSlideUp 1.5s ease-in-out forwards;
+  }
+  
+  @keyframes backgroundSlideDown {
+    0% {
+      background-image: url('../pagefive/logo gia.png');
 
-.eye-logo1{
+      background-size: 100% 85%;
+      background-position: bottom;
+    }
+    100% {
+      background-image: url('../Pictures/Group 2 (1).png');
+      background-size: 100% 50%;
+      background-position: bottom;
+    }
+  }
+  
+  .container-two.background-slide-down {
+    animation: backgroundSlideDown 1.5s ease-in-out forwards;
+  }
+  
 
+  .eye-logo1,
+  .text-logo1,
+  .btn-head-home {
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .eye-logo1 {
     position: relative;
-   margin-top: 70px;
-}
-.text-logo1{
-
+    margin-top: 70px;
+  }
+  
+  .text-logo1 {
     position: relative;
-  margin-top: 50px;
-   
-}
-.Plant-png-one1{
- position: relative;
-
-
-}
-.btn-head-home{
+    margin-top: 50px;
+  }
+  
+  .Plant-png-one1 {
+    position: relative;
+  }
+  
+  .btn-head-home {
     position: absolute;
     bottom: 0;
     width: 100%;
-display: flex;
-flex-direction: column;
-gap: 10px;
-}
-.but-one1{
-    width: 100%;
-    padding: 10px 0px 20px  0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .but-one1 {
+    width: 95%;
+    padding: 10px 0px 20px 0px;
     position: relative;
     color: white;
     background-color: transparent;
     border: 2px #FFB800 solid;
     font-size: 40px;
     font-weight: bold;
-    font-family: 'CinemaFont'; 
+    font-family: 'CinemaFont';
     cursor: pointer;
-}
-.but-tow1{
-    width: 100%;
-   padding: 10px 0px 20px  0px;
+    border-radius: 20px;
+  }
+  
+  .but-tow1 {
+    width: 95%;
+    padding: 10px 0px 20px 0px;
     background-color: #FFB800;
     color: white;
     font-size: 40px;
     position: relative;
     z-index: 100;
     border: none;
-    font-family: 'CinemaFont'; 
-        cursor: pointer;
-    
-}
-@media (max-width: 480px) {
-    .eye-logo1,
-    .text-logo1{
-        position: relative;
-        height: 61px;
-        width: 114px;
-    }
-}
+    font-family: 'CinemaFont';
+    cursor: pointer;
+    border-radius: 20px;
+  }
   
+  @media (max-width: 480px) {
+    .eye-logo1,
+    .text-logo1 {
+      position: relative;
+      height: 61px;
+      width: 114px;
+    }
+  }

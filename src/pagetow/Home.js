@@ -1,51 +1,75 @@
 import './Home.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import eye from '../Pictures/Logo.svg';
 import text from '../Pictures/Group 3.svg';
-import Plant from '../Pictures/Group 2 (1).png';
-import { Link } from 'react-router-dom';
-function Home(){
-    /*useEffect(() => {
-        // جلوگیری از چرخش به حالت افقی
-        const handleOrientation = (e) => {
-          if (window.matchMedia("(orientation: landscape)").matches) {
-            // جلوگیری از چرخش به افقی
-            document.body.style.display = 'none';
-          } else {
-            document.body.style.display = 'block';
-          }
-        };
-    
-        window.addEventListener("resize", handleOrientation);
-        
-        // فراخوانی اولیه
-        handleOrientation();
-    
-        return () => {
-          window.removeEventListener("resize", handleOrientation);
-        };
-      }, []);*/
-    
-return(
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
-<>
+function Home() {
+    const [animateExit, setAnimateExit] = useState(false);
+    const [animateBg, setAnimateBg] = useState(false);
+    const [animateBgReverse, setAnimateBgReverse] = useState(false);
 
-<div className='head-two'>
+    const navigate = useNavigate();
+    const location = useLocation();
 
-    <div className='container-two'>
-<img src={eye} className='eye-logo1'/>
-<img src={text} className='text-logo1'/>
+    const [elementsOpacity, setElementsOpacity] = useState(0);
 
-<span className='btn-head-home'>
-<Link to="/Help"><button className='but-one1'>راهنمای بازی؟</button></Link>
-<Link to='/StatusPage'><button className='but-tow1'>!شروع بازی</button></Link>
-</span>
-    </div>
-</div>
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setElementsOpacity(1);
+        }, 100);
+        return () => clearTimeout(timer);
+    }, []);
 
-</>
+    useEffect(() => {
+        if (location.state && location.state.fromStatusPage) {
+            setAnimateBgReverse(true);
+            setElementsOpacity(0); 
+            
+            const fadeTimer = setTimeout(() => {
+                setElementsOpacity(1); 
+            }, 50);
 
-)
+            const animationTimer = setTimeout(() => {
+                setAnimateBgReverse(false);
+                window.history.replaceState({}, document.title);
+            }, 1500); 
+            return () => {
+                clearTimeout(fadeTimer);
+                clearTimeout(animationTimer);
+            };
+        }
+    }, [location.state]);
 
+    const handleStartGame = () => {
+        setAnimateExit(true);
+        setAnimateBg(true);
+
+        setElementsOpacity(0); 
+
+        setTimeout(() => {
+            navigate('/StatusPage', { state: { animateEntry: true } });
+        }, 1500); 
+    };
+
+    return (
+        <>
+            <div className={`head-two ${animateExit ? 'content-fade-out-up' : ''}`}>
+                <div 
+                    className={`container-two ${animateBg ? 'background-slide-up' : ''} ${animateBgReverse ? 'background-slide-down' : ''}`}
+                >
+                    <img src={eye} className='eye-logo1' alt="Eye Logo" style={{ opacity: elementsOpacity }} />
+                    <img src={text} className='text-logo1' alt="Text Logo" style={{ opacity: elementsOpacity }} />
+
+                    <span className='btn-head-home' style={{ opacity: elementsOpacity }}>
+                        <Link to="/Help"><button className='but-one1'>راهنمای بازی؟</button></Link>
+                        <span>
+                        <button className='but-tow1' onClick={handleStartGame}>!شروع بازی</button></span>
+                    </span>
+                </div>
+            </div>
+        </>
+    );
 }
+
 export default Home;
