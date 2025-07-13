@@ -52,7 +52,7 @@
     min-height: 100dvh;
     background-color: #891515;
     background-image: url('../pagefive/logo gia.png');
-    background-size: 100% 80%;
+    background-size: 100% 85%;
     background-repeat: no-repeat;
     background-position: bottom;
     display: flex;
@@ -60,20 +60,20 @@
     align-items: center;
     position: relative;
     overflow: hidden;
-    background-position: center 200%;
+    background-position: center 230%;
   }
   
   @keyframes backgroundSlideUp {
     0% {
       background-image: url('../pagefive/logo gia.png');
-      background-size: 100% 80%;
+      background-size: 100% 85%;
       background-position: bottom;
-      background-position: center 200%;
+      background-position: center 230%;
 
     }
     100% {
       background-image: url('../pagefive/logo gia.png');
-      background-size: 100% 85%;
+      background-size: 100% 90%;
       background-position: bottom;
 
     }
@@ -87,12 +87,12 @@
     0% {
       background-image: url('../pagefive/logo gia.png');
 
-      background-size: 100% 85%;
+      background-size: 100% 90%;
       background-position: bottom;
     }
     100% {
       background-image: url('../pagefive/logo gia.png');
-      background-size: 100% 80%;
+      background-size: 100% 85%;
       background-position: bottom;
       background-position: center 200%;
 
