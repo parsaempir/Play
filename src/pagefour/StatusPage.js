@@ -188,7 +188,7 @@ function StatusPage() {
                                     alt="افزودن بازیکن"
                                     className="add-player-icon"
                                     onClick={handleOpenModal}
-                                    height='100px'
+                                    height='95px'
                                 />
                                 {players.map((player) => (
                                     <div key={player.id} className="player-card">
@@ -202,7 +202,7 @@ function StatusPage() {
                                             src={icon}
                                             alt={player.name}
                                             className="player-img"
-                                            height='100px'
+                                            height='95px'
                                         />
                                         <span className='player-name-add'><h5>{player.name}</h5></span>
                                     </div>
@@ -273,12 +273,12 @@ function StatusPage() {
                         </span>
                         <div className='container-div'>
                             <div className='player-list' id='player-list-time'>
-                                <img
-                                    src={addjas}
-                                    className='img-add'
-                                    height='100px'
-                                    alt="Thumbnail"
-                                />
+                            <div class="outer-box">
+  <div class="inner-dashed-box">
+    <span>+</span>
+  </div>
+</div>
+
                              
                             </div>
                         </div>
