@@ -188,7 +188,7 @@ function StatusPage() {
                                     alt="افزودن بازیکن"
                                     className="add-player-icon"
                                     onClick={handleOpenModal}
-                                    height='95px'
+                                    height='116px'
                                 />
                                 {players.map((player) => (
                                     <div key={player.id} className="player-card">
@@ -202,7 +202,7 @@ function StatusPage() {
                                             src={icon}
                                             alt={player.name}
                                             className="player-img"
-                                            height='95px'
+                                            height='116px'
                                         />
                                         <span className='player-name-add'><h5>{player.name}</h5></span>
                                     </div>
@@ -246,7 +246,7 @@ function StatusPage() {
                                     alt="افزودن جاسوس"
                                     className="add-player-icon"
                                     onClick={addJasos}
-                                    height='100px'
+                                    height='116px'
                                 />
                                 {jasos.map((jas) => (
                                     <div key={jas.id} className="player-card">
@@ -260,7 +260,7 @@ function StatusPage() {
                                             src={jasosin}
                                             alt={jas.name}
                                             className="player-img"
-                                            height='100px'
+                                            height='116px'
                                         />
                                     </div>
                                 ))}

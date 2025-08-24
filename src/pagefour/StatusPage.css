@@ -78,7 +78,7 @@
 .player-list {
   display: flex;
   gap: 15px;
-  justify-content: center;
+  flex-direction: row-reverse;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -88,6 +88,7 @@
 .add-player-icon {
   cursor: pointer;
   object-fit: contain;
+  order: -1;
 }
 
 .player-card {
@@ -102,8 +103,8 @@
 
 .player-card .remove-btn {
   position: absolute;
-  right: 57px;
-  bottom: 85px;
+  right: 65px;
+  bottom: 93px;
   cursor: pointer;
   width: 20px;
   height: 20px;
