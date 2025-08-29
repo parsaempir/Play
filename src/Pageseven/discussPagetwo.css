@@ -55,10 +55,20 @@
     background-color: #891517;
 
 }
+.oncard{
+    height: 400px;
+}
+
 @media (max-width: 480px) {
     .span-oncard{
         position: relative;
         top:0;
         height: 50%;
     }
+    .oncard{
+        height: 300px;
+    }
+  .jas-h{
+    font-size: 10px;
+  }
 }
